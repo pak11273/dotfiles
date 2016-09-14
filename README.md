@@ -1,5 +1,5 @@
 ##Reference:
-[http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/]
+[link](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
 ##Cloning files on another machine
 
