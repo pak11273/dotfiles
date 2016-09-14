@@ -1,0 +1,20 @@
+= Ubuntu Server Setup =
+
+* [ ] Ubuntu Server Setup
+    - [ ] Create a droplet/iso
+    * [ ] SSH
+        - [ ] create ssh keys if you dont have:
+        - [ ] type this in shell =>
+        - ssh-keygen -t rsa -C "your_email@example.com"
+        - [ ] add linux distro
+        - [ ] upload public key to server
+    * [ ] Add superuser
+        - [ ] adduser pak11273
+        - [ ] usermod -aG sudo pak11273
+        - [ ] copy public key
+        - [ ] login as root and su pak11273
+        - [ ] mkdir ~/.ssh
+        - [ ] chmod 700 ~/.ssh
+        - [ ] vim ~/.ssh/authorized_keys
+        - [ ] paste public key
+        - [ ] exit
