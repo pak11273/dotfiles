@@ -1,0 +1,36 @@
+Install the following plugins      
+      
+     vundle 
+      Plug 'vimwiki/vimwiki' " store your vim note here
+      Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+      " Shorthand notation; fetches https://github.com/scrooloose/syntastic
+      Plug 'scrooloose/syntastic'
+
+      Plug 'ervandew/supertab' " use <tab> insert completion
+
+      Plug 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
+
+      Plug 'tpope/vim-fugitive' " git wrapper for vim
+
+      Plug 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documenter
+
+
+      " Plug 'SirVer/ultisnips' " create snippets ( needs python support )
+
+      Plug 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
+
+      Plug 'ctrlpvim/ctrlp.vim' " fuzzy file finder
+
+      Plug 'MarcWeber/vim-addon-mw-utils' " dependency for vim snips
+
+      Plug 'tomtom/tlib_vim' " dependency for vim snips
+
+      Plug 'garbas/vim-snipmate' " vim snips 
+
+      Plug 'honza/vim-snippets' " vim snips 
+
+      Plug 'flazz/vim-colorschemes' " vim colorschemes 
+
+      call plug#end()
+
