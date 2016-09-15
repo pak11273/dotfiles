@@ -1,0 +1,17 @@
+[alias]
+    s = status
+    co = checkout
+    ci = commit
+    s = status
+    br = branch
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+[user]
+    email = pak11273@gmail.com
+    name = pak11273
+[color]
+    ui = auto
+[push]
+    default = simple
+

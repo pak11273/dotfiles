@@ -1,20 +1,238 @@
-= Ubuntu Server Setup =
+== Follow these in order to setup a basic node server framework  on Digital Ocean ==
 
-* [ ] Ubuntu Server Setup
-    - [ ] Create a droplet/iso
-    * [ ] SSH
-        - [ ] create ssh keys if you dont have:
-        - [ ] type this in shell =>
-        - ssh-keygen -t rsa -C "your_email@example.com"
-        - [ ] add linux distro
-        - [ ] upload public key to server
-    * [ ] Add superuser
-        - [ ] adduser pak11273
-        - [ ] usermod -aG sudo pak11273
-        - [ ] copy public key
-        - [ ] login as root and su pak11273
-        - [ ] mkdir ~/.ssh
-        - [ ] chmod 700 ~/.ssh
-        - [ ] vim ~/.ssh/authorized_keys
-        - [ ] paste public key
-        - [ ] exit
+= [[#Ubuntu Server Setup ]]=
+
+= [[#NGinx Setup ]]=
+
+= [[#Node Setup ]]=
+
+= [[#PM2 ]]=
+
+= [[#Multiple Apps ]]=
+
+= [[#VIM setup]] =
+
+= [[#Dotfiles setup]] =
+
+= [[#tmux setup]] =
+
+
+
+
+== Ubuntu Server Setup ==
+* [X] Setup
+    - [X] Create a droplet/iso
+    * [X] SSH
+        - [X] create ssh keys if you dont have:
+        - [X] type this in shell:
+            - [X] ssh-keygen -t rsa -C "your_email@example.com"
+        - [X] add linux distro
+        - [X] upload public key to server
+    * [X] Add superuser
+        - [X] adduser pak11273
+        - [X] usermod -aG sudo pak11273
+        - [X] copy public key
+        - [X] login as root and su pak11273
+        - [X] mkdir ~/.ssh
+        - [X] chmod 700 ~/.ssh
+        - [X] vim ~/.ssh/authorized_keys
+        - [X] paste public key
+        - [X] exit
+    * [X] Disable password authentication (optional)
+        - [X] allows only ssh keys access to server
+        - [X] vim /etc/ssh/sshd_config
+        - [X] PasswordAuthentication no
+        - [X] systemctl reload sshd
+    * [X] Basic firewall
+        - [X] ufw allow OpenSSH
+        - [X] ufw enable
+        - [X] ufw status
+
+== NGinx Setup ==
+* [X] completed 
+    - [X] apt-get update
+    - [X] apt-get install nginx
+    * [X] I. adjust firewall
+        - [X] ufw allow 'Nginx Full'
+        - [X] ufw status
+        - [X] systemctl status nginx
+        - [X] apt-get curl
+
+== Node Setup ==
+* [X] completed 
+    - [X] apt-get update
+    - [X] wget <tar link>
+    - [X] mkdir node
+    - [X] tar xvf node-v*.tar.?z --strip-components=1 -C ./node
+    - Next, we'll configure the global prefix of npm, where npm will create symbolic links to installed Node packages, to somewhere that it's in your default path. We'll set it to /usr/local with this command:
+    - [X] mkdir node/etc
+    - [X] echo 'prefix=/usr/local' > node/etc/npmrc
+    - [X] move node/npm binaries to install loc:
+        - [X] sudo mv node /opt/
+    - [X] sudo chown -R root: /opt/node
+    - [X] sudo ln -s /opt/node/bin/node /usr/local/bin/node
+    - [X] sudo ln -s /opt/node/bin/npm /usr/local/bin/npm
+	
+
+== PM2 ==
+* [X] completed
+    - [X] npm install pm2 -g
+    - [X] pm2 startup ubuntu
+    - [X] copy/paste the line it provides  
+        - this sets pm2 to start on boot
+    - [X] pm2 start <server name>
+        - other pm2 commands:
+        - pm2 stop,restart,list,info,monit
+
+== Multiple Apps ==
+* [X] completed
+	- [X] /etc/nginx/sites-available:
+        - [X] Create a file of the appname. 
+        - [X] c/p:
+            - change APP_PRIVATE_IP_ADDRESS to 127.0.0.1 or localhost and server_name
+            
+{{{	
+	server {
+	
+	listen 80;
+
+	server_name example.com;
+
+	location /<appname> {
+		proxy_pass http://APP_PRIVATE_IP_ADDRESS:8080;
+        	proxy_http_version 1.1;
+        	proxy_set_header Upgrade $http_upgrade;
+        	proxy_set_header Connection 'upgrade';
+        	proxy_set_header Host $host;
+        	proxy_cache_bypass $http_upgrade;
+    }
+}
+}}}
+
+* [X] basic structure of an app
+      - [X] c/p inside the server filename:
+          - This file is usually inside /var/www/dev/<appname> 
+          - where private_ip_addr use 127.0.0.1 
+    {{{
+	var http = require('http');
+	http.createServer(function (req, res) {
+  		res.writeHead(200, {'Content-Type': 'text/plain'});
+  		res.end('Hello World\n');
+}).listen(8080, 'APP_PRIVATE_IP_ADDRESS');
+	console.log('Server running jat http://APP_PRIVATE_IP_ADDRESS:8080/');
+    }}}
+    
+= VIM setup =
+* [X] completed
+    * [X] c/p in command line:
+          sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+          libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+          libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
+          python3-dev ruby-dev lua5.1 lua5.1-dev git
+    
+    * [X] remove vim: 
+          sudo apt-get remove vim vim-runtime gvim
+    * [X] cd ~
+    * [X] git clone https://github.com/vim/vim.git
+    * [X] c/p in command line:
+    * [X] ./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
+            --enable-python3interp \
+            --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
+            --enable-perlinterp \
+            --enable-luainterp \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr
+    * [X] make VIMRUNTIMEDIR=/usr/share/vim/vim80
+    * [X] sudo apt-get install checkinstall
+    * [X] cd vim
+    * [X] sudo checkinstall
+
+= Dotfiles setup =
+* [X] completed part 1
+      - [X] cd ~
+      - [X] mkdir dotfiles
+      - [X] vim makesymlinks.sh
+      - [X] c/p:
+{{{
+#!/bin/bash
+############################
+# http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
+# .make.sh
+# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+############################
+
+########## Variables
+
+files="bashrc vimrc vim"    # list of files/folders to symlink in homedir
+
+##########
+
+# create dotfiles_old in homedir
+echo "Creating $olddir for backup of any existing dotfiles in ~"
+mkdir -p $olddir
+echo "...done"
+
+# change to the dotfiles directory
+echo "Changing to the $dir directory"
+cd $dir
+echo "...done"
+
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+for file in $files; do
+    echo "Moving any existing dotfiles from ~ to $olddir"
+    mv ~/.$file ~/dotfiles_old/
+    echo "Creating symlink to $file in home directory."
+    ln -s $dir/$file ~/.$file
+done
+}}}
+
+    * [O] completed part 2
+          - [X] create github repo
+          - [X] upload to repo:
+          - any changes you make to dotfiles, add them to your makesymlinks.sh file
+          - [.] Add plugins:
+              - [X] Plug 'vundle' " vim manager
+              - [X] Plug 'vimwiki/vimwiki' " store your vim note here
+              - [ ] Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+
+              - [ ] Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+              - [ ] https://github.com/scrooloose/syntastic
+              - [ ] Plug 'scrooloose/syntastic'
+              - [ ] Plug 'ervandew/supertab' " use <tab> insert completion
+              - [ ] Plug 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
+              - [ ] Plug 'tpope/vim-fugitive' " git wrapper for vim
+              - [ ] Plug 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documente
+              - [ ] " Plug 'SirVer/ultisnips' " create snippets ( needs python support )
+              - [ ] Plug 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
+              - [ ] Plug 'ctrlpvim/ctrlp.vim' " fuzzy file finder
+              - [ ] Plug 'MarcWeber/vim-addon-mw-utils' " dependency for vim snips
+              - [ ] Plug 'tomtom/tlib_vim' " dependency for vim snips
+              - [ ] Plug 'garbas/vim-snipmate' " vim snips 
+              - [ ] Plug 'honza/vim-snippets' " vim snips 
+              - [ ] Plug 'flazz/vim-colorschemes' " vim colorschemes 
+
+= tmux setup = 
+
+* [ ] completed
+    - [ ] start a tmux session
+    - [ ] prefix + I //will install plugins
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
