@@ -1,0 +1,21 @@
+# show mode in prompt
+set show-mode-in-prompt on
+
+# Use Vi, not Emacs, style editing
+set editing-mode vi
+
+# Show all completions as soon as I press tab, even if there's more than one
+set show-all-if-ambiguous on
+# Ignore case
+set completion-ignore-case on
+
+# isaac changes
+#
+# maps terminal insert and command keys
+$if mode=vi
+    set keymap vi-command
+    "i": vi-insertion-mode
+    set keymap vi-insert
+    "jj": vi-movement-mode
+$endif
+

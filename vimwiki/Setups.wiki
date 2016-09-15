@@ -197,6 +197,7 @@ done
               - [X] Plug 'vundle' " vim manager
               - [X] Plug 'vimwiki/vimwiki' " store your vim note here
               - [ ] Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+              - [ ] Plug 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
 
               - [ ] Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
               - [ ] https://github.com/scrooloose/syntastic
@@ -206,7 +207,6 @@ done
               - [ ] Plug 'tpope/vim-fugitive' " git wrapper for vim
               - [ ] Plug 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documente
               - [ ] " Plug 'SirVer/ultisnips' " create snippets ( needs python support )
-              - [ ] Plug 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
               - [ ] Plug 'ctrlpvim/ctrlp.vim' " fuzzy file finder
               - [ ] Plug 'MarcWeber/vim-addon-mw-utils' " dependency for vim snips
               - [ ] Plug 'tomtom/tlib_vim' " dependency for vim snips

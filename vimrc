@@ -13,6 +13,13 @@ Plugin 'VundleVim/Vundle.vim'
 " personal wiki/diary/tasks
 Plugin 'vimwiki/vimwiki'
 
+" status and tabline
+Plugin 'vim-airline/vim-airline'
+
+" tmux and vim integration
+Plugin 'christoomey/vim-tmux-navigator'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
