@@ -193,32 +193,32 @@ done
           - [X] create github repo
           - [X] upload to repo:
           - any changes you make to dotfiles, add them to your makesymlinks.sh file
-          - [.] Add plugins:
-              - [X] Plug 'vundle' " vim manager
-              - [X] Plug 'vimwiki/vimwiki' " store your vim note here
-              - [ ] Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-              - [ ] Plug 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
+          - [o] Add plugins:
+              - [X] Plugin 'vundle' " vim manager
+              - [X] Plugin 'vimwiki/vimwiki' " store your vim note here
+              - [X] Plugin 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+              - [X] Plugin 'vim-airline/vim-airline-themes'
+              - [X] Plugin 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
 
-              - [ ] Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-              - [ ] https://github.com/scrooloose/syntastic
-              - [ ] Plug 'scrooloose/syntastic'
-              - [ ] Plug 'ervandew/supertab' " use <tab> insert completion
-              - [ ] Plug 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
-              - [ ] Plug 'tpope/vim-fugitive' " git wrapper for vim
-              - [ ] Plug 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documente
-              - [ ] " Plug 'SirVer/ultisnips' " create snippets ( needs python support )
-              - [ ] Plug 'ctrlpvim/ctrlp.vim' " fuzzy file finder
-              - [ ] Plug 'MarcWeber/vim-addon-mw-utils' " dependency for vim snips
-              - [ ] Plug 'tomtom/tlib_vim' " dependency for vim snips
-              - [ ] Plug 'garbas/vim-snipmate' " vim snips 
-              - [ ] Plug 'honza/vim-snippets' " vim snips 
-              - [ ] Plug 'flazz/vim-colorschemes' " vim colorschemes 
+              - [X] Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+              - [X] Plugin 'scrooloose/syntastic'
+              - [ ] " Plugin 'ervandew/supertab' " use <tab> insert completion
+              - [X] Plugin 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
+              - [X] Plugin 'tpope/vim-fugitive' " git wrapper for vim
+              - [ ] " Plugin 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documente
+              - [ ] " Plugin 'SirVer/ultisnips' " create snippets ( needs python support )
+              - [X] Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder
+              - [ ] Plugin 'MarcWeber/vim-addon-mw-utils' " dependency for vim snips
+              - [ ] Plugin 'tomtom/tlib_vim' " dependency for vim snips
+              - [ ] Plugin 'garbas/vim-snipmate' " vim snips 
+              - [ ] Plugin 'honza/vim-snippets' " vim snips 
+              - [X] Plugin 'flazz/vim-colorschemes' " vim colorschemes 
 
 = tmux setup = 
 
 * [ ] completed
     - [ ] start a tmux session
-    - [ ] prefix + I //will install plugins
+    - [ ] prefix + I //installs plugins
  
  
  

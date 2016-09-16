@@ -540,9 +540,9 @@ Today's Survey
 
     * [o] Day 1 - NodeJS I
 
-        * [X] Lesson Video:
-            * [X] NodeJS I - 2 hours 42 minutes
-                - [X] https://vimeo.com/151691575
+        * [ ] Lesson Video:
+            * [ ] NodeJS I - 2 hours 42 minutes
+                - [ ] https://vimeo.com/151691575
         * [X] Mini Project:
             * [X] Siri
                 - [X] https://github.com/DevMountain/Siri 
@@ -565,8 +565,8 @@ Today's Survey
                 
 * [ ] Day 2 - NodeJS II
 
-Lesson Video:
-NodeJS II - 1 hour 55 minutes
+    * [ ] Lesson Video:
+        * [ ] NodeJS II - 1 hour 55 minutes
 Mini Project:
 Rewrite in Progress
 Learning Objectives

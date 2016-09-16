@@ -16,11 +16,36 @@ Plugin 'vimwiki/vimwiki'
 " status and tabline
 Plugin 'vim-airline/vim-airline'
 
+" airline themes
+Plugin 'vim-airline/vim-airline-themes'
+
 " tmux and vim integration
 Plugin 'christoomey/vim-tmux-navigator'
 
 " directory tree for vim
 Plugin 'scrooloose/nerdtree'
+
+" validation scripts
+Plugin 'scrooloose/syntastic'
+
+" edit surrounding tags
+Plugin 'tpope/vim-surround'
+
+" git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" file finder
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" colorschemes
+Plugin 'flazz/vim-colorschemes'
+
+
+
+
+
+
+
 
 
 

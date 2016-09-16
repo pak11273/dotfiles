@@ -221,3 +221,280 @@ tmux attach -t devmtn
 tmux ls
 ps
 tmux attach -t devmtn
+c
+cd /
+ls /
+cd /etc/nginx/sites-available/
+ls
+vim themxyzptlk 
+cd /var/www/dev
+ls
+cd themxyzptlk/
+vim themxyzptlk.js 
+c
+ls
+vim 
+tmux attach -t devmtn
+vim .bash_profile 
+ls
+clear
+./bashrc
+sourc .bashrc
+source .bashrc
+clear
+cd /etc/
+ls
+cd nginx
+ls
+cd sites-available/
+ls
+clear
+vim themxyzptlk 
+cd /var/www/dev
+ls
+cd learn
+ls
+vim learn.js 
+cd ..
+ls
+cd devmtn/
+ls
+vim trello/
+cd trello/
+ls
+vim trello.js
+:w
+pm2 start trello
+pm2 status
+clear
+pm2 status
+pm2 start trello.js
+pm2 status
+pm2 start learn.js
+cd ..
+clear
+ls
+cd ..
+ls
+earn
+ls
+cd learn
+ls
+cd ../themxyzptlk/
+ls
+pm2 start themxyzptlk.js 
+cd ../devmtn/
+ls
+cd trello
+vim trello.js
+pm2 reload trello
+clear
+vim trello.js
+ls
+mv trello.js index.js
+vim index.js 
+pm2 start index.js -n trello
+clear
+vim index.js 
+cd /etc/nginx/sites-available/
+ls
+vim themxyzptlk 
+c
+cd /var/www/dev
+ls
+vim devmtn/
+cd devmtn/
+ls
+vim trello/
+cd trello/
+ls
+vim index.js 
+pm2 reload trello
+c
+ls
+vim index.js 
+cd ..
+cd ..
+ls
+cd themxyzptlk/
+ls
+vim themxyzptlk.js 
+cd ..ls
+ls
+cd ..
+ls
+cd devmtn/
+ls
+vim trello/
+cd trello/
+vim index.js 
+ls
+vim index.js
+c
+cd
+vim .vimrc
+cd dotfiles
+git s
+git add .
+git s
+git commit -m "adds a few more vim plugins"
+git s
+git push origin master
+c
+vim --startuptime log.txt main.java
+vim
+vim
+ls
+c
+cd
+ls
+cd .vimrc
+ls
+ls -al
+cd dotfiles
+ls
+ls
+ls -al dotfiles/
+cd dotfiles
+ls
+cd ..
+ls
+vim vimrc.bundles.local
+./makesymlinks.sh 
+c
+vim
+cd 
+ls -al
+cd dotfiles
+vim makesymlinks.sh 
+./makesymlinks.sh 
+cd
+ls -al
+vim
+vim
+vim
+vim .vimrc.bundles.local 
+vim .vimrc
+vim
+rm .vimrc.bundles.local 
+cd dotfiles
+ls
+vim makesymlinks.sh 
+c
+c
+vim
+ls
+ls
+c
+ls
+cd ..
+ls
+ls
+ls
+cd /etc/nginx
+ls
+cd sites-available/
+ls
+rm :
+ls
+clear
+vim themxyzptlk 
+cd /var/www/dev
+ls
+cd devmtn
+ls
+cd trello
+ls
+pm2 status
+vim index.js 
+pm2 reload trello
+pm2 status
+vim index.js 
+pm2 reload trello
+vim index.js 
+pm2 status
+vim index.js 
+vim index.js 
+pm2 reload trello
+pm2 reload
+pm2 status
+vim index.js 
+pm2 reload trello
+vim index.js 
+pm2 reload index.js 
+cd
+ls
+cd /etc/nginx/sites-available/
+ls
+vim themxyzptlk e
+vim themxyzptlk 
+c
+cd /var/www/dev/devmtn
+ls
+cd trello
+ls
+vim index.js 
+pm2 status
+vim index.js 
+pm2 reload trello
+ls
+vim index.js 
+pm2 reload trello
+c
+cd
+vim .vimrc
+vim
+vim .vimrc
+c
+vim
+vim .vimrc
+vim
+vim .vimrc
+vim
+c
+pm2 status
+c
+ls
+cd /var/www/dev
+cd devmtn/
+ls
+mkdir books
+cd books
+vim index.js
+ls
+git init
+ls
+ls -al
+c
+npm init
+ls
+c
+pm2 status
+pm2 reload trello
+pm2 status
+pm2 logs
+pm2 logs | pager
+clear
+pm2 reload trello
+::wq
+c
+pm2 reload trello
+:
+pm2 reload trello
+cd
+clear
+c
+pm2 status
+pm2 reload trello
+ 
+c
+vim 
+c
+vim
+c
+vim
+vim
+vim 
+c
+cd /var/www/dev/devmtn/books
+ls
