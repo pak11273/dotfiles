@@ -120,3 +120,104 @@ ls -al
 ls -a
 c
 clear
+cd
+vim .vimrc
+vim
+c
+clear
+ls
+cd dotfiles
+ls
+git s
+git add .
+git s
+git commit -m "more dotfile configs
+
+
+
+"
+git s
+git push origin master
+c
+clear
+cd ..
+ls -al
+vim .bashrc
+c
+clear
+source .bashrc
+c
+jj
+clear
+vim .bash_profile
+vim .bash_logout
+vim .bash_aliases 
+vim .gitconfig 
+vim .git-prompt.sh 
+cd dotfiles
+vim makesymlinks.sh 
+./makesymlinks.sh 
+clear
+cd
+ls -la
+vim .inputrc 
+clear
+cd dotfiles
+vim makesymlinks.sh 
+./makesymlinks.sh 
+clear
+cd
+vim .jshintrc 
+cd vim
+ls
+cd ..
+s
+ls
+su pak11273 
+ls
+cd dotfiles
+ls
+vim viminfo
+tmux attach -t devmtn
+tmux kill-session -t devmtn
+clear
+tmux ls
+ufw status
+pm2 status
+c
+git diff
+git add .
+git s
+git commit -m "adds bash configs and some plugins for basic functionality"
+git push origin master
+/config
+c
+cd
+cd /etc/nginx/sites-available/
+ls
+mkdir devmtn
+ls
+ls
+ls
+vim themxyzptlk 
+cd ..
+rm -rf devmtn
+tmux ls
+tmux new -s devmtn
+exit
+clear
+tmux attach -t devmtn
+tmux ls
+tmux new -s devmtn
+exit
+pm2 status
+pm2 delete trello
+cd /var/www/dev/devmtn/trello/
+ls
+clear
+ls
+vim trello.js
+tmux attach -t devmtn
+tmux ls
+ps
+tmux attach -t devmtn

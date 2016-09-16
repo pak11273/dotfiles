@@ -19,6 +19,9 @@ Plugin 'vim-airline/vim-airline'
 " tmux and vim integration
 Plugin 'christoomey/vim-tmux-navigator'
 
+" directory tree for vim
+Plugin 'scrooloose/nerdtree'
+
 
 
 " All of your Plugins must be added before the following line
