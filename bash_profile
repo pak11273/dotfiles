@@ -13,4 +13,5 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 rmd () {
   pandoc $1 | lynx -stdin
-}sh_profile
+}
+

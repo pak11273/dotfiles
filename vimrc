@@ -34,6 +34,9 @@ Plugin 'tpope/vim-surround'
 " git wrapper
 Plugin 'tpope/vim-fugitive'
 
+" vim commentary 
+Plugin 'tpope/vim-commentary'
+
 " file finder
 Plugin 'ctrlpvim/ctrlp.vim'
 

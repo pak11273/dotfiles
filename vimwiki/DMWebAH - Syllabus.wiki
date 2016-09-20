@@ -305,33 +305,40 @@ Project:
 Twitter Clone
 Additional Reading:
 Assessment:
-Week 6
+* [.] Week 6
 
-Day 1 - AngularJS I
+    * [.] Day 1 - AngularJS I
 
-Pre-Reading:
-Starting with Angular
-Conceptual Intro to Angular
-Watch "Angular in 60-ish Minutes"
-Lesson Video:
-Angular I - Intro to Angular
-Mini Project:
-Babies first Angular
-Learning Objectives
-Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
-Students will understand what a module, controller, directive, and service is in angular
-Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
-Students will be able to ng-repeat over data
-Students will be able to filter data
-Project:
-Angular Friends
-Assessment:
-
-AngularJS Day 1
-Weeklong Challenge:
-
-DevMt.In - Day One
-Day 2 - AngularJS II
+        * [o] Pre-Reading:
+            - [X] Starting with Angular:
+                - [X] this blog no longer works
+                        http://stephanebegaudeau.tumblr.com/post/48776908163/everything-you-need-to-understand-to-start-with
+            - [X] Conceptual Intro to Angular
+                    http://paislee.io/a-conceptual-introduction-to-angularjs/ 
+            - [ ] Watch "Angular in 60-ish Minutes":
+                    https://www.youtube.com/watch?v=i9MHigUZKEM
+        * [ ] Lesson Video:
+            * [ ] Angular I - Intro to Angular
+                    https://vimeo.com/148916498 
+            * [ ] Mini Project:
+                - [ ] Babies first Angular
+                    https://github.com/DevMountain/mini-BabiesFirstAngular 
+        * [ ] Learning Objectives
+            - [ ] Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
+            - [ ] Students will understand what a module, controller, directive, and service is in angular
+            - [ ] Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
+            - [ ] Students will be able to ng-repeat over data
+            - [ ] Students will be able to filter data
+        * [ ] Project:
+            - [ ] Angular Friends
+                    https://github.com/DevMountain/angular-friends
+        * [ ] Assessment:
+            - [ ] AngularJS Day 1
+                    https://codecard.io/a/cardio-preview/B4yCwFR8R
+        * [ ] Weeklong Challenge:
+            - [ ] DevMt.In - Day One
+                    https://github.com/DevMountain/dev-mt-in 
+* [ ] Day 2 - AngularJS II
 
 Pre-Reading:
 Angular Services
@@ -536,106 +543,113 @@ Quiz App (Use this to reference the Github repo)
 Quiz App Project Guide - Day 3 and BD's (Use this to start and build the project)
 Class Survey:
 Today's Survey
-* [o] Week 10
+* [o] Week 10 
 
-    * [o] Day 1 - NodeJS I
+    * [O] Day 1 - NodeJS I
 
-        * [ ] Lesson Video:
-            * [ ] NodeJS I - 2 hours 42 minutes
-                - [ ] https://vimeo.com/151691575
+        * [X] Lesson Video:
+            * [X] NodeJS I - 2 hours 42 minutes
+                - [X] https://vimeo.com/151691575
         * [X] Mini Project:
             * [X] Siri
                 - [X] https://github.com/DevMountain/Siri 
                 - [X] **Can't do, no access to client
-        * [O] Learning Objectives
+        * [X] Learning Objectives
             - [X] Students understand what Node is and that it can be used as a server
             - [X] Student will understand how HTTP works to communicate between client & server
             - [X] Student will understand the need for a module like express
             - [X] Student can use require to import a Node module
             - [X] Student will understand the basic utility of a package.json file
-            - [ ] Student can create a HTTP NodeJS server using express
-            - [ ] Students can explain endpoints and create basic ones testing them with Postman
-        * [ ] Project:
-            * [ ] Trello App (Use this to reference the Github repo)
-                - [ ] https://github.com/DevMountain/trello-clone
-            * [ ] Trello App Project Guide - Day 1 (Use this to start and build the project)
-                - [ ] http://projectguide.devmounta.in/#/trello-clonehttp://projectguide.devmounta.in/#/trello-clone
-            * [ ] Additional Reading:
+            - [X] Student can create a HTTP NodeJS server using express
+            - [X] Students can explain endpoints and create basic ones testing them with Postman
+        * [o] Project:
+            * [X] Trello App (Use this to reference the Github repo)
+                - [X] https://github.com/DevMountain/trello-clone
+            * [X] Trello App Project Guide - Day 1 (Use this to start and build the project)
+                - [X] http://projectguide.devmounta.in/#/trello-clonehttp://projectguide.devmounta.in/#/trello-clone
+            * [ ] Additional Reading: later
                 - [ ] https://www.thenewboston.com/videos.php?cat=355
                 
-* [ ] Day 2 - NodeJS II
+    * [.] Day 2 - NodeJS II
 
-    * [ ] Lesson Video:
-        * [ ] NodeJS II - 1 hour 55 minutes
-Mini Project:
-Rewrite in Progress
-Learning Objectives
-Student can require other .js files in the project
-Student can use bodyParser to get data out of the body
-Student can use req.params
-Student is introduced to req.query
-Student understands the request response lifecycle in express including the order in which functions are called
-Student can utilize middleware
-Project:
-Trello App (Use this to reference the Github repo)
-Trello App Project Guide - Day 2 (Use this to start and build the project)
-Additional Reading:
-Day 3 - NodeJS III
+        * [o] Lesson Video: 
+            - [X] NodeJS II - 1 hour 55 minutes
+        * [.] Mini Project
+            - [X] Rewrite in Progress
+        * [.] Learning Objectives
+            - [X] Student can require other .js files in the project
+            - [ ] Student can use bodyParser to get data out of the body
+            - [ ] Student can use req.params
+            - [ ] Student is introduced to req.query
+            - [ ] Student understands the request response lifecycle in express including the order in which functions are called
+            - [ ] Student can utilize middleware
+        * [ ] Project:
+            - [ ] Trello App (Use this to reference the Github repo)
+            - [ ] Trello App Project Guide - Day 2 (Use this to start and build the project)
+            - [ ] Additional Reading:
+                - [ ] Day 3 - NodeJS III
+        * [ ] Lesson Video:
+            - [ ] Node III - 2 hours 10 minutes
+                    https://vimeo.com/145906798
+        * [ ] Mini Project:
+            - [ ] Rewrite in Progress = movies project
+        * [ ] Learning Objectives
+            - [ ] Student can use Express to serve static files
 
-Lesson Video:
-Node III - 2 hours 10 minutes
-Mini Project:
-Rewrite in Progress
-Learning Objectives
-Student can use Express to serve static files
-Student can use routing in Express to create basic API endpoints
-Student can use route params to make dynamic endpoints
-Student can build a front-end Angular application that connects to a back-end NodeJS API
-Project:
-Trello App (Use this to reference the Github repo)
-Trello App Project Guide - Day 3 (Use this to start and build the project)
-Additional Reading:
-Week 11
+            - [ ] Student can use routing in Express to create basic API endpoints
+            - [ ] Student can use route params to make dynamic endpoints
+            - [ ] Student can build a front-end Angular application that connects to a back-end NodeJS API
+        * [ ] Project:
+            - [ ] Trello App (Use this to reference the Github repo)
+            - [ ] Trello App Project Guide - Day 3 (Use this to start and build the project)
+            - [ ] Additional Reading:
+* [ ] Week 11
 
-Day 1 - MongoDB I
+    * [ ] Day 1 - MongoDB I
 
-Lesson Video:
-Mongo I - 1 hour 41 minutes
-Before class:
-Make sure you've installed MongoDB (Mac or PC)
-Mini Project:
-Birds
-Learning Objectives
-Understand the DB's place in the web app landscape (MongoDB vs DBaaS like Firebase)
-Understand DBs, Collections, and Documents
-Understand CRUD operations with MongoDB
-Project:
-Trello App (Use this to reference the Github repo)
-Trello App Project Guide - Day 4 (Use this to start and build the project)
-Additional Reading:
-Day 2 - MongoDB II
-
-Lesson Video:
-Mongo II - 1 hour 20 minutes
-Mini Project:
-Mini-Birds Mongoose
-Learning Objectives
-understand what object modeling is and why it’s used
-understand the difference between Mongoose and MongoJS
-Project:
-Trello App (Use this to reference the Github repo)
-Trello App Project Guide - Day 5 (Use this to start and build the project)
-Additional Reading:
-Day 3 - MongoDB III
-
-Lesson Video:
-Mongo III - 1 hour 40 minutes
-Mini Project:
-Mini-Birds Related
-Learning Objectives
-Understand the concept of relationships
-Understand the different types of relationships, and when to use them
-Understand how and when to use embedded and referential schemas
+        * [ ] Lesson Video:
+            - [ ] Mongo I - 1 hour 41 minutes todo 1:20
+                    https://vimeo.com/140831164
+        * [ ] Before class:
+            - [ ] Make sure you've installed MongoDB (Mac or PC)
+        * [ ] Mini Project:
+            - [ ] Birds:
+                    https://github.com/jacob-israel-turner/mini-birds.git
+        * [ ] Learning Objectives
+            - [ ] Understand the DB's place in the web app landscape (MongoDB vs DBaaS like Firebase)
+            - [ ] Understand DBs, Collections, and Documents
+            - [ ] Understand CRUD operations with MongoDB
+        * [ ] Project:
+            - [ ] Trello App (Use this to reference the Github repo)
+            - [ ] Trello App Project Guide - Day 4 (Use this to start and build the project)
+            - [ ] Additional Reading:
+            
+    * [ ] Day 2 - MongoDB II
+    
+        * [ ] Lesson Video:
+            * [ ] Mongo II - 1 hour 20 minutes
+            
+            * [ ] Mini Project:
+                * [ ] Mini-Birds Mongoose
+                        https://github.com/DevMountain/mini-birds-mongoose
+        * [ ] Learning Objectives
+            - [ ] understand what object modeling is and why it’s used
+            - [ ] understand the difference between Mongoose and MongoJS
+        * [ ] Project:
+            - [ ] Trello App (Use this to reference the Github repo)
+            - [ ] Trello App Project Guide - Day 5 (Use this to start and build the project)
+            * [ ] Additional Reading:
+            
+    * [ ] Day 3 - MongoDB III
+    
+        * [ ] Lesson Video:
+    Mongo III - 1 hour 40 minutes
+    Mini Project:
+    Mini-Birds Related
+    Learning Objectives
+    Understand the concept of relationships
+    Understand the different types of relationships, and when to use them
+    Understand how and when to use embedded and referential schemas
 Project:
 Trello App (Use this to reference the Github repo)
 Trello App Project Guide - Day 6 (Use this to start and build the project)

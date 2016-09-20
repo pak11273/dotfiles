@@ -16,6 +16,14 @@
 
 = [[#tmux setup]] =
 
+= [[#mongodb setup]] =
+
+
+= [[#basic app framework]] =
+
+
+
+
 
 
 
@@ -205,6 +213,7 @@ done
               - [ ] " Plugin 'ervandew/supertab' " use <tab> insert completion
               - [X] Plugin 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
               - [X] Plugin 'tpope/vim-fugitive' " git wrapper for vim
+              - [ ] Plugin 'tpope/vim-commentary' " comments out code
               - [ ] " Plugin 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documente
               - [ ] " Plugin 'SirVer/ultisnips' " create snippets ( needs python support )
               - [X] Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder
@@ -220,9 +229,70 @@ done
     - [ ] start a tmux session
     - [ ] prefix + I //installs plugins
  
+= mongodb setup = 
+* [ ] completed
+    * [ ] customize mongo shell
+        * [ ] custom prompt
+        * [ ] start mongo shell
+            - [ ] mongo
+            - [ ] var prompt = function() { return db+"@"+host+" Uptime:"+db.serverStatus().uptime+" Documents:"+db.stats().objects+" > " ;}
+            - [ ] 
  
+ = basic app framework =
  
- 
+* [ ] completed
+    - [ ] cd inside of your project root directory
+    - [ ] touch index.js
+          var express = require('express');
+          var bodyParser = require('body-parser');
+          var cors = require('cors');
+          var mongojs = require('mongojs');
+          
+          var app = express();
+          
+          //1. listen for http requests 
+          app.listen(<port>, function() {
+            console.log('listening on port 9002');
+          });
+          
+          = //2. always parse http body as json, it assigns result to req.body =
+          //ALL http methods will be parsed as json
+          app.use(bodyParser.json())
+          
+          //3. abstract away methods into an object
+         
+          var controller = {
+            "index": function(req,res,next) {
+                res.send('get page');
+                });
+                
+              app.get('/endpoint', books_controller.index);
+          
+          //4. basic http post method 
+          app.post('/endpoint', function(req,res,next) {
+            res.send(req.body);
+          });
+          
+          //5. basic http delete method 
+          // incoming url domain.com/endpoint/0
+          app.delete('/endpoint', function(req,res,next) {
+            array.splice(req,params.id, 1);
+            res.send(array:w
+            );
+          });
+          
+          
+    - [ ] git init
+    - [ ] npm init
+    - [ ] npm install express --save
+    - [ ] vim .gitignore  
+        - [ ] node_modules
+    - [ ] npm install body-parser --save 
+    - [ ] cd root
+    - [ ] bower install 
+    - [ ] pm2 start index.js -n <app name>
+    - [ ] 
+
  
  
  
