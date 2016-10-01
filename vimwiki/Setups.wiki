@@ -18,6 +18,8 @@
 
 = [[#mongodb setup]] =
 
+= [[#node debugger]] =
+
 
 = [[#basic app framework]] =
 
@@ -57,14 +59,18 @@
         - [X] ufw status
 
 == NGinx Setup ==
-* [X] completed 
+* [O] completed 
     - [X] apt-get update
     - [X] apt-get install nginx
-    * [X] I. adjust firewall
+    * [O] I. adjust firewall
         - [X] ufw allow 'Nginx Full'
         - [X] ufw status
         - [X] systemctl status nginx
         - [X] apt-get curl
+    * [ ] add php and js to file extensions: later
+        - [ ] cd /etc/nginx
+        - [ ] vim nginx.conf
+        - [ ] Add this line:
 
 == Node Setup ==
 * [X] completed 
@@ -237,6 +243,28 @@ done
             - [ ] mongo
             - [ ] var prompt = function() { return db+"@"+host+" Uptime:"+db.serverStatus().uptime+" Documents:"+db.stats().objects+" > " ;}
             - [ ] 
+
+ = node debugger =
+ 
+ * [ ] completed
+     - [ ] npm install -g vimdebug
+     - [ ] put debugger inside listener:
+            app.listen(8080, function() {
+                debugger;
+                });
+     - [ ] start script 
+            node --debug-brk index.js
+     - [ ] start agent
+            node-vim-inspector 
+     - [ ] inside vim type :nbs 
+      **** see node-vim-debugger for commands
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  = basic app framework =
  

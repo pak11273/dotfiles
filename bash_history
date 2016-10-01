@@ -1,500 +1,500 @@
-vim themxyzptlk 
+vim .tmux.conf
 c
-cd /var/www/dev/devmtn/
-ls
-mv books angular
-ls
-mv angular books
-cp books angular
-ls
-cp -r books angular
-ls
-cd angular
-ls
-rm -rf angualr
-ls
-cd ../books/
-ls
-rm :q
-rm :w
+source .tmux.conf
 c
-cd ..
+vim .tmux.conf
+DISPLAY=:0 xclip -sel clip < ~/.ssh/id_sa.pub
 ls
-cd angular
+ls -al
 ls
-rm -rf angular
+DISPLAY=:0 xclip -sel clip < ~/.ssh/id_sa.pub
+cd .ssh
 ls
-cd ..
-ls
-rm -rf angular
-ls
-mkdir angular
+                  │
+:oo ~/.ssh# DISPLAY=:0 xclip -sel clip < ~/.ssh/id_sa.pub                           │
+──────────────────────────────────────────────────────────────────────────┬───────────┴───────────────────────────────────────────────────────────
+⌬ PM2 monioing (To go fuhe check ou hps://app.keymeics.io)      │+oo ~#
+c
+                  │
+:oo ~/.ssh# DISPLAY=:0 xclip -sel clip < ~/.ssh/id_sa.pub                           │
+──────────────────────────────────────────────────────────────────────────┬───────────┴───────────────────────────────────────────────────────────
+⌬ PM2 monioing (To go fuhe check ou hps://app.keymeics.io)      │+oo ~#
+                                                                      cd
+c
+echo $DISPLAY
+c
+echo $DISPLAY
+mongo
+vim
+c
+vim
+c
+c
+pm2 monit
+c
+pm2 monit
+c
+mongod
+c
+pm2 list
+pm2 monit
+c
+pm2 monit
+c
+c
+c
+C
+mongod
 c
 ls
-cd angular
-ls
-touch index.js
-vim index.js
 c
-git init
-npm init
-npm install express --save
+mongod
+mongod
+C
+akjslkfjlajljfkasljfkjads
+askjfja
+jfkdjsfjskljlkdaj
+fdajsfjklsj
+echo $DISPALY
+echo $DISPLAY
+exit
 c
-vim .gitignore
-npm install body-parser --save
-bower install
+ls
+ls
+echo $DISPLAY
+tmux attach -t mongo
+tmux ls
+tmux attach -t mongo
+tmux kill-session -t mongo
 c
-bower install
-vim index.js 
-cd /etc/nginx/
 ls
-cd sites-available/
-ls
-vim themxyzptlk 
+tmux new -s mongo
+exti
+exit
+alksjlkfdja
+jasjfajsjf
+asfjsjksdj
+fj
+aj
+fajdd
+c
+exit
+tmux ls
+tmux ls
+tmux new -s test
+exit
+tmux ls
+tmux new -s mongo
+exit
+tmux attach -t mongo
+fg
+tmux a mongo
+tmux a -t mongo
+tmux a -t mongo
+tmux attach -t mongo
+exit
+tmux attach -t mongo
+mongo
+c
+c
+mongo
+Kcc
+ck
+c
+mongoiiii
+lakj
+ajkdfja
+jf
+jkja
+jsithis is a a test  fooooooooooooojf+root ~# jfd
+nd not found
++root ~# jkja
+jkja: command not found
+:root ~# jd
+c
+tmux ls
+tmux ls
+tmux attach -t mongo
 c
 cd /var/www/dev
 ls
-cd devmtn
+cd devmtn/
 ls
-cd angular
+cd library/
+c
+vim
+c
+mongo
+fg
+c
+fg
+fg
+c
+mongo
+f
+c
+fg
+pwd
+c
+ip addr
+fg
+c
+mongo
+c
+fg
+mongo
+c
+fg
+tmux attach -t mongo
+pm2 monit
+c
+vim .tmux.conf
+c
+mongod
+mongod
 ls
 c
+exit
+c
+fg
+c
+cd /var/www/dev
 ls
-vim index.js
-jounralctl -xe | pagesr
-jounralctl -xe | pager
-journalctl -xe
-journalctl -xe | pager
+cd devmtn/
+ls
+cd library/
 c
-systemctl restart nginx
-systemctl status
-systemctl status
-systemctl restart nginx
-systemctl status nginx.service
-systemctl status nginx.service | pager
+ls
 c
-systemctl status nginx.service | pager
+ps aux | grep mongo
+c
+vim
+ls
+ls
+cd ..
 cd /etc/nginx/
 ls
 cd sites-available/
+ls
+c
+ls
 vim themxyzptlk 
-systemctl restart nginx
-c
-ls
-cd th
-vim themxyzptlk 
-c
-cd /var/www/dev/devmtn/angular/
-ls
-vim index.js 
-vim index.js 
-vim
-c
-cd ..
-ls
-cd books
-c
-vim
-ls
-cd .
-cd ..
-ls
-mv books movies
-ls
-cd movies
-ls
-cd /etc/nginx/sites-available/
-vim themxyzptlk 
-systemctl restart nginx
-c
-cd /var/www/dev/devmtn/
-ls
-cd movies
+cd ../sites-enabled/
 ls
 c
-ls
-vim 
-pm2 logs | pager
-pm2 logs | pager
-vim
-npm install cors --save
-c
-fg
-pm2 logs
-pm2 logs | pager
-c
-vim
-npm install mongoose --save
-c
-fg
-npm install express-session --save
-c
-fg
-vim /var/log/nginx/error.log
-c
-ls
-vim
-ps | grep mongod
-ps wuax | grep mongod
 c
 mongod
-v
 c
 fg
-c
-clear
+tmux attach -t mongo
+cd
+cd /var/log
+ls
+cd nginx/
+ls
+ls
+
+
+vim error.log
+vim error.log
 cd ..
 ls
-c
-pm2 list
-c
-mkdir library
-ls -al
-c
-c
-cd library/
-touch index.js
-pm2 start index.js -n library
+cd nginx/
+ls
+vim access.log
 c
 vim
-ngm git
-git add .
-git init
-git add .
-git commit -m "init"
 c
-npm init
+tmux ls
+tmux attach -t mongo
+tmux attach -t mongo
+tmux kill-session -t mongo
+tmux ls
+tmux ls
+ps aux | vim
+ps aux | grep vim
 c
-npm install body-parser --save
-npm install cors
-vim package.json 
-npm install cors --save
-vim package.json 
+tmux ls
+tmux new -s mongo
+tmux a -t mongo
+exit
+tmux a -t mongo
+tmux a -t mongo
+
+
+
+
+
+
+
 c
-npm install express --save
-c
-fg
-npm install mongojs --save
-c
-pm2 reload library
-c
-cd /etc/nginx/sites-available/
 ls
-vim themxyzptlk 
-fg
-systemctl restart nginx
+tmux ls
+tmux a -t mongo
+
+
+eixt
+exit
 c
-vim themxyzptlk 
-cd -
-fg
+tmux a -t mongo
 c
-pm2 logs
-pm2 logs | pager
+exit
 c
-fg
-vim /var/log/nginx/error.log
-vim /var/log/nginx/error.log
-vim /var/log/nginx/error.log
-pm2 reload library
 c
-vim /var/log/nginx/error.log
-vim /var/log/nginx/access.log
-fg
-pm2 reload library
+tmux ls
+tmux a -t mongo
 c
-vim /var/log/nginx/error.log
-pm2 logs | parser
-pm2 logs | pager 
+exit
 c
-fg
-cd ..
-ls
-cd ..
+exit
+c
+tmux ls
+tmux a -t mongo
+bd
+c
+exit
+cd /var/www/dev
 ls
 cd themxyzptlk/
-vim index.js 
-cd ..
 ls
-cd learn
-ls
-vim learn.js
 cd ..
 ls
 cd devmtn/
 ls
-cd angular/
-ls
-vim index.js 
-cd .
-cd ..
-fg
-c
-vim
-ls
 cd library/
 ls
-vim index.js 
+vim ind
+vim index.js
+cd ../
+ls
+git clone http://github.com/jacob-israel-turner/mini-birds.git
+ls
+cd mini-birds/
+ls
+c
+ls
+npm init
+ls
+vim birds.json 
+c
+npm i express body-parser cors mongojs --save-dev
+ls
+vim package.json 
+c
+ils
+ls
+vim
+c
+cd /etc/nginx/sites-available/
+vim themxyzptlk 
+cd /var/www/dev/devmtn/
+ls
+cd mini-birds/
+ls
 c
 ls
 vim index.js 
-pm2 reload library
-c
-fg
-fg
-vim
-pm2 reload library
-vim
-c
-mongodb
-mongod
-c
-ps uax | grep mongod
 pm2 list
+pm2 delete --watch
+pm2 delete --watch
+pm2 start --watch --name birds
 c
-pm2 reload library
+pm2 restart --watch --name "birds"
+pm2 list
+pm2 delete "--watch"
+pm2 
+pm2 | pager
+pm2 kill --watch
+pm2 lsit
+pm2 list
+cd ../
+ls
+cd .
+ls
+cd ..
+ls
+ls
+cd themxyzptlk/
+ls
+pm2 start index.js -n themxyzptlk --watch
+cd ../devmtn/mini-birds/
+ls
+pm2 start index.js -n birds --watch
 c
-fg
-pm2 reload library
-c
-fg
-ps uax | grep mongo
-c
-fg
-fg
-c
- 
-vim
-pm2 reload books
-c
-pm2 reload books
-c
-pm2 status
-npm install jshint -g
-c
-npm monit
-c
-pm2 monit
+pm2 list
+vim 
 pm2 logs
 pm2 logs | pager
-pm2 logs | pager
-clear
+:q
+c
+vim
+c
+ls
+vim
+e:wqa
+c
+vim
+cd dotfiles
+ls
+cd vimwiki/
+ls
+ls -al
+rm .Dev\ Mtn.wiki.swp 
+rm .DMWebAH\ -\ Syllabus.wiki.swp 
+c
+mongo
+systemctl restart nginx
+pm2
+pm2 list
+cd /var/www/dev
+cd devmtn
+ls
+cd mini-birds/
+ls
+cls
+ls
+pm2 start index.js -n --watch
+pm2 list
+pm2 delete --watch
+ls
+pm2 remove --watch
+ls
+pm2 list
+c
+cd
+cd /etc/nginx/sites-available/
+vim themxyzptlk 
+systemctl restart nginx
+c
+vim
+pm2 list
+pm2 reload birds
+pm2 list
+c
 pm2 monit
+pm2 list
+pm2 list
+pm2 list
+pm2 list
+mongo
 c
+cd 
+ls
 c
-cd /etc
+pm2 list
+c
+cd /var/log/nginx/
 ls
-cd nginx
+vim error.log
+vim access.log
+c
 ls
-cd sites-available/
-ls
-vim the
 cd ..
+ls
+cd mongodb/
+ls
+vim mongodb.log
+vim mongodb.log.1
+c
+ps aux | grep mongo
+c
+c
+cd
+c
+ls
+c
+pm2 list
+pm2 list
+pm2 list
+pm2 list
+monfo
+mongo
+c
+pm2 list
+pm2 list
+pm2 list
+lkjlk
+
+
+
+
+c
+vim
+mongod
+mongod
+ls
+ls
+ls
+c
+mongod
+c
+c
+tmux ls
+tmux ls
+tmux a -t mongo
+ls
+tmux ls
+tmux kill-session -t mongo
+c
+tmux ls
+tmux ls
+tmxu ls
+c
+tmux new -s mongo 
+c
+tmux a -t mongo
+fg
 c
 cd /var/www/dev
 ls
-cd /devmtn
+cd devmtn/
 ls
-cd devmtn
-ls
-c
-cd angular
-pm2 start index.js -n angular
-c
-pm2 start angular --watch
-lc
-c
-systemctl service restart nginx
-systemctl restart nginx
-journalctl -xe
-c
-ufw status
-c
-pm2 monit
-pm2 delete books
-cd ..
-ls
-cd books
-ls
-cd moviews
-cd movies/
-ls
-pm2 start index.js -n movies
-pm2 start movies --watch
-c
-pm2 monit
-c
-c
-pm2 monit
-clear
-cd /etc/nginx
-ls
-vim sites-available/themxyzptlk 
-cd -
-cd ../library/
-c
-cd /etc
-ls
-cd nginx
-ls
-cd sites-available/
+cd mini-birds/
 c
 ls
-vim themxyzptlk 
-c
-pm2 ist
-pm2 list
-pm2 monit
-cd
-c
-pm2 reload library
-pm2 reload library
-pm2 reload library
-pm2 reload library
-pm2 reload library
-pm2 reload library
-pm2 reload library
-c
-pm2 reload library
-pm2 reload library
-pm2 reload library
-pm2 library --watch
-pm2 start library --watch
-c
-pm2 monit
-c
-ps wuax | mongod
-c
-mongod
-c
-tmux attach -t devmtn
-d
-vim
-c
-vim
-vim
-c
-vim
-
-
-c
-vim
-c
-c
-ps -aux | grep mongo
-which mongo.conf
-cd /etc
+tmux a -t mongo
 ls
-cd ..
+vim inde
+vim index.js 
 ls
-cd bin
-ls
-mongod
+vim birds.json 
+vim birds.json 
+tmux
 c
+tmux a -t mongo
+exit
 ls
-vim
-:q
-c
-ls
-ps 
-ps 
-c
+vim birds.json 
+vim birds.json 
 tmux ls
-vim
-c
-tmux new -s devmtn
-ls
+tmux kill-session -t 1
+tmux la
+tmus ls
 tmux ls
-tmux kill-session -t devmtn
-tmux new -s devmtn
+tmux a -t mongo
+cd /var/www/dev/devmtn/
+ls
+cd mini-birds/
+ls
+tmux
+c
+ls
 ls
 c
+ls
+c
+ls
+]
+tmux ls
+tmux kill-session -t 2
+tmux a -t mongo
+vim
+tmux a -t mongo
+exit
+c
+ls
 c
 ls
 tmux ls
-tmux kill-session -t devmtn
-ls
-c
-ps aux 
-ps aux | pager
-c
-exit
-mongod
-exit
-vim
-mongo
-mongo
-mongo
-c
-mongo
-mongodb://mongo_admin:password@localhost/
-mongo
-exit
-mongod
-c
-cd
-mongod
-fg
-clear
-exit
-c
-ls
-ls -al
-which data
-find -name data
-find . -name data
-find . -fname data
-mkdir data/
-cd data
-mkdir db
-cd db
-c
-cd /bin
-ls
-cd /etc
-ls
-cd bin
-ls
-which bin
-cd ..
-ls
-c
-ls
-cd usr
-ls
-cd bin
-ls
-cd ..
-ls
-c
-ls
-cd ..
-ls
-c
-which mongo
-cd /usr/bin/mongo
-ls
-cd /usr
-cd bin
-ls
-ls | grep mon
-mongod
-c
-tmux ls
-tmux new -s devmtn
-exit
-c
-tmux ls
-ps -aux | grep mongo
-mongod
-c
-tmux new -s mongo
-exit
-tmux attach -t mongo
-c
-ps -aux
-q
-c
-cd dotfiles
-ls
-xt
+tmux a -t mongo
 exit

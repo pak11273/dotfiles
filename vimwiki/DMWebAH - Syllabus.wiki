@@ -603,16 +603,17 @@ Today's Survey
             - [ ] Trello App (Use this to reference the Github repo)
             - [ ] Trello App Project Guide - Day 3 (Use this to start and build the project)
             - [ ] Additional Reading:
-* [ ] Week 11
+* [.] Week 11
 
-    * [ ] Day 1 - MongoDB I
+    * [o] Day 1 - MongoDB I
 
-        * [ ] Lesson Video:
-            - [ ] Mongo I - 1 hour 41 minutes todo 1:20
+        * [X] Lesson Video:
+            - [X] Mongo I - 1 hour 41 minutes 
                     https://vimeo.com/140831164
-        * [ ] Before class:
-            - [ ] Make sure you've installed MongoDB (Mac or PC)
-        * [ ] Mini Project:
+            - [ ] later: get delete function to work            
+        * [X] Before class:
+            - [X] Make sure you've installed MongoDB (Mac or PC)
+        * [ ] Mini Project: todo
             - [ ] Birds:
                     https://github.com/jacob-israel-turner/mini-birds.git
         * [ ] Learning Objectives
