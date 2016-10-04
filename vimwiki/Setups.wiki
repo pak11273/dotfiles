@@ -1,4 +1,4 @@
-* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [O] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
 
@@ -12,7 +12,7 @@
 
     * [X] = [[#PM2]]=
 
-    * [ ] = [[#Multiple Apps ]]=
+    * [X] = [[#Multiple Apps ]]=
  
     * [ ] = [[#tmux setup]] =
  
@@ -230,6 +230,8 @@ done
 
 * [ ] completed
     - [ ] start a tmux session
+    - [ ] git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    - [ ] tmux source ~/.tmux.conf
     - [ ] prefix + I //installs plugins
  
 = mongodb setup = 
