@@ -1,18 +1,18 @@
-== Follow these in order to setup a basic node server framework  on Digital Ocean ==
+* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
-= [[#Ubuntu Server Setup ]]=
+    * [X] = [[#Dotfiles setup]] =
 
-= [[#NGinx Setup ]]=
+    * [X] = [[#VIM setup]] =
+    
+    * [ ] = [[#Ubuntu Server Setup ]]=
 
-= [[#Node Setup ]]=
+    * [ ] = [[#NGinx Setup ]]=
 
-= [[#PM2 ]]=
+    * [ ] = [[#Node Setup ]]=
+
+    * [ ] = = [[#PM2 ]]=
 
 = [[#Multiple Apps ]]=
-
-= [[#VIM setup]] =
-
-= [[#Dotfiles setup]] =
 
 = [[#tmux setup]] =
 
@@ -148,17 +148,10 @@
           sudo apt-get remove vim vim-runtime gvim
     * [X] cd ~
     * [X] git clone https://github.com/vim/vim.git
+    * [X] cd vim
     * [X] c/p in command line:
-    * [X] ./configure --with-features=huge \
-            --enable-multibyte \
-            --enable-rubyinterp \
-            --enable-pythoninterp \
-            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
-            --enable-python3interp \
-            --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
-            --enable-perlinterp \
-            --enable-luainterp \
-            --enable-gui=gtk2 --enable-cscope --prefix=/usr
+    * [X] 
+./configure --with-features=huge --enable-multibyte --enable-rubyinterp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-python3interp --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu --enable-perlinterp --enable-luainterp --enable-gui=gtk2 --enable-cscope --prefix=/usr
     * [X] make VIMRUNTIMEDIR=/usr/share/vim/vim80
     * [X] sudo apt-get install checkinstall
     * [X] cd vim
