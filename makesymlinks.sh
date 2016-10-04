@@ -30,4 +30,5 @@ for file in $files; do
 	mv ~/.$file ~/dotfiles_old/
 	echo "Creating symlink to $file in home directory."
 	ln -s $dir/$file ~/.$file
+    ln -s $dir/vimwiki ~/vimwiki
 done

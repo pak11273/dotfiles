@@ -16,4 +16,8 @@ chmod +x makesymlinks.sh
 
 ./makesymlinks.sh
 
+## Vundle
 
+Download vundle and git clone repo
+
+vim and :PluginInstall
