@@ -4,21 +4,21 @@
 
     * [X] = [[#VIM setup]] =
     
-    * [ ] = [[#Ubuntu Server Setup ]]=
+    * [X] = [[#Ubuntu Server Setup ]]=
 
-    * [ ] = [[#NGinx Setup ]]=
+    * [X] = [[#NGinx Setup ]]=
 
-    * [ ] = [[#Node Setup ]]=
+    * [X] = [[#Node Setup ]]=
 
-    * [ ] = = [[#PM2 ]]=
+    * [X] = [[#PM2]]=
 
-= [[#Multiple Apps ]]=
-
-= [[#tmux setup]] =
-
-= [[#mongodb setup]] =
-
-= [[#node debugger]] =
+    * [ ] = [[#Multiple Apps ]]=
+ 
+    * [ ] = [[#tmux setup]] =
+ 
+    * [ ] = [[#mongodb setup]] =
+ 
+    * [ ] = [[#node debugger]] =
 
 
 = [[#basic app framework]] =
@@ -48,11 +48,12 @@
         - [X] vim ~/.ssh/authorized_keys
         - [X] paste public key
         - [X] exit
-    * [X] Disable password authentication (optional)
-        - [X] allows only ssh keys access to server
-        - [X] vim /etc/ssh/sshd_config
-        - [X] PasswordAuthentication no
-        - [X] systemctl reload sshd
+    * Disable password authentication (optional)
+        * UPDATE: Do not do this step.  It will prevent Putty from using passphrase for your ssh key.  Reference only:
+        * allows only ssh keys access to server
+        * vim /etc/ssh/sshd_config
+        * PasswordAuthentication no
+        * systemctl reload sshd
     * [X] Basic firewall
         - [X] ufw allow OpenSSH
         - [X] ufw enable
@@ -62,41 +63,44 @@
 * [O] completed 
     - [X] apt-get update
     - [X] apt-get install nginx
-    * [O] I. adjust firewall
+    * [X] I. adjust firewall
         - [X] ufw allow 'Nginx Full'
         - [X] ufw status
         - [X] systemctl status nginx
-        - [X] apt-get curl
+        - [X] apt-get install curl
     * [ ] add php and js to file extensions: later
         - [ ] cd /etc/nginx
         - [ ] vim nginx.conf
         - [ ] Add this line:
 
 == Node Setup ==
-* [X] completed 
+* [.] completed 
     - [X] apt-get update
-    - [X] wget <tar link>
-    - [X] mkdir node
-    - [X] tar xvf node-v*.tar.?z --strip-components=1 -C ./node
-    - Next, we'll configure the global prefix of npm, where npm will create symbolic links to installed Node packages, to somewhere that it's in your default path. We'll set it to /usr/local with this command:
-    - [X] mkdir node/etc
-    - [X] echo 'prefix=/usr/local' > node/etc/npmrc
-    - [X] move node/npm binaries to install loc:
-        - [X] sudo mv node /opt/
-    - [X] sudo chown -R root: /opt/node
-    - [X] sudo ln -s /opt/node/bin/node /usr/local/bin/node
-    - [X] sudo ln -s /opt/node/bin/npm /usr/local/bin/npm
-	
+    - [X] apt-get install nodejs
+    - [X] apt-get install npm
+    - [ ] sudo apt-get install build-essential libssl-dev
+    - [ ] sudo apt-get install build-essential libssl-dev
+    - [ ] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+    - [ ] bash install_nvm.sh 
+    - [ ] source ~/.profile
+    * [ ] get latest node version
+        - [ ] nvm install 6.7.0 ( or latest version ) 
+        - [ ] nvm use 6.7.0
+        * useful commands:
+            * nvm ls //see what version installed
+            * node -v  //see what version you are using
+            * nvm alias default 6.0.0 //use this version as default
 
 == PM2 ==
-* [X] completed
+* [O] completed
     - [X] npm install pm2 -g
     - [X] pm2 startup ubuntu
     - [X] copy/paste the line it provides  
-        - this sets pm2 to start on boot
-    - [X] pm2 start <server name>
-        - other pm2 commands:
-        - pm2 stop,restart,list,info,monit
+        * this sets pm2 to start on boot
+        * 
+    * other pm2 commands:
+        * pm2 start <server name>
+        * pm2 stop,restart,list,info,monit
 
 == Multiple Apps ==
 * [X] completed
