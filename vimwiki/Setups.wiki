@@ -18,6 +18,8 @@
  
     * [X] = [[#mongodb setup]] =
     
+    * [ ] = [[#server security]] =
+    
     * [ ] = [[#robomongo]] =  
  
     * [ ] = [[#node debugger]] =
@@ -345,8 +347,15 @@ done
     - [ ] comment out bindIp: 127.0.0.1
     - [ ] service mongod restart
 
- 
- 
+= server security =
+* [ ] completed
+    * [ ] to be reviewed
+        * [ ] UFW
+    * [ ] Useful audit command:
+        * [ ] sudo netstat -plunt
+    * [ ] Tripwire
+        * [ ] to be reviewed
+   
  
  
  
