@@ -613,13 +613,16 @@ Today's Survey
             - [ ] later: get delete function to work            
         * [X] Before class:
             - [X] Make sure you've installed MongoDB (Mac or PC)
-        * [ ] Mini Project: todo
-            - [ ] Birds:
+        * [.] Mini Project: todo
+            - [.] Birds:
                     https://github.com/jacob-israel-turner/mini-birds.git
-        * [ ] Learning Objectives
-            - [ ] Understand the DB's place in the web app landscape (MongoDB vs DBaaS like Firebase)
-            - [ ] Understand DBs, Collections, and Documents
-            - [ ] Understand CRUD operations with MongoDB
+                    - [X] Step 1
+                    - [ ] Step 2
+                    - [ ] Step 3
+        * [X] Learning Objectives
+            - [X] Understand the DB's place in the web app landscape (MongoDB vs DBaaS like Firebase)
+            - [X] Understand DBs, Collections, and Documents
+            - [X] Understand CRUD operations with MongoDB
         * [ ] Project:
             - [ ] Trello App (Use this to reference the Github repo)
             - [ ] Trello App Project Guide - Day 4 (Use this to start and build the project)

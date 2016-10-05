@@ -16,7 +16,9 @@
  
     * [X] = [[#tmux setup]] =
  
-    * [ ] = [[#mongodb setup]] =
+    * [X] = [[#mongodb setup]] =
+    
+    * [ ] = [[#robomongo]] =  
  
     * [ ] = [[#node debugger]] =
 
@@ -336,7 +338,12 @@ done
     - [ ] cd root
     - [ ] bower install 
     - [ ] pm2 start index.js -n <app name>
-    - [ ] 
+    
+= robomongo = 
+* [ ] completed
+    - [ ] vim /etc/mongod.conf 
+    - [ ] comment out bindIp: 127.0.0.1
+    - [ ] service mongod restart
 
  
  
