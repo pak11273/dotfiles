@@ -179,6 +179,9 @@ let g:syntastic_html_tidy_exec = 'tidy'
 let g:syntastic_html_checkers = ['validator']
 " let g:syntastic_scss_checkers = ["tidy"]
 
+" CSS syntastic settings
+let g:syntastic_css_checers = ['csslint']
+
 " XML syntastic settings
 let g:syntastic_xml_checkers=["xmllint"]
 
