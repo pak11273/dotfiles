@@ -158,9 +158,9 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 
 " On by default, turn it off for html
-" let g:syntastic_mode_map = { 'mode': 'active',
-"             \ 'active_filetypes': [''] }
-"          "   \ 'passive_filetypes': ['html'] }
+let g:syntastic_mode_map = { 'mode': 'active',
+           \ 'passive_filetypes': ['html'] }
+            " \ 'active_filetypes': [''] }
 
 " Use jshint (uses ~/.jshintrc)
 let g:syntastic_javascript_checkers = ['jshint']
@@ -175,12 +175,12 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_scss_checkers = ['scss_lint']
 
 " HTML5 syntastic settings
-let g:syntastic_html_tidy_exec = 'tidy'
-let g:syntastic_html_checkers = ['validator']
+" let g:syntastic_html_tidy_exec = 'tidy'
+" let g:syntastic_html_checkers = ['validator']
 " let g:syntastic_scss_checkers = ["tidy"]
 
 " CSS syntastic settings
-let g:syntastic_css_checers = ['csslint']
+let g:syntastic_css_checkers = ['csslint']
 
 " XML syntastic settings
 let g:syntastic_xml_checkers=["xmllint"]
