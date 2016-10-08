@@ -351,6 +351,9 @@ done
 * [ ] completed
     * [ ] to be reviewed
         * [ ] UFW
+            * [ ] allow x11 port forwarding
+                - [ ] sudo ufw allow 6000:6063/tcp
+                - [ ] sudo ufw allow 6000:6063/udp
     * [ ] Useful audit command:
         * [ ] sudo netstat -plunt
     * [ ] Tripwire
