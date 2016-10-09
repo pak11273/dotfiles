@@ -1,22 +1,22 @@
-* [O] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [.] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
 
     * [X] = [[#VIM setup]] =
     
-    * [X] = [[#Ubuntu Server Setup ]]=
+    * [ ] = [[#Ubuntu Server Setup ]]=
 
-    * [X] = [[#NGinx Setup ]]=
+    * [ ] = [[#NGinx Setup ]]=
 
-    * [X] = [[#Node Setup ]]=
+    * [ ] = [[#Node Setup ]]=
 
-    * [X] = [[#PM2]]=
+    * [ ] = [[#PM2]]=
 
-    * [X] = [[#Multiple Apps ]]=
+    * [ ] = [[#Multiple Apps ]]=
  
-    * [X] = [[#tmux setup]] =
+    * [ ] = [[#tmux setup]] =
  
-    * [X] = [[#mongodb setup]] =
+    * [ ] = [[#mongodb setup]] =
     
     * [ ] = [[#server security]] =
     
@@ -34,54 +34,55 @@
 
 
 == Ubuntu Server Setup ==
-* [X] Setup
+* [o] Setup
     - [X] Create a droplet/iso
     * [X] SSH
         - [X] create ssh keys if you dont have:
-        - [X] type this in shell:
-            - [X] ssh-keygen -t rsa -C "your_email@example.com"
+        * [X] type this in shell:
+            - [X] ssh-keygen -t rsa -C "pak11273@gmail.com"
         - [X] add linux distro
-        - [X] upload public key to server
-    * [X] Add superuser
-        - [X] adduser pak11273
-        - [X] usermod -aG sudo pak11273
-        - [X] copy public key
-        - [X] login as root and su pak11273
-        - [X] mkdir ~/.ssh
-        - [X] chmod 700 ~/.ssh
-        - [X] vim ~/.ssh/authorized_keys
-        - [X] paste public key
-        - [X] exit
+        * [X] create key in putty
+            - [X] upload public key to server
+    * [ ] Add superuser
+        - [ ] adduser pak11273
+        - [ ] usermod -aG sudo pak11273
+        - [ ] copy public key
+        - [ ] login as root and su pak11273
+        - [ ] mkdir ~/.ssh
+        - [ ] chmod 700 ~/.ssh
+        - [ ] vim ~/.ssh/authorized_keys
+        - [ ] paste public key
+        - [ ] exit
     * Disable password authentication (optional)
         * UPDATE: Do not do this step.  It will prevent Putty from using passphrase for your ssh key.  Reference only:
         * allows only ssh keys access to server
         * vim /etc/ssh/sshd_config
         * PasswordAuthentication no
         * systemctl reload sshd
-    * [X] Basic firewall
-        - [X] ufw allow OpenSSH
-        - [X] ufw enable
-        - [X] ufw status
+    * [ ] Basic firewall
+        - [ ] ufw allow OpenSSH
+        - [ ] ufw enable
+        - [ ] ufw status
 
 == NGinx Setup ==
-* [O] completed 
-    - [X] apt-get update
-    - [X] apt-get install nginx
-    * [X] I. adjust firewall
-        - [X] ufw allow 'Nginx Full'
-        - [X] ufw status
-        - [X] systemctl status nginx
-        - [X] apt-get install curl
+* [ ] completed 
+    - [ ] apt-get update
+    - [ ] apt-get install nginx
+    * [ ] I. adjust firewall
+        - [ ] ufw allow 'Nginx Full'
+        - [ ] ufw status
+        - [ ] systemctl status nginx
+        - [ ] apt-get install curl
     * [ ] add php and js to file extensions: later
         - [ ] cd /etc/nginx
         - [ ] vim nginx.conf
         - [ ] Add this line:
 
 == Node Setup ==
-* [.] completed 
-    - [X] apt-get update
-    - [X] apt-get install nodejs
-    - [X] apt-get install npm
+* [ ] completed 
+    - [ ] apt-get update
+    - [ ] apt-get install nodejs
+    - [ ] apt-get install npm
     - [ ] sudo apt-get install build-essential libssl-dev
     - [ ] sudo apt-get install build-essential libssl-dev
     - [ ] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
@@ -96,10 +97,10 @@
             * nvm alias default 6.0.0 //use this version as default
 
 == PM2 ==
-* [O] completed
-    - [X] npm install pm2 -g
-    - [X] pm2 startup ubuntu
-    - [X] copy/paste the line it provides  
+* [ ] completed
+    - [ ] npm install pm2 -g
+    - [ ] pm2 startup ubuntu
+    - [ ] copy/paste the line it provides  
         * this sets pm2 to start on boot
         * 
     * other pm2 commands:
@@ -107,10 +108,10 @@
         * pm2 stop,restart,list,info,monit
 
 == Multiple Apps ==
-* [X] completed
-	- [X] /etc/nginx/sites-available:
-        - [X] Create a file of the appname. 
-        - [X] c/p:
+* [ ] completed
+	- [ ] /etc/nginx/sites-available:
+        - [ ] Create a file of the appname. 
+        - [ ] c/p:
             - change APP_PRIVATE_IP_ADDRESS to 127.0.0.1 or localhost and server_name
             
 {{{	
@@ -131,8 +132,8 @@
 }
 }}}
 
-* [X] basic structure of an app
-      - [X] c/p inside the server filename:
+* [ ] basic structure of an app
+      - [ ] c/p inside the server filename:
           - This file is usually inside /var/www/dev/<appname> 
           - where private_ip_addr use 127.0.0.1 
     {{{
@@ -152,18 +153,18 @@
           libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
           python3-dev ruby-dev lua5.1 lua5.1-dev git
     
-    * [X] remove vim: 
+    - [X] remove vim: 
           sudo apt-get remove vim vim-runtime gvim
     * [X] cd ~
     * [X] git clone https://github.com/vim/vim.git
     * [X] cd vim
     * [X] c/p in command line:
-    * [X] 
+        - [X] 
 ./configure --with-features=huge --enable-multibyte --enable-rubyinterp --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-python3interp --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu --enable-perlinterp --enable-luainterp --enable-gui=gtk2 --enable-cscope --prefix=/usr
-    * [X] make VIMRUNTIMEDIR=/usr/share/vim/vim80
-    * [X] sudo apt-get install checkinstall
-    * [X] cd vim
-    * [X] sudo checkinstall
+    - [X] make VIMRUNTIMEDIR=/usr/share/vim/vim80
+    - [X] sudo apt-get install checkinstall
+    - [X] cd vim
+    - [X] sudo checkinstall
 
 = Dotfiles setup =
 * [X] completed part 1
@@ -204,31 +205,31 @@ for file in $files; do
 done
 }}}
 
-    * [O] completed part 2
+    * [o] completed part 2
           - [X] create github repo
           - [X] upload to repo:
           - any changes you make to dotfiles, add them to your makesymlinks.sh file
-          - [o] Add plugins:
-              - [X] Plugin 'vundle' " vim manager
-              - [X] Plugin 'vimwiki/vimwiki' " store your vim note here
-              - [X] Plugin 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-              - [X] Plugin 'vim-airline/vim-airline-themes'
-              - [X] Plugin 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
+          - [ ] Add plugins:
+              - [ ] Plugin 'vundle' " vim manager
+              - [ ] Plugin 'vimwiki/vimwiki' " store your vim note here
+              - [ ] Plugin 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+              - [ ] Plugin 'vim-airline/vim-airline-themes'
+              - [ ] Plugin 'christoomey/vim-tmux-navigator' " tmux + vim seamless navigation
 
-              - [X] Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-              - [X] Plugin 'scrooloose/syntastic'
+              - [ ] Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+              - [ ] Plugin 'scrooloose/syntastic'
               - [ ] " Plugin 'ervandew/supertab' " use <tab> insert completion
-              - [X] Plugin 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
-              - [X] Plugin 'tpope/vim-fugitive' " git wrapper for vim
+              - [ ] Plugin 'tpope/vim-surround' " surround code with parens, brackets, quotes, etc
+              - [ ] Plugin 'tpope/vim-fugitive' " git wrapper for vim
               - [ ] Plugin 'tpope/vim-commentary' " comments out code
               - [ ] " Plugin 'tobyS/vmustache' | Plug 'tobyS/pdv' " php documente
               - [ ] " Plugin 'SirVer/ultisnips' " create snippets ( needs python support )
-              - [X] Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder
+              - [ ] Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder
               - [ ] Plugin 'MarcWeber/vim-addon-mw-utils' " dependency for vim snips
               - [ ] Plugin 'tomtom/tlib_vim' " dependency for vim snips
               - [ ] Plugin 'garbas/vim-snipmate' " vim snips 
               - [ ] Plugin 'honza/vim-snippets' " vim snips 
-              - [X] Plugin 'flazz/vim-colorschemes' " vim colorschemes 
+              - [ ] Plugin 'flazz/vim-colorschemes' " vim colorschemes 
 
 = tmux setup = 
 
