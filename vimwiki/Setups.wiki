@@ -1,24 +1,26 @@
-* [.] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
 
     * [X] = [[#VIM setup]] =
     
-    * [ ] = [[#Ubuntu Server Setup ]]=
+    * [X] = [[#Ubuntu Server Setup ]]=
 
-    * [ ] = [[#NGinx Setup ]]=
+    * [X] = [[#NGinx Setup ]]=
 
-    * [ ] = [[#Node Setup ]]=
+    * [X] = [[#Node Setup ]]=
 
-    * [ ] = [[#PM2]]=
+    * [X] = [[#PM2]]=
 
-    * [ ] = [[#Multiple Apps ]]=
+    * [X] = [[#Multiple Apps ]]=
  
     * [ ] = [[#tmux setup]] =
  
     * [ ] = [[#mongodb setup]] =
     
     * [ ] = [[#server security]] =
+    
+    * [ ] = [[#daily monitor]] =
     
     * [ ] = [[#robomongo]] =  
  
@@ -34,7 +36,7 @@
 
 
 == Ubuntu Server Setup ==
-* [o] Setup
+* [X] Setup
     - [X] Create a droplet/iso
     * [X] SSH
         - [X] create ssh keys if you dont have:
@@ -43,66 +45,64 @@
         - [X] add linux distro
         * [X] create key in putty
             - [X] upload public key to server
-    * [ ] Add superuser
-        - [ ] adduser pak11273
-        - [ ] usermod -aG sudo pak11273
-        - [ ] copy public key
-        - [ ] login as root and su pak11273
-        - [ ] mkdir ~/.ssh
-        - [ ] chmod 700 ~/.ssh
-        - [ ] vim ~/.ssh/authorized_keys
-        - [ ] paste public key
-        - [ ] exit
+    * [X] Add superuser
+        - [X] adduser pak11273
+        - [X] usermod -aG sudo pak11273
+        - [X] copy public key
+        - [X] login as root and su pak11273
+        - [X] mkdir ~/.ssh
+        - [X] chmod 700 ~/.ssh
+        - [X] vim ~/.ssh/authorized_keys
+        - [X] paste public key
+        - [X] exit
     * Disable password authentication (optional)
         * UPDATE: Do not do this step.  It will prevent Putty from using passphrase for your ssh key.  Reference only:
         * allows only ssh keys access to server
         * vim /etc/ssh/sshd_config
         * PasswordAuthentication no
         * systemctl reload sshd
-    * [ ] Basic firewall
-        - [ ] ufw allow OpenSSH
-        - [ ] ufw enable
-        - [ ] ufw status
+    * [X] Basic firewall
+        - [X] ufw allow OpenSSH
+        - [X] ufw enable
+        - [X] ufw status
 
 == NGinx Setup ==
-* [ ] completed 
-    - [ ] apt-get update
-    - [ ] apt-get install nginx
-    * [ ] I. adjust firewall
-        - [ ] ufw allow 'Nginx Full'
-        - [ ] ufw status
-        - [ ] systemctl status nginx
-        - [ ] apt-get install curl
+* [O] completed 
+    - [X] apt-get update
+    - [X] apt-get install nginx
+    * [X] I. adjust firewall
+        - [X] ufw allow 'Nginx Full'
+        - [X] ufw status
+        - [X] systemctl status nginx
+        - [X] apt-get install curl
     * [ ] add php and js to file extensions: later
         - [ ] cd /etc/nginx
         - [ ] vim nginx.conf
         - [ ] Add this line:
 
 == Node Setup ==
-* [ ] completed 
-    - [ ] apt-get update
-    - [ ] apt-get install nodejs
-    - [ ] apt-get install npm
-    - [ ] sudo apt-get install build-essential libssl-dev
-    - [ ] sudo apt-get install build-essential libssl-dev
-    - [ ] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-    - [ ] bash install_nvm.sh 
-    - [ ] source ~/.profile
-    * [ ] get latest node version
-        - [ ] nvm install 6.7.0 ( or latest version ) 
-        - [ ] nvm use 6.7.0
+* [X] completed 
+    - [X] apt-get update
+    - [X] apt-get install nodejs
+    - [X] apt-get install npm
+    - [X] sudo apt-get install build-essential libssl-dev
+    - [X] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+    - [X] bash install_nvm.sh 
+    - [X] source ~/.profile
+    * [X] get latest node version
+        - [X] nvm install 6.7.0 ( or latest version ) 
+        - [X] nvm use 6.7.0
         * useful commands:
             * nvm ls //see what version installed
             * node -v  //see what version you are using
             * nvm alias default 6.0.0 //use this version as default
 
 == PM2 ==
-* [ ] completed
-    - [ ] npm install pm2 -g
-    - [ ] pm2 startup ubuntu
-    - [ ] copy/paste the line it provides  
+* [X] completed
+    - [X] npm install pm2 -g
+    - [X] pm2 startup ubuntu
+    - [X] copy/paste the line it provides  
         * this sets pm2 to start on boot
-        * 
     * other pm2 commands:
         * pm2 start <server name>
         * pm2 stop,restart,list,info,monit
@@ -132,9 +132,9 @@
 }
 }}}
 
-* [ ] basic structure of an app
-      - [ ] c/p inside the server filename:
-          - This file is usually inside /var/www/dev/<appname> 
+* [X] basic structure of an app
+      - [X] c/p inside the server filename:
+          - [X] This file is usually inside /var/www/dev/<appname> 
           - where private_ip_addr use 127.0.0.1 
     {{{
 	var http = require('http');
@@ -349,7 +349,7 @@ done
     - [ ] service mongod restart
 
 = server security =
-* [ ] completed
+* [.] completed
     * [ ] to be reviewed
         * [ ] UFW
             * [ ] allow x11 port forwarding
@@ -357,13 +357,173 @@ done
                 - [ ] sudo ufw allow 6000:6063/udp
     * [ ] Useful audit command:
         * [ ] sudo netstat -plunt
-    * [ ] Tripwire
-        * [ ] to be reviewed
+    * [ ] Nginx Setup
+        - [ ] vim /etc/nginx/nginx.conf
+            * [ ] add this to file:
+            limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s;
+            limit_req_status 444;
+            map $remote_addr $rt_filtered_ip {
+               default $binary_remote_addr;
+               # list other ips below
+               # ie. 1.2.3.4 ""; //make sure you use "" in 2nd column for every ip
+            }
+        * [ ] prevent info disclosure
+            - [ ] vim /etc/nginx/nginx.conf
+                - [ ] uncomment server_tokens off;
+                - [ ] sudo service nginx reload
+            * [ ] add this to server block of each server:
+                * [ ] vim /etc/nginx/sites-available/<server>
+                    - [ ] error_page 401 403 404 /404.html;
+                    - [ ] sudo service nginx reload
+        * [ ] SSL with Let's Encrypt 
+            * [ ] reference: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+            - [ ] ensure you have a domain name and A records to www and @
+            - [ ] sudo apt-get update
+            - [ ] sudo apt-get install letsencrypt
+            - [ ] vim /etc/nginx/sites-available/<server>
+                    location ~/.well-known {
+                        root /var/www;
+                        allow all;
+                    }
+            - [ ] search for nginx errors:
+                    sudo nginx -t 
+            - [ ] sudo systemctl restart nginx 
+            - [ ] use the following to encrypt a site:
+                - sudo letsencrypt certonly -a webroot --webroot-path=/var/www -d example.com -d www.example.com
+                * letsencrypt notes:
+                    * cert and chains saved at /etc/letsencrypt/live/<domain.com>/fullchain.pem.
+                    * expires at a later date, to renew simply run letsencrypt again
+                    * account data saved at /etc/letsencrypt which contains certs and private keys, make regular backups of this folder.
+            * [ ] generate a strong Diffie-Hellman group:
+                - [ ] sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+                    * it will reside in /etc/ssl/certs/dhparam.pem 
+            * [ ] Now use your ssl cert
+                - [ ] vim /etc/nginx/snippets/ssl-pak11273.com.conf
+                - [ ] add these lines, but change "example" to your domain: 
+                    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+                    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+            * [ ] vim /etc/nginx/snippets/ssl-params.conf 
+            * [ ] add the following:
+               # from https://cipherli.st/
+               # and https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html
+               ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+               ssl_prefer_server_ciphers on;
+               ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+               ssl_ecdh_curve secp384r1;
+               ssl_session_cache shared:SSL:10m;
+               ssl_session_tickets off;
+               ssl_stapling on;
+               ssl_stapling_verify on;
+               resolver 8.8.8.8 8.8.4.4 valid=300s;
+               resolver_timeout 5s;
+               # Disable preloading HSTS for now.  You can use the commented out header line that includes
+               # the "preload" directive if you understand the implications.
+               #add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+               add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+               add_header X-Frame-Options DENY;
+               add_header X-Content-Type-Options nosniff;
+
+               ssl_dhparam /etc/ssl/certs/dhparam.pem;
+
+                * to learn more about what this does, read here:
+                     https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+            * [ ] Make a backup of your server file:
+                - [ ] sudo cp /etc/nginx/sites-available/<server file> 
+            * [ ] Modify unencrypted http reqa to redirect to encrypted https 
+            * [ ] Add this line to /etc/nginx/sites-available/<server file>:
+                server_name example.com www.example.com;
+                return 301 https://$server_name$request_uri;
+               
+               
+            * [ ] Add another server block to the above file (replace example.com with your domain): 
+                  server {
+                    # SSL Config
+                    
+                    listen 443 ssl http2 default_server;
+                    listen [::]:443 ssl http2 default_server;
+                    include snippets/ssl-example.com.conf;
+                    include snippets/ssl-params.conf;
+                  }
+                  
+            * [ ] Seee this website if you need to include http too:
+                * [ ] https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+            * [ ] Adjust ufw now 
+                - [ ] Ensure ufw status says "Nginx Full"
+                * [ ] test nginx for errors
+                    - [ ] sudo nginx -t
+                - [ ] sudo systemctl restart nginx
+                * [ ] ssl test goto:
+                    - [ ]https://www.ssllabs.com/ssltest/analyze.html?d=example.com
+                            
+            * [ ] Restrict IP
+                - [ ] in your server file in the server block, add this line and replace with your ip.  (great for wp sites for /wp-admin directory.  use for admin folders etc:
+                    location /<folders>/ {
+                        allow <ipaddress>/24;
+                        allow <another ipaddress>/24;
+                        deny all;
+                    }
+                - [ ] sudo service nginx reload 
+            * [ ] wapiti audit software 
+                - [ ] sudo apt-get install wapiti
+            * [ ] Create cronjob for letsencrypt
+                - [ ] sudo crontab -e
+                    - [ ] add these lines:
+                        30 2 * * 1 /usr/bin/letsencrypt renew >> /var/log/le-renew.log
+                        35 2 * * 1 /bin/systemctl reload nginx
+                     
+                                      
+        * [.] fail2ban
+            - [X] apt-get install fail2ban
+            - [ ] vim /etc/fail2ban/filter.d/nginx-req-limit.conf
+                * [ ] add this text:
+           # Fail2Ban configuration file
+           #
+           # supports: ngx_http_limit_req_module module
+           
+           [Definition]
+           
+           failregex = limiting requests, excess:.* by zone.*client: <HOST>
+           
+           # Option: ignoreregex
+           # Notes.: regex to ignore. If this regex matches, the line is ignored.
+           # Values: TEXT
+           #
+           ignoreregex =
+            * [ ] jail config 
+                - [ ] cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+                - [ ] add following:
+           [nginx-req-limit]
+           
+           enabled = true
+           filter = nginx-req-limit
+           action: iptables-multiport[name=ReqLimit, port="http,https", protocol=tcp]
+           logpath = /var/log/nginx/*error.log
+       findtime = 600
+       bantime = 7200
+       maxretry = 10
+            - [ ] service fail2ban restart 
+       
+       
+
+       
    
- 
- 
- 
- 
+== daily monitor == 
+* [ ] Check logs for suspicious activity
+    - [ ] tail -f /var/www/dev/pak11273/logs/*.log | egrep "login|444"
+        * if you site is under attack you will seee something like this:
+        * 2013/08/23 04:17:03 [error] 256554#0: *99927 limiting requests, excess: 1.852 by zone "one", client: 1.2.3.4, server: example.com, request: "GET /wp-login.php HTTP/1.0", host: "exmaple.com"
+* [ ] use this to simulate an attack:
+        - ab -n 100 -c 10 107.170.216.170/index.js
+        * later: this makes requests, but doesn't produce errors
+* [ ] see what ips are snooping ssh
+    - [ ] tail -f /var/log/fail2ban.log
+        * [ ] look for lines that ban ip
+* [ ] see jailed ips
+    - [ ] fail2ban-client status nginx-req-limit 
+* [ ] wapiti scan
+    - [ ] wapiti http://example.org -n 10 -b folder
+    - [ ] use bash to scp file to local and read it
+    - [ ] check this output every month to make sure letsencrypt is renewing: /var/log/le-renew.log
  
  
  
