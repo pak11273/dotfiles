@@ -14,11 +14,9 @@
 
     * [X] = [[#Multiple Apps ]]=
  
-    * [ ] = [[#tmux setup]] =
- 
     * [ ] = [[#mongodb setup]] =
     
-    * [ ] = [[#server security]] =
+    * [X] = [[#server security]] =
     
     * [ ] = [[#daily monitor]] =
     
@@ -357,7 +355,7 @@ done
                 - [ ] sudo ufw allow 6000:6063/udp
     * [ ] Useful audit command:
         * [ ] sudo netstat -plunt
-    * [ ] Nginx Setup
+    * [.] Nginx Setup
         - [ ] vim /etc/nginx/nginx.conf
             * [ ] add this to file:
             limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s;
@@ -472,8 +470,8 @@ done
                         35 2 * * 1 /bin/systemctl reload nginx
                      
                                       
-        * [.] fail2ban
-            - [X] apt-get install fail2ban
+        * [ ] fail2ban
+            - [ ] apt-get install fail2ban
             - [ ] vim /etc/fail2ban/filter.d/nginx-req-limit.conf
                 * [ ] add this text:
            # Fail2Ban configuration file
@@ -499,11 +497,24 @@ done
            action: iptables-multiport[name=ReqLimit, port="http,https", protocol=tcp]
            logpath = /var/log/nginx/*error.log
        findtime = 600
-       bantime = 7200
+       bantime = -1
        maxretry = 10
-            - [ ] service fail2ban restart 
-       
-       
+                - [ ] service fail2ban restart 
+            * [.] Permanent ban config
+                * [.] ref: https://zach.seifts.us/posts/2013/07/14/how-make-fail2ban-bans-persistent
+                    * [o] You can make the bans persistent by setting up a blacklist and automatically loading them when fail2ban is restarted. First, you need to create a file to store blacklisted IPs.
+                        - [X] sudo touch /etc/fail2ban/ip.blacklist
+                        - [ ] Then you can either make a copy or edit the /etc/fail2ban/action.d/iptables-multiport.conf file. I prefer to make a copy of it because I version all of my configs.
+                    * [ ] In the action config file you have a few different directives, we want to focus on 2, the actionstart and actionban. First, when fail2ban bans an IP we want to not only ban it, but we want to add the IP address to the ip.blacklist file:
+                            actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
+                                 echo <ip> >> /etc/fail2ban/ip.blacklist
+                    * [ ] Then we want to be sure that the iptables rule is added when fail2ban is started, so we add the following lines of code to the actionstart directive:
+                          actionstart = iptables -N fail2ban-<name>
+                                        iptables -A fail2ban-<name> -j RETURN
+                                        iptables -I INPUT -p <protocol> -m multiport --dports <port> -j fail2ban-<name>
+                                        cat /etc/fail2ban/ip.blacklist | while read IP; do iptables -I fail2ban-<name> 1 -s $IP -j DROP; done
+                      * That's it, once you restart fail2ban it will automatically ban all of the IPs in your ip.blacklist file.
+                   
 
        
    
@@ -524,6 +535,15 @@ done
     - [ ] wapiti http://example.org -n 10 -b folder
     - [ ] use bash to scp file to local and read it
     - [ ] check this output every month to make sure letsencrypt is renewing: /var/log/le-renew.log
+* [ ] Check tcp traffic
+    - [ ] tcptrack -i eth0
+* [ ] Check banned ips at /etc/fail2ban/ip.blacklist
+    * [ ] Ban an IP
+        - [ ] sudo /sbin/iptables -A INPUT -s <ipp addr> -j DROP
+    * [ ] View a banned IP
+        - [ ] sudo iptables -L INPUT -v -n | grep "<ip addr>"
+    * [ ] Unban an IP
+        - [ ] sudo iptables -D INPUT -s <ip addr> -j DROP
  
  
  
