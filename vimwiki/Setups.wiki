@@ -60,6 +60,8 @@
         * vim /etc/ssh/sshd_config
         * PasswordAuthentication no
         * systemctl reload sshd
+* [ ] X11 setup
+    * [ ] todo
 
 == NGinx Setup ==
 * [X] completed 
@@ -78,7 +80,18 @@
         - [ ] sudo vim /etc/fail2ban/jail.local:
               [Default] 
               bantime = 1800;
-        - [ ] 
+              destemail = youremail
+              sender = fail2ban@localhost
+              action = %(action_mwl)s
+              [nginx-http-auth]
+              enabled = true
+        - [ ] restart fail2ban              
+              sudo service fail2ban restart
+* [ ] More fail2ban for nginx
+      * [ ] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-an-nginx-server-with-fail2ban-on-ubuntu-14-04
+      * [ ] todo
+              
+
 
 == Node Setup ==
 * [ ] completed 
@@ -448,6 +461,8 @@ done
     * [ ] Unban an IP
         - [ ] sudo iptables -D INPUT -s <ip addr> -j DROP
         - [ ] view /var/log/iptables.log 
+    * [ ] Check iptables
+        - [ ] sudo iptables -L
  
 = PreSetup = 
 
