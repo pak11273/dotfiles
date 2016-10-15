@@ -1,4 +1,4 @@
-* [.] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
     
@@ -6,9 +6,9 @@
 
     * [X] = [[#VIM setup]] =
     
-    * [ ] = [[#server security]] =
+    * [X] = [[#Ubuntu Server Setup ]]=
     
-    * [ ] = [[#Ubuntu Server Setup ]]=
+    * [ ] = [[#server security]] =
 
     * [ ] = [[#NGinx Setup ]]=
 
@@ -20,8 +20,7 @@
  
     * [ ] = [[#mongodb setup]] =
     
-    
-    * [ ] = [[#daily monitor]] =
+* [ ] = [[#daily monitor]] =
     
     * [ ] = [[#robomongo]] =  
  
@@ -61,24 +60,25 @@
         * vim /etc/ssh/sshd_config
         * PasswordAuthentication no
         * systemctl reload sshd
-    * [ ] Basic firewall
-        - [ ] ufw allow OpenSSH
-        - [ ] ufw enable
-        - [ ] ufw status
 
 == NGinx Setup ==
-* [ ] completed 
-    - [ ] apt-get update
-    - [ ] apt-get install nginx
-    * [ ] I. adjust firewall
-        - [ ] ufw allow 'Nginx Full'
-        - [ ] ufw status
-        - [ ] systemctl status nginx
-        - [ ] apt-get install curl
-    * [ ] add php and js to file extensions: later
-        - [ ] cd /etc/nginx
-        - [ ] vim nginx.conf
-        - [ ] Add this line:
+* [X] completed 
+    - [X] apt-get update
+    - [X] apt-get install nginx
+    - [X] apt-get install curl
+    * [X] add php and js to file extensions: later
+        - [X] cd /etc/nginx
+        - [X] vim nginx.conf
+        - [X] Add this line:
+* [.] Add nginx security
+    * [X] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
+        * [X] add sendmail
+            - [X] sudo apt-get install sendmail 
+    * [ ] change bantime to half an hour
+        - [ ] sudo vim /etc/fail2ban/jail.local:
+              [Default] 
+              bantime = 1800;
+        - [ ] 
 
 == Node Setup ==
 * [ ] completed 
@@ -364,7 +364,64 @@ done
     - [ ] service ssh restart
     * Now you can download dotfiles to newuser
 
-== dail monitor == 
+    * [ ] Iptables security setup 
+        - [ ] ref: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-iptables-on-ubuntu-14-04
+        - [ ] If you mess up you can restart iptables:
+              sudo iptables -P INPUT ACCEPT
+              sudo iptables -P OUTPUT ACCEPT
+              sudo iptables -F
+        * [ ] Match packets that are part of an existing connection and connections that are established:
+            - [ ] sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+        - [ ] Open up ports 22 and 80:
+              sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+              sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+        - [ ] Allow server computer to talk to itself:
+              sudo iptables -I INPUT 1 -i lo -j ACCEPT
+        - [ ] 2 options (pick the latter) for dropping any packets that don't follow our rules:      
+            - [ ] Option 1: Change default to not accept any packets if it doesn't meet our rules:
+              sudo iptables -P INPUT DROP 
+              * if you reset server, then you won't have access. but through console.
+            - [ ] Option 2: 
+              sudo iptables -P INPUT ACCEPT
+              suod iptables -A INPUT -j DROP
+        * [ ] Adding new rules:
+            * [ ] When adding new rules follow this template:
+              sudo iptables -D INPUT -j DROP
+              sudo iptables -A INPUT new_rule_here
+              sudo iptables -A INPUT -j DROP
+              
+              * [ ] or insert the new rule by line-number right before the last rule:
+              ie. sudo iptables -I INPUT  line_number new_rule
+        * [ ] Making your rules persist 
+            - [ ] sudo apt-get update
+            - [ ] sudo apt-get install iptables-persistent
+        * [ ] After implementing new rules use this line to keep the rule persisting:
+            * [ ] 14.04 
+                sudo /etc/init.d/iptables-persistent save 
+                sudo /etc/init.d/iptables-persistent reload
+            * [ ] 16.04 
+                sudo netfilter-persistent save
+                sudo netfilter-persistent reload
+        * [ ] Autodrop ssh logins to 8 times per minute
+            - [ ] sudo iptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW -m recent --set --name SSH
+            - [ ] sudo iptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW -m recent --update --seconds 60 --hitcount 8 --rttl --name SSH -j DOP
+        * [ ] Log denied calls (dont forget to drop/and reinstate the last rule - see above)
+            - [ ] sudo iptables -A INPUT -m limit --limit 5/min -j LOG --log-prefix "[denied]" --log-level 7
+        * [ ] Rediret log file from kern.log to denied.log
+            - [ ] vim /etc/rsyslog.d/my_iptables.conf
+                * [ ] add line:
+                    - [ ] :msg,contains,"[denied]" /var/log/iptables.log
+                    - [ ] sudo touch /var/log/iptables.log
+        - [ ] save rules
+        * [ ] todo - block china ddos
+            * [ ] ref: https://mattwilcox.net/web-development/unexpected-ddos-blocking-china-with-ipset-and-iptables
+        * [ ] fail2ban
+            * [ ] sudo apt-get update
+            * [ ] sudo apt-get install fail2ban
+            * [ ] awk '{ printf "# "; print; }' /etc/fail2ban/jail.conf | sudo tee /etc/fail2ban/jail.local
+
+
+== daily monitor == 
 * [ ] Check logs for suspicious activity
     - [ ] tail -f /var/www/dev/pak11273/logs/*.log | egrep "login|444"
         * if you site is under attack you will seee something like this:
@@ -390,6 +447,7 @@ done
         - [ ] sudo iptables -L INPUT -v -n | grep "<ip addr>"
     * [ ] Unban an IP
         - [ ] sudo iptables -D INPUT -s <ip addr> -j DROP
+        - [ ] view /var/log/iptables.log 
  
 = PreSetup = 
 
