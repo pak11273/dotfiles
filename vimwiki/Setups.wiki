@@ -1,4 +1,4 @@
-* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [O] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
     
@@ -12,7 +12,7 @@
 
     * [X] = [[#NGinx Setup ]]=
     
-    * [ ] = [[#nginx security]] = 
+    * [X] = [[#nginx security]] = 
 
     * [X] = [[#Node Setup ]]=
 
@@ -73,68 +73,199 @@
     - [X] apt-get update
     - [X] apt-get install nginx
     - [X] apt-get install curl
-    * [O] add php and js to file extensions: later
+    * [o] add php and js to file extensions: later
         - [X] cd /etc/nginx
         - [X] vim nginx.conf
         - [X] Add this line:
+        
+      
 == nginx security ==
 * [.] Add nginx security
-    * [X] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
-        * [X] add sendmail
+    * [.] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
+        * [.] add sendmail
             - [X] sudo apt-get install sendmail 
+            - [ ] vim /etc/hosts
+                * [ ] change line 127.0.0.1 localhost to:
+                    - [ ] 127.0.0.1 localhost.localdomain localhost <hostname> 
     * [ ] change bantime to half an hour
         - [ ] sudo vim /etc/fail2ban/jail.local:
               [Default] 
-              bantime = 1800;
+              bantime = -1;
               destemail = youremail
               sender = fail2ban@localhost
               action = %(action_mwl)s
               [nginx-http-auth]
               enabled = true
+              filter = nginx-http-auth
         - [ ] restart fail2ban              
               sudo service fail2ban restart
 * [ ] More fail2ban for nginx
       * [ ] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-an-nginx-server-with-fail2ban-on-ubuntu-14-04
-      * [ ] todo
+      * [ ] Custom Jails
+      * [ ] vim /etc/fail2ban/jail.local
+          - [ ] badbots
+                [nginx-badbots]
+                enabled  = true
+                port     = http,https
+                filter   = nginx-badbots
+                logpath  = /var/log/nginx/access.log
+                maxretry = 2
+          - [ ] nohome 
+                [nginx-nohome]
+                enabled  = true
+                port     = http,https
+                filter   = nginx-nohome
+                logpath  = /var/log/nginx/access.log
+                mxaxretry = 2
+          - [ ] noproxy 
+                [nginx-noproxy]
+                enabled  = true
+                port     = http,https
+                filter   = nginx-noproxy
+                logpath  = /var/log/nginx/access.log
+                mxaxretry = 2
+      * [ ] Custom Filters
+          * [ ] no username or password supplied
+          - [ ] vim /etc/fail2ban/filter.d/nginx-http-auth.conf:
+                - [ ] repace current filter with this one:
+                failregex = ^ \[error\] \d+#\d+: \*\d+ user "\S+":? (password mismatch|was not found in ".*"), client: <HOST>, server: \S+, request: "\S+ \S+ HTTP/\d+\.\d+", host: "\S+"\s*$
+                            ^ \[error\] \d+#\d+: \*\d+ no user/password was provided for basic authentication, client: <HOST>, server: \S+, request: "\S+ \S+ HTTP/\d+\.\d+", host: "\S+"\s*$
+          * [ ] badbots filter
+              * [ ] just copying default, no editing necessary
+                  - [ ] sudo cp apache-badbots.conf nginx-badbots.conf 
+          * [ ] nohome filter
+              - [ ] vim /etc/fail2ban/filter.d/nginx-nohome.conf:
+                    [Definition]
+
+                    failregex = ^<HOST> -.*GET .*/~.*
+
+                    ignoreregex =
               
+          * [ ] noproxy filter
+              - [ ] vim /etc/fail2ban/filter.d/nginx-noproxy.conf
+                    [Definition]
+                    
+                    failregex = ^<HOST> -.*GET http.*
+                    
+                    ignoreregex =
+          - [ ] sudo service fail2ban restart 
+* [ ] SSL config with letsencrypt
+    * [ ] ref: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04 
+    - [ ] sudo apt-get udpate
+    - [ ] sudo apt-get install letsencrypt 
+    - [ ] vim /etc/nginx/sites-available/<server name>:
+          server {
+               listen 80;
+               root /var/www/html;
+               index index.html index.htm;
+               
+               server_name pak11273.com;
+
+               location ~ /.well-known {
+                   allow all;
+               }
+                    
+               location / {
+               }
+        
+           }
+         
+    - [ ] remove default from sites-enabled
+    - [ ] add index.html to /var/www/html
+    - [ ] add robots.txt to /var/www/html:
+          User-agent: *
+          Disallow: /
+    - [ ] sudo letsencrypt certonly -a webroot --webroot-path=/var/www/html -d example.com -d www.example.com 
+    * [ ] Locate where your certificate is
+        - [ ] sudo ls -l /etc/letsencrypt/live/your_domain_name
+    - [ ] sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+    - [ ] sudo vim /etc/nginx/snippets/ssl-example.com.conf 
+            ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    - [ ] sudo vim /etc/nginx/snippets/ssl-params.conf
+           # from https://cipherli.st/
+           # # and https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html
+           ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+           ssl_prefer_server_ciphers on;
+           ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+           ssl_ecdh_curve secp384r1;
+           ssl_session_cache shared:SSL:10m;
+           ssl_session_tickets off;
+           ssl_stapling on;
+           ssl_stapling_verify on;
+           resolver 8.8.8.8 8.8.4.4 valid=300s;
+           resolver_timeout 5s;
+           # Disable preloading HSTS for now.  You can use the commented out header line that includes
+           # the "preload" directive if you understand the implications.
+           #add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
+           add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+           add_header X-Frame-Options DENY;
+           add_header X-Content-Type-Options nosniff;
+           ssl_dhparam /etc/ssl/certs/dhparam.pem;
+    - [ ] add this to /etc/nginx/sites-available/<server file>
+                     return 301 https://$server_name$request_uri;
+               }
+               
+               server {
+               
+                   # SSL configuration
+                     listen 443 ssl http2 default_server;
+                     listen [::]:443 ssl http2 default_server;
+                     include snippets/ssl-example.com.conf;
+                     include snippets/ssl-params.conf;
+                     
+                     root /var/www/html;
+                     
+                     location /<app> {
+                        ...
+                     }
+               }
+               
+    - [ ] Make ssl auto renewal 
+    - [ ] sudo letsencrypt renew
+        - [ ] sudo crontab -e
+            - [ ] add these lines:
+                30 2 * * 1 /usr/bin/letsencrypt renew >> /var/log/le-renew.log
+                35 2 * * 1 /bin/systemctl reload nginx
+                 
 
 
 == Node Setup ==
-* [X] completed 
-    - [X] apt-get update
-    - [X] apt-get install nodejs
-    - [X] apt-get install npm
-    - [X] sudo apt-get install build-essential libssl-dev
-    - [X] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-    - [X] bash install_nvm.sh 
-    - [X] source ~/.profile
-    * [X] get latest node version
-        - [X] nvm install 6.7.0 ( or latest version ) 
-        - [X] nvm use 6.7.0
-        * useful commands:
-            * nvm ls //see what version installed
-            * node -v  //see what version you are using
-            * nvm alias default 6.0.0 //use this version as default
+    * [X] completed 
+        - [X] apt-get update
+        - [X] apt-get install nodejs
+        - [X] apt-get install npm
+        - [X] sudo apt-get install build-essential libssl-dev
+        - [X] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+        - [X] bash install_nvm.sh 
+        - [X] source ~/.profile
+        * [X] get latest node version
+            - [X] nvm install 6.7.0 ( or latest version ) 
+            - [X] nvm use 6.7.0
+            * useful commands:
+                * nvm ls //see what version installed
+                * node -v  //see what version you are using
+                * nvm alias default 6.0.0 //use this version as default
 
-== PM2 ==
-* [X] completed
-    - [X] npm install pm2 -g
-    - [X] pm2 startup ubuntu
-    - [X] copy/paste the line it provides  
-        * this sets pm2 to start on boot
-    * other pm2 commands:
-        * pm2 start <server name>
-        * pm2 stop,restart,list,info,monit
+    == PM2 ==
+    * [X] completed
+        - [X] npm install pm2 -g
+        - [X] pm2 startup ubuntu
+        - [X] copy/paste the line it provides  
+            * this sets pm2 to start on boot
+        * other pm2 commands:
+            * pm2 start <server name>
+            * pm2 stop,restart,list,info,monit
 
-== Multiple Apps ==
-* [ ] completed
-	- [ ] /etc/nginx/sites-available:
-        - [ ] Create a file of the appname. 
-        - [ ] c/p:
-            - change APP_PRIVATE_IP_ADDRESS to 127.0.0.1 or localhost and server_name
-            
-{{{	
-	server {
+    == Multiple Apps ==
+    * [ ] completed
+        - [ ] /etc/nginx/sites-available:
+            - [ ] Create a file of the appname. 
+            - [ ] c/p:
+                - change APP_PRIVATE_IP_ADDRESS to 127.0.0.1 or localhost and server_name
+                
+    {{{	
+        server {
 	
 	listen 80;
 
