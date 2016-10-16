@@ -1,4 +1,4 @@
-* [O] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
     
@@ -11,6 +11,8 @@
     * [X] = [[#server security]] =
 
     * [X] = [[#NGinx Setup ]]=
+    
+    * [ ] = [[#nginx security]] = 
 
     * [X] = [[#Node Setup ]]=
 
@@ -64,14 +66,15 @@
     * [ ] todo
 
 == NGinx Setup ==
-* [X] completed 
+* [O] completed 
     - [X] apt-get update
     - [X] apt-get install nginx
     - [X] apt-get install curl
-    * [X] add php and js to file extensions: later
+    * [O] add php and js to file extensions: later
         - [X] cd /etc/nginx
         - [X] vim nginx.conf
         - [X] Add this line:
+== nginx security ==
 * [.] Add nginx security
     * [X] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
         * [X] add sendmail
