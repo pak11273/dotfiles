@@ -62,6 +62,9 @@
         * vim /etc/ssh/sshd_config
         * PasswordAuthentication no
         * systemctl reload sshd
+* [ ] Timezone setup
+        - [ ] sudo dpkg-reconfigure tzdata
+    
 * [ ] X11 setup
     * [ ] todo
 
