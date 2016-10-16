@@ -1,4 +1,4 @@
-* [o] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [O] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
     
@@ -8,13 +8,13 @@
     
     * [X] = [[#Ubuntu Server Setup ]]=
     
-    * [ ] = [[#server security]] =
+    * [X] = [[#server security]] =
 
-    * [ ] = [[#NGinx Setup ]]=
+    * [X] = [[#NGinx Setup ]]=
 
-    * [ ] = [[#Node Setup ]]=
+    * [X] = [[#Node Setup ]]=
 
-    * [ ] = [[#PM2]]=
+    * [X] = [[#PM2]]=
 
     * [ ] = [[#Multiple Apps ]]=
  
@@ -94,27 +94,27 @@
 
 
 == Node Setup ==
-* [ ] completed 
-    - [ ] apt-get update
-    - [ ] apt-get install nodejs
-    - [ ] apt-get install npm
-    - [ ] sudo apt-get install build-essential libssl-dev
-    - [ ] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-    - [ ] bash install_nvm.sh 
-    - [ ] source ~/.profile
-    * [ ] get latest node version
-        - [ ] nvm install 6.7.0 ( or latest version ) 
-        - [ ] nvm use 6.7.0
+* [X] completed 
+    - [X] apt-get update
+    - [X] apt-get install nodejs
+    - [X] apt-get install npm
+    - [X] sudo apt-get install build-essential libssl-dev
+    - [X] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+    - [X] bash install_nvm.sh 
+    - [X] source ~/.profile
+    * [X] get latest node version
+        - [X] nvm install 6.7.0 ( or latest version ) 
+        - [X] nvm use 6.7.0
         * useful commands:
             * nvm ls //see what version installed
             * node -v  //see what version you are using
             * nvm alias default 6.0.0 //use this version as default
 
 == PM2 ==
-* [ ] completed
-    - [ ] npm install pm2 -g
-    - [ ] pm2 startup ubuntu
-    - [ ] copy/paste the line it provides  
+* [X] completed
+    - [X] npm install pm2 -g
+    - [X] pm2 startup ubuntu
+    - [X] copy/paste the line it provides  
         * this sets pm2 to start on boot
     * other pm2 commands:
         * pm2 start <server name>
