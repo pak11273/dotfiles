@@ -1,8 +1,8 @@
-* [.] Week 1
+* [ ] Week 1
 
-	* [.] Day 1 - Github & Version Control
+	* [ ] Day 1 - Github & Version Control
 
-            * [.] Pre-Reading:
+            * [ ] Pre-Reading:
                 * [ ] Git - The Simple Guide
                     - [ ] http://rogerdudler.github.io/git-guide/
                 * [ ] Atlassian Git Tutorial
@@ -11,16 +11,16 @@
                 * [ ] Lesson Video:
                     * [ ] Github 1 Hour 11 Minutes
                         - [ ] https://www.youtube.com/playlist?list=PLFq09yYVYpcK2409Owt4nyRleoRO-OdSx
-                * [O] Learning Objectives
-                    * [O] Students will understand and be able to use the command line for
-                        - [X] creating a folder
-                        - [X] creating a file
-                        - [X] editing a file
-                        - [X] changing directories
-                * [o] Students will understand what Git and Github are and how they fit into the web app landscape
-                        - [X] Students will be able to clone a repo and know its purpose
-                        - [X] Students will be able to add, commit, and push files to github
-                        - [X] Students will understand basic branching
+                * [ ] Learning Objectives
+                    * [ ] Students will understand and be able to use the command line for
+                        - [ ] creating a folder
+                        - [ ] creating a file
+                        - [ ] editing a file
+                        - [ ] changing directories
+                * [ ] Students will understand what Git and Github are and how they fit into the web app landscape
+                        - [ ] Students will be able to clone a repo and know its purpose
+                        - [ ] Students will be able to add, commit, and push files to github
+                        - [ ] Students will understand basic branching
                         - [ ] Students will understand how to use github in a group setting
                         - [ ] Students be able to understand what a "Fork" is and be able to Fork a repo
                         - [ ] Students will be able to handle merge conflicts
@@ -29,9 +29,9 @@
                     * [ ] Project:
                         * [ ] Learn Git
                             - [ ] https://github.com/DevMountain/learn-git
-                    * [X] Additional Practice:
-                        * [X] Learn Git Branching
-                            - [X] http://pcottle.github.io/learnGitBranching/ 
+                    * [ ] Additional Practice:
+                        * [ ] Learn Git Branching
+                            - [ ] http://pcottle.github.io/learnGitBranching/ 
 Additional Reading:
 The Command Line Crash Course
 Lecture archive
@@ -305,35 +305,35 @@ Project:
 Twitter Clone
 Additional Reading:
 Assessment:
-* [O] Week 6
+* [.] Week 6
 
-    * [O] Day 1 - AngularJS I
+    * [.] Day 1 - AngularJS I
 
-        * [o] Pre-Reading:
+        * [X] Pre-Reading:
             - [X] Starting with Angular:
                 - [X] this blog no longer works
                         http://stephanebegaudeau.tumblr.com/post/48776908163/everything-you-need-to-understand-to-start-with
             - [X] Conceptual Intro to Angular
                     http://paislee.io/a-conceptual-introduction-to-angularjs/ 
-            - [ ] Watch "Angular in 60-ish Minutes": todo
+            - [X] Watch "Angular in 60-ish Minutes": todo
                     https://www.youtube.com/watch?v=i9MHigUZKEM
-        * [X] Lesson Video: 
+        * [o] Lesson Video: 
             * [X] Angular I - Intro to Angular
                     https://vimeo.com/148916498 
-            * [X] Mini Project: 
-                - [X] Babies first Angular
+            * [ ] Mini Project: 
+                - [ ] Babies first Angular
                     https://github.com/DevMountain/mini-BabiesFirstAngular 
-        * [X] Learning Objectives
-            - [X] Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
-            - [X] Students will understand what a module, controller, directive, and service is in angular
-            - [X] Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
-            - [X] Students will be able to ng-repeat over data
-            - [X] Students will be able to filter data
-        * [X] Project:
-            - [X] Angular Friends
+        * [ ] Learning Objectives
+            - [ ] Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
+            - [ ] Students will understand what a module, controller, directive, and service is in angular
+            - [ ] Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
+            - [ ] Students will be able to ng-repeat over data
+            - [ ] Students will be able to filter data
+        * [ ] Project:
+            - [ ] Angular Friends
                     https://github.com/DevMountain/angular-friends
-        * [X] Assessment:
-            - [X] AngularJS Day 1
+        * [ ] Assessment:
+            - [ ] AngularJS Day 1
                     https://codecard.io/a/cardio-preview/B4yCwFR8R
         * [ ] Weeklong Challenge:
                     https://github.com/DevMountain/dev-mt-in 
@@ -539,41 +539,41 @@ Quiz App (Use this to reference the Github repo)
 Quiz App Project Guide - Day 3 and BD's (Use this to start and build the project)
 Class Survey:
 Today's Survey
-* [o] Week 10 
+* [ ] Week 10 
 
-    * [O] Day 1 - NodeJS I
+    * [ ] Day 1 - NodeJS I
 
-        * [X] Lesson Video:
-            * [X] NodeJS I - 2 hours 42 minutes
-                - [X] https://vimeo.com/151691575
-        * [X] Mini Project:
-            * [X] Siri
-                - [X] https://github.com/DevMountain/Siri 
-                - [X] **Can't do, no access to client
-        * [X] Learning Objectives
-            - [X] Students understand what Node is and that it can be used as a server
-            - [X] Student will understand how HTTP works to communicate between client & server
-            - [X] Student will understand the need for a module like express
-            - [X] Student can use require to import a Node module
-            - [X] Student will understand the basic utility of a package.json file
-            - [X] Student can create a HTTP NodeJS server using express
-            - [X] Students can explain endpoints and create basic ones testing them with Postman
-        * [o] Project:
-            * [X] Trello App (Use this to reference the Github repo)
-                - [X] https://github.com/DevMountain/trello-clone
-            * [X] Trello App Project Guide - Day 1 (Use this to start and build the project)
-                - [X] http://projectguide.devmounta.in/#/trello-clonehttp://projectguide.devmounta.in/#/trello-clone
+        * [ ] Lesson Video:
+            * [ ] NodeJS I - 2 hours 42 minutes
+                - [ ] https://vimeo.com/151691575
+        * [ ] Mini Project:
+            * [ ] Siri
+                - [ ] https://github.com/DevMountain/Siri 
+                - [ ] **Can't do, no access to client
+        * [ ] Learning Objectives
+            - [ ] Students understand what Node is and that it can be used as a server
+            - [ ] Student will understand how HTTP works to communicate between client & server
+            - [ ] Student will understand the need for a module like express
+            - [ ] Student can use require to import a Node module
+            - [ ] Student will understand the basic utility of a package.json file
+            - [ ] Student can create a HTTP NodeJS server using express
+            - [ ] Students can explain endpoints and create basic ones testing them with Postman
+        * [ ] Project:
+            * [ ] Trello App (Use this to reference the Github repo)
+                - [ ] https://github.com/DevMountain/trello-clone
+            * [ ] Trello App Project Guide - Day 1 (Use this to start and build the project)
+                - [ ] http://projectguide.devmounta.in/#/trello-clonehttp://projectguide.devmounta.in/#/trello-clone
             * [ ] Additional Reading: later
                 - [ ] https://www.thenewboston.com/videos.php?cat=355
                 
-    * [.] Day 2 - NodeJS II
+    * [ ] Day 2 - NodeJS II
 
-        * [o] Lesson Video: 
-            - [X] NodeJS II - 1 hour 55 minutes
-        * [.] Mini Project
-            - [X] Rewrite in Progress
-        * [.] Learning Objectives
-            - [X] Student can require other .js files in the project
+        * [ ] Lesson Video: 
+            - [ ] NodeJS II - 1 hour 55 minutes
+        * [ ] Mini Project
+            - [ ] Rewrite in Progress
+        * [ ] Learning Objectives
+            - [ ] Student can require other .js files in the project
             - [ ] Student can use bodyParser to get data out of the body
             - [ ] Student can use req.params
             - [ ] Student is introduced to req.query
@@ -599,28 +599,28 @@ Today's Survey
             - [ ] Trello App (Use this to reference the Github repo)
             - [ ] Trello App Project Guide - Day 3 (Use this to start and build the project)
             - [ ] Additional Reading:
-* [.] Week 11
+* [ ] Week 11
 
-    * [O] Day 1 - MongoDB I
+    * [ ] Day 1 - MongoDB I
 
-        * [X] Lesson Video:
-            - [X] Mongo I - 1 hour 41 minutes 
+        * [ ] Lesson Video:
+            - [ ] Mongo I - 1 hour 41 minutes 
                     https://vimeo.com/140831164
-        * [X] Before class:
-            - [X] Make sure you've installed MongoDB (Mac or PC)
-        * [X] Mini Project: 
-            - [X] Birds:
+        * [ ] Before class:
+            - [ ] Make sure you've installed MongoDB (Mac or PC)
+        * [ ] Mini Project: 
+            - [ ] Birds:
                     https://github.com/jacob-israel-turner/mini-birds.git
-                    - [X] Step 1
-                    - [X] Step 2
-                    - [X] Step 3
-        * [X] Learning Objectives
-            - [X] Understand the DB's place in the web app landscape (MongoDB vs DBaaS like Firebase)
-            - [X] Understand DBs, Collections, and Documents
-            - [X] Understand CRUD operations with MongoDB
-        * [.] Project:
-            - [.] Trello App (Use this to reference the Github repo)
-                - [X] Day 1 
+                    - [ ] Step 1
+                    - [ ] Step 2
+                    - [ ] Step 3
+        * [ ] Learning Objectives
+            - [ ] Understand the DB's place in the web app landscape (MongoDB vs DBaaS like Firebase)
+            - [ ] Understand DBs, Collections, and Documents
+            - [ ] Understand CRUD operations with MongoDB
+        * [ ] Project:
+            - [ ] Trello App (Use this to reference the Github repo)
+                - [ ] Day 1 
                 - [ ] Day 2
                 - [ ] Day 3
                 - [ ] Day 4
