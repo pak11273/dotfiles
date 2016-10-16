@@ -60,7 +60,9 @@
         * vim /etc/ssh/sshd_config
         * PasswordAuthentication no
         * systemctl reload sshd
-
+    * [ ] Timezone setup
+        - [ ] sudo dpkg-reconfigure tzdata
+    
 == NGinx Setup ==
 * [X] completed 
     - [X] apt-get update
