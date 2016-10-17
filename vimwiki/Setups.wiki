@@ -64,6 +64,8 @@
         * systemctl reload sshd
 * [ ] Timezone setup
         - [ ] sudo dpkg-reconfigure tzdata
+* [ ] Bower fix
+        - [ ] ln -s /usr/bin/nodejs /usr/bin/node
     
 * [ ] X11 setup
     * [ ] todo

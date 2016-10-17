@@ -305,32 +305,32 @@ Project:
 Twitter Clone
 Additional Reading:
 Assessment:
-* [.] Week 6
+* [o] Week 6
 
-    * [.] Day 1 - AngularJS I
+    * [o] Day 1 - AngularJS I
 
-        * [X] Pre-Reading:
+        * [o] Pre-Reading:
             - [X] Starting with Angular:
                 - [X] this blog no longer works
                         http://stephanebegaudeau.tumblr.com/post/48776908163/everything-you-need-to-understand-to-start-with
             - [X] Conceptual Intro to Angular
                     http://paislee.io/a-conceptual-introduction-to-angularjs/ 
-            - [X] Watch "Angular in 60-ish Minutes": todo
+            - [ ] Watch "Angular in 60-ish Minutes": todo
                     https://www.youtube.com/watch?v=i9MHigUZKEM
-        * [o] Lesson Video: 
+        * [X] Lesson Video: 
             * [X] Angular I - Intro to Angular
                     https://vimeo.com/148916498 
-            * [ ] Mini Project: 
-                - [ ] Babies first Angular
+            * [X] Mini Project: 
+                - [X] Babies first Angular
                     https://github.com/DevMountain/mini-BabiesFirstAngular 
-        * [ ] Learning Objectives
-            - [ ] Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
-            - [ ] Students will understand what a module, controller, directive, and service is in angular
-            - [ ] Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
-            - [ ] Students will be able to ng-repeat over data
-            - [ ] Students will be able to filter data
-        * [ ] Project:
-            - [ ] Angular Friends
+        * [X] Learning Objectives
+            - [X] Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
+            - [X] Students will understand what a module, controller, directive, and service is in angular
+            - [X] Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
+            - [X] Students will be able to ng-repeat over data
+            - [X] Students will be able to filter data
+        * [X] Project:
+            - [X] Angular Friends todo
                     https://github.com/DevMountain/angular-friends
         * [ ] Assessment:
             - [ ] AngularJS Day 1
