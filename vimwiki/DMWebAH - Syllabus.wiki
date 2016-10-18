@@ -323,40 +323,39 @@ Assessment:
             * [X] Mini Project: 
                 - [X] Babies first Angular
                     https://github.com/DevMountain/mini-BabiesFirstAngular 
-        * [X] Learning Objectives
-            - [X] Students will understand the difference between jQuery and Angular and how Angular fits into the web app landscape
-            - [X] Students will understand what a module, controller, directive, and service is in angular
+        * [X] Learning Objectivescontroller, directive, and service is in angular
             - [X] Students will be able to, from scratch, build a basic angular application, put data on a controller's scope, and bind that data to the view
             - [X] Students will be able to ng-repeat over data
             - [X] Students will be able to filter data
-        * [X] Project:
-            - [X] Angular Friends todo
+        * [ ] Project:
+            - [ ] Angular Friends 
                     https://github.com/DevMountain/angular-friends
-        * [ ] Assessment:
-            - [ ] AngularJS Day 1
+                    - [ ] - todo: fix asc/desc filter
+        * [X] Assessment:
+            - [X] AngularJS Day 1
                     https://codecard.io/a/cardio-preview/B4yCwFR8R
         * [ ] Weeklong Challenge:
                     https://github.com/DevMountain/dev-mt-in 
-            - [ ] DevMt.In - Day One todo
-* [ ] Day 2 - AngularJS II
-    * [ ] Pre-Reading:
-        - [ ] Angular Services todo
-    * [ ] Lesson Video:
-        - [ ] Angular II - Services
-    * [ ] Mini Project:
-        - [ ] User Profiles
-    * [ ] Learning Objectives
-        - [ ] Students will understand the purpose of Services in Angular
-        - [ ] Students will know how to inject services into their controllers
-        - [ ] Students will know how to call methods on their services from in their controllers and put the response on $scope
-        - [ ] know the difference between factories and services
-    * [ ] Assessment
-        - [ ] AngularJS II - Services
-    * [ ] Project:
-        - [ ] Quote Book
-    * [ ] Weeklong Challenge:
-        - [ ] DevMt.In - Day Two
-Day 3 - AngularJS Workday
+                - [ ] DevMt.In - Day One todo
+                * [ ] Day 2 - AngularJS II
+                * [ ] Pre-Reading:
+                    - [ ] Angular Services todo
+                * [ ] Lesson Video:
+                    - [ ] Angular II - Services
+                * [ ] Mini Project:
+                    - [ ] User Profiles
+                * [ ] Learning Objectives
+                    - [ ] Students will understand the purpose of Services in Angular
+                    - [ ] Students will know how to inject services into their controllers
+                    - [ ] Students will know how to call methods on their services from in their controllers and put the response on $scope
+                    - [ ] know the difference between factories and services
+                * [ ] Assessment
+                    - [ ] AngularJS II - Services
+                * [ ] Project:
+                    - [ ] Quote Book
+                * [ ] Weeklong Challenge:
+                    - [ ] DevMt.In - Day Two
+            Day 3 - AngularJS Workday
 
 Lesson Video:
 No video today. Continue working on the Angular project, mini-projects, or the weeklong challenge.
