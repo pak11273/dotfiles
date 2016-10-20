@@ -334,21 +334,21 @@ Assessment:
         * [X] Assessment:
             - [X] AngularJS Day 1
                     https://codecard.io/a/cardio-preview/B4yCwFR8R
-        * [O] Weeklong Challenge:
+        * [X] Weeklong Challenge:
                     https://github.com/DevMountain/dev-mt-in 
             - [X] DevMt.In - Day One todo
-            * [o] Day 2 - AngularJS II
+            * [X] Day 2 - AngularJS II
                 * [X] Pre-Reading:
                     - [X] Angular Services 
                 * [X] Lesson Video:
                     - [X] Angular II - Services
-                * [ ] Mini Project:
-                    - [ ] User Profiles todo
-                * [ ] Learning Objectives
-                    - [ ] Students will understand the purpose of Services in Angular
-                    - [ ] Students will know how to inject services into their controllers
-                    - [ ] Students will know how to call methods on their services from in their controllers and put the response on $scope
-                    - [ ] know the difference between factories and services
+                * [X] Mini Project:
+                    - [X] User Profiles 
+                * [X] Learning Objectives
+                    - [X] Students will understand the purpose of Services in Angular
+                    - [X] Students will know how to inject services into their controllers
+                    - [X] Students will know how to call methods on their services from in their controllers and put the response on $scope
+                    - [X] know the difference between factories and services
         * [ ] Assessment
             - [ ] AngularJS II - Services
         * [ ] Project:
