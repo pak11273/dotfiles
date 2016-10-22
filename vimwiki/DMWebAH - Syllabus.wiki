@@ -377,7 +377,7 @@ Assessment:
               - [X] Students will be able to explain what AJAX is
               - [X] Students will make an ajax request with angular, call .then on the promise and add that data to the $scope
           * [ ] Project:
-              - [ ] Chatroom
+              - [ ] Chatroom Todo
           * [ ] Assessment
               - [ ] AngularJS III - $http
           * [ ] Weeklong Challenge:

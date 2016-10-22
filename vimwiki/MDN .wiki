@@ -1,0 +1,25 @@
+= JavaScript =
+* ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+== Tutorials ==
+
+=== Introductory ===
+==== [[#JavaScript Guide ]]====
+==== [[#JavaScript technologies overview]] ====
+
+=== Intermediate ===
+==== #A re-introduction to Javascript ====
+
+=== Advanced ===
+==== #Inheritance and the prototype chain ====
+
+
+
+
+
+
+== JavaScript Guide ==
+- [X] Introduction
+- [ ] Grammar and Types
+
+== JavaScript technologies overview ==
