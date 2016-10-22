@@ -349,42 +349,42 @@ Assessment:
                     - [X] Students will know how to inject services into their controllers
                     - [X] Students will know how to call methods on their services from in their controllers and put the response on $scope
                     - [X] know the difference between factories and services
-        * [ ] Assessment
-            - [ ] AngularJS II - Services
+        * [X] Assessment
+            - [X] AngularJS II - Services
         * [ ] Project:
-            - [ ] Quote Book
+            - [ ] Quote Book 
+                - [ ] finish storing to cookies todo
         * [ ] Weeklong Challenge:
-            - [ ] DevMt.In - Day Two
-        * [ ] Day 3 - AngularJS Workday 
-Lesson Video:
-No video today. Continue working on the Angular project, mini-projects, or the weeklong challenge.
-Weeklong Challenge:
-DevMt.In - Day Three
-Week 7
+            - [ ] DevMt.In - Day Two todo
+    * [.] Day 3 - AngularJS Workday 
+        * [.] Lesson Video:
+            - [X] No video today. Continue working on the Angular project, mini-projects, or the weeklong challenge.
+            * [ ] Weeklong Challenge:
+                - [ ] DevMt.In - Day Three todo
+* [.] Week 7
 
-Day 1 - AngularJS III
-
-Pre-Reading:
-Angular's $http
-Promises
-Lesson Video:
-Angular III - $http
-Mini Project:
-User Profiles II
-Learning Objectives
-Students will be able to explain what JSON is
-Students will be able to explain what REST is
-Students will be able to explain what AJAX is
-Students will make an ajax request with angular, call .then on the promise and add that data to the $scope
-Project:
-Chatroom
-Assessment
-AngularJS III - $http
-Weeklong Challenge:
-DevMt.In - Day Three
-Class Survey:
-Today's Survey
-Day 2 - Angular IV
+    * [.] Day 1 - AngularJS III
+          * [o] Pre-Reading:
+              - [X] Angular's $http
+              - [X] Promises
+          * [o] Lesson Video:
+              - [X] Angular III - $http
+          * [X] Mini Project:
+              - [X] User Profiles II 
+          * [X] Learning Objectives
+              - [X] Students will be able to explain what JSON is
+              - [X] Students will be able to explain what REST is
+              - [X] Students will be able to explain what AJAX is
+              - [X] Students will make an ajax request with angular, call .then on the promise and add that data to the $scope
+          * [ ] Project:
+              - [ ] Chatroom
+          * [ ] Assessment
+              - [ ] AngularJS III - $http
+          * [ ] Weeklong Challenge:
+              - [ ] DevMt.In - Day Three
+          * [ ] Class Survey:
+              - [ ] Today's Survey
+      * [ ] Day 2 - Angular IV
 
 Pre-Reading:
 $q

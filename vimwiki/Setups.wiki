@@ -452,7 +452,8 @@ done
           var controller = {
             "index": function(req,res,next) {
                 res.send('get page');
-                });
+             }
+          };
                 
               app.get('/endpoint', books_controller.index);
           
@@ -472,14 +473,35 @@ done
           
     - [ ] git init
     - [ ] npm init
-    - [ ] npm install express --save
+    - [ ] npm i express body-parser cors mongojs --save
     - [ ] vim .gitignore  
         - [ ] node_modules
-    - [ ] npm install body-parser --save 
     - [ ] cd root
-    - [ ] bower install 
+    - [ ] sudo bower init --allow-root 
     - [ ] pm2 start index.js -n <app name>
-    
+    * [ ] Change nginx config:
+          location / {
+                  proxy_pass http://localhost:{YOUR_PORT};
+                  proxy_http_version 1.1;
+                  proxy_set_header Upgrade $http_upgrade;
+                  proxy_set_header Connection 'upgrade';
+                  proxy_set_header Host $host;
+                                                          proxy_cache_bypass $http_upgrade;
+                                                                      }
+          - [ ] Add port access:
+                 sudo iptables -A INPUT -p tcp --dport <port #> -j ACCEPT 
+
+
+
+
+
+
+
+
+
+
+
+
 = robomongo = 
 * [ ] completed
     - [ ] vim /etc/mongod.conf 
