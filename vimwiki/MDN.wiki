@@ -4,14 +4,14 @@
 == Tutorials ==
 
 === Introductory ===
-==== [[#JavaScript Guide ]]====
-==== [[#JavaScript technologies overview]] ====
+- [ ] [[#JavaScript Guide ]]
+- [ ] [[#JavaScript technologies overview]] 
 
 === Intermediate ===
-==== #A re-introduction to Javascript ====
+- [ ] #A re-introduction to Javascript
 
 === Advanced ===
-==== #Inheritance and the prototype chain ====
+- [ ] #Inheritance and the prototype chain
 
 
 
@@ -21,5 +21,6 @@
 == JavaScript Guide ==
 - [X] Introduction
 - [ ] Grammar and Types
+    - [ ] Data type conversion todo
 
 == JavaScript technologies overview ==

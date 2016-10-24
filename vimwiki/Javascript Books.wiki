@@ -1,0 +1,7 @@
+= Begining JavaScript 4th Edition =
+
+- [X] Chapter 1
+- [X] Chapter 2
+- [ ] Chapter 3
+    - [ ] 87/793
+- [ ] Chapter 4

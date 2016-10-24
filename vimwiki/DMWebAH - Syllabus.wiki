@@ -278,7 +278,7 @@ Students will understand the DOM
 Students will be able to make basic manipulations to the DOM
 Students will understand visual and functional purpose of the jQuery
 Project:
-Todo List
+todo List
 Additional Reading:
 CodeAcademy
 Assessment
@@ -361,9 +361,9 @@ Assessment:
             - [X] No video today. Continue working on the Angular project, mini-projects, or the weeklong challenge.
             * [ ] Weeklong Challenge:
                 - [ ] DevMt.In - Day Three todo
-* [.] Week 7
+* [O] Week 7
 
-    * [.] Day 1 - AngularJS III
+    * [O] Day 1 - AngularJS III
           * [o] Pre-Reading:
               - [X] Angular's $http
               - [X] Promises
@@ -376,29 +376,29 @@ Assessment:
               - [X] Students will be able to explain what REST is
               - [X] Students will be able to explain what AJAX is
               - [X] Students will make an ajax request with angular, call .then on the promise and add that data to the $scope
-          * [ ] Project:
-              - [ ] Chatroom Todo
-          * [ ] Assessment
-              - [ ] AngularJS III - $http
+          * [X] Project:
+              - [X] Chatroom 
+          * [X] Assessment
+              - [X] AngularJS III - $http
           * [ ] Weeklong Challenge:
-              - [ ] DevMt.In - Day Three
-          * [ ] Class Survey:
-              - [ ] Today's Survey
-      * [ ] Day 2 - Angular IV
-
-Pre-Reading:
-$q
-Lesson Video:
-Angular IV - $q Promises
-Mini Project:
-User Profile III
-Learning Objectives
-Students will be able to make $http requests to various APIs
-Students will be able to use outside directives and know how to inject those modules into their application
-Students will be able to create, return, and resolve their own promises with $q
-Project:
-iTunes API
-Additional Reading:
+              - [ ] DevMt.In - Day Three todo
+          * [X] Class Survey:
+              - [X] Today's Survey
+      * [O] Day 2 - Angular IV
+          * [X] Pre-Reading:
+              - [X] $q
+          * [X] Lesson Video:
+              - [X] Angular IV - $q Promises 
+          * [X] Mini Project:
+              - [X] User Profile III
+          * [o] Learning Objectives
+              - [X] Students will be able to make $http requests to various APIs
+              - [X] Students will be able to use outside directives and know how to inject those modules into their application
+              - [ ] Students will be able to create, return, and resolve their own promises with $q
+              - [ ] later: need more understanding on q and promises.
+          * [ ] Project:
+              - [ ] iTunes API
+    Additional Reading:
 The Power of Q
 JSONP
 Assessment

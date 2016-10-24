@@ -7,9 +7,9 @@
     - [X] #2: Basic data types--Number
     - [X] #3: Basic data types--String
     - [X] #4: Basic data types--Array
-    - [ ] #5: Basic data types--Object
-    - [ ] #6: Basic data types--Boolean and conditional statements if..else
-    - [ ] #7: if..else and ternary operator
+    - [X] #5: Basic data types--Object
+    - [X] #6: Basic data types--Boolean and conditional statements if..else
+    - [X] #7: if..else and ternary operator
     - [ ] #8: Conditional statement--switch
     - [ ] #9: loop statement --while and do..while
     - [ ] #10: loop statement --for
