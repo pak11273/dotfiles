@@ -489,8 +489,11 @@ done
                                                           proxy_cache_bypass $http_upgrade;
                                                                       }
           - [ ] Add port access:
-                 sudo iptables -A INPUT -p tcp --dport <port #> -j ACCEPT 
-
+              sudo iptables -D INPUT -j DROP
+              sudo iptables -A INPUT -p tcp --dport <port #> -j ACCEPT 
+              sudo iptables -A INPUT -j DROP
+              /sbin/iptables-save
+              
 
 
 

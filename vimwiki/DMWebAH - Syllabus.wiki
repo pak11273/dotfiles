@@ -384,65 +384,78 @@ Assessment:
               - [ ] DevMt.In - Day Three todo
           * [X] Class Survey:
               - [X] Today's Survey
-      * [O] Day 2 - Angular IV
+      * [o] Day 2 - Angular IV
           * [X] Pre-Reading:
               - [X] $q
           * [X] Lesson Video:
               - [X] Angular IV - $q Promises 
           * [X] Mini Project:
               - [X] User Profile III
-          * [o] Learning Objectives
+          * [X] Learning Objectives
               - [X] Students will be able to make $http requests to various APIs
               - [X] Students will be able to use outside directives and know how to inject those modules into their application
-              - [ ] Students will be able to create, return, and resolve their own promises with $q
-              - [ ] later: need more understanding on q and promises.
+              - [X] Students will be able to create, return, and resolve their own promises with $q
+              - [X] later: need more understanding on q and promises.
           * [ ] Project:
-              - [ ] iTunes API
-    Additional Reading:
-The Power of Q
-JSONP
-Assessment
-AngularJS IV - APIs
-Weeklong Challenge:
-DevMt.In - Day Four
-Class Survey:
-Today's Survey
-Day 3 - Angular Review I
+              - [ ] iTunes API : Todo => review $http and $q again
+          * [ ] Additional Reading:
+              - [ ] The Power of Q
+              - [ ] JSONP
+          * [ ] Assessment
+              - [ ] AngularJS IV - APIs
+          * [ ] Weeklong Challenge:
+              - [ ] DevMt.In - Day Four
+          * [o] Class Survey:
+              - [X] Today's Survey
+          * [ ] Day 3 - Angular Review I
+          
+      * [o] In-class practice project : Angular Drills
+          - [X] 1. basics
+          - [X] 2. arrays
+          - [X] 3. filters todo: prac
+          * [o] 4. api
+              - [X] swapi.co
+              - [ ] birdapi.com
+              - [ ] pokeapi
+              - [X] smurfs
+              - [ ] marvel api 
+          - [ ] 5. /
+          - [ ] 6. routings
+          - [ ] 7. directive
+          - [ ] 8. directive
+          - [ ] 9. directive
+          - [ ] 10. directive
+      
+      * [o] Class Survey:
+          - [X] Today's Survey
+* [.] Week 8
 
-In-class practice project : Angular Drills
-
-Class Survey:
-Today's Survey
-Week 8
-
-Day 1 - Angular V
-
-Pre-Reading:
-Routing with UI-Router
-Lesson Video:
-Routing - 1 hour 7 minutes
-Install these before class!:
-Install Node - Mac
-Install Node - Windows
-Mini Project:
-MiniRoute
-Learning Objectives
-
-Students will understand the methodology behind routing and templating
-Students will be able to set up a basic routing system with multiple views and controllers using UI-Router
-Students will be able to use resolve to resolve data and pass in data to their controller before theirn controller initializes
-Students will be able to use stateParams to gather data from the URL
-Project:
-
-DevMtn Travels
-Assessment:
-AngularJS V - Routing
-Weeklong Challenge:
-Quiz App Repo (Use this to reference the Github repo)
-Quiz App Project Guide - Day 1 (Use this to start and build the project)
-Class Survey:
-Today's Survey
-Day 2 - Angular V Workday
+    * [.] Day 1 - Angular V
+        * [ ] Pre-Reading:
+            - [ ] Routing with UI-Router
+        * [ ] Lesson Video:
+            - [ ] Routing - 1 hour 7 minutes
+        * [o] Install these before class!:
+            - [X] Install Node - Mac
+            - [X] Install Node - Windows
+        * [ ] Mini Project:
+            - [ ] MiniRoute
+        * [ ] Learning Objectives
+            - [ ] Students will understand the methodology behind routing and templating
+            - [ ] Students will be able to set up a basic routing system with multiple views and controllers using UI-Router
+            - [ ] Students will be able to use resolve to resolve data and pass in data to their controller before theirn controller initializes
+            - [ ] Students will be able to use stateParams to gather data from the URL
+            
+        * [ ] Project:
+            - [ ] DevMtn Travels
+        * [ ] Assessment:
+            - [ ] AngularJS V - Routing
+        * [ ] Weeklong Challenge:
+            - [ ] Quiz App Repo (Use this to reference the Github repo)
+            - [ ] Quiz App Project Guide - Day 1 (Use this to start and build the project)
+        * [ ] Class Survey:
+            - [ ] Today's Survey
+        * [ ] Day 2 - Angular V Workday
 
 Pre-Reading:
 Routing with UI-Router

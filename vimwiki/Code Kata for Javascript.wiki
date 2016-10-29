@@ -10,8 +10,8 @@
     - [X] #5: Basic data types--Object
     - [X] #6: Basic data types--Boolean and conditional statements if..else
     - [X] #7: if..else and ternary operator
-    - [ ] #8: Conditional statement--switch
-    - [ ] #9: loop statement --while and do..while
+    - [X] #8: Conditional statement--switch
+    - [X] #9: loop statement --while and do..while
     - [ ] #10: loop statement --for
     - [ ] #11: loop statement --break,continue
     - [ ] #12: loop statement --for..in and for..of
