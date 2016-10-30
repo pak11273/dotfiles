@@ -22,6 +22,8 @@
  
     * [ ] = [[#mongodb setup]] =
     
+    * [ ] = [[#postgreSQL setup]] =
+    
 * [ ] = [[#daily monitor]] =
     
     * [ ] = [[#robomongo]] =  
@@ -404,7 +406,42 @@ done
             - [ ] var prompt = function() { return db+"@"+host+" Uptime:"+db.serverStatus().uptime+" Documents:"+db.stats().objects+" > " ;}
             - [ ] 
 
- = node debugger =
+= postgreSQL setup =
+* [ ] completed
+    * [ ] Install postgres server
+        - [ ] sudo apt-get install postgresql postgresql-contrib 
+        - [ ] sudo apt-get install pgadmin3
+        - [ ] sudo apt-get install postgresql-contrib
+        - [ ] sudo -u postgres psql
+        - [ ] CREATE EXTENSION adminpack;
+    * [ ] Set user postgres
+        - [ ] sudo -u postgres psql postgres 
+    * [ ] change pw
+        - [ ] \password 
+    * [ ] exit postgres
+        - [ ] Ctrl-D or \q
+    * [ ] Create database
+        - [ ] sudo - u postgres psql 
+        - [ ] sudo -u postgres createdb mydb
+                        or 
+        - [ ] create database <databasename>; 
+    * [ ] Open security
+        - [ ] sudo iptables -D INPUT -j DROP
+        - [ ] sudo iptables -A INPUT -p tcp --dport 5432 -j ACCEPT
+        - [ ] sudo iptables -A INPUT -j DROP
+        - [ ] sudo netfilter-persistent save
+        - [ ] sudo netfilter-persistent reload 
+        - [ ] sudo service ufw restart
+    * [ ] Allow remote access
+        * [ ] Make backup of all conf files you change
+            * [ ] sudo vim /etc/postgresql/<version>/main/postgresql.conf:
+                - [ ] listen_addresses = '*'
+            * [ ] sudo vim /etc/postgresql/<version>/main/pg_hba.conf:
+                - [ ] host all all 0.0.0.0/0 md5
+            - [ ] sudo /etc/init.d/postgresql stop
+            - [ ] sudo /etc/init.d/postgresql start
+ 
+= node debugger =
  
  * [ ] completed
      - [ ] npm install -g vimdebug
@@ -429,8 +466,31 @@ done
  = basic app framework =
  
 * [ ] completed
+    * [ ] directory and file structure:
+        - [ ] main directory
+            package.json (this is made with npm init)
+            - [ ] public
+                index.html
+                - [ ] assets 
+                    - [ ] img
+                    - [ ] styles
+                - [ ] app
+                    app.module.js
+                    app.routes.js
+                    - [ ] home component
+                        ie. homeTemplate, homeCtrl, homeService, homeDashboard, homeLogin
+                    - [ ] shared
+                        ie. navbar, directives, footer
+            - [ ] server
+                schema.sql 
+                index.js
+                - [ ] controllers
+                - [ ] db
+            
     - [ ] cd inside of your project root directory
-    - [ ] touch index.js
+    - [ ] npm init
+    - [ ] npm i express body-parser cors mongojs --save (or massive instead of mongojs)
+    - [ ] touch index.js:
           var express = require('express');
           var bodyParser = require('body-parser');
           var cors = require('cors');
@@ -472,8 +532,6 @@ done
           
           
     - [ ] git init
-    - [ ] npm init
-    - [ ] npm i express body-parser cors mongojs --save
     - [ ] vim .gitignore  
         - [ ] node_modules
     - [ ] cd root
