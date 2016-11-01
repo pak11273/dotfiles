@@ -1,0 +1,50 @@
+= Code Kata for Javascript =
+
+* ref: https://github.com/myjinxin2015/Katas-list-of-Training-JS-series 
+
+* [.] Completed
+    - [X] #1: create your first JS function helloWorld
+    - [X] #2: Basic data types--Number
+    - [X] #3: Basic data types--String
+    - [X] #4: Basic data types--Array
+    - [X] #5: Basic data types--Object
+    - [X] #6: Basic data types--Boolean and conditional statements if..else
+    - [X] #7: if..else and ternary operator
+    - [X] #8: Conditional statement--switch
+    - [X] #9: loop statement --while and do..while
+    - [ ] #10: loop statement --for
+    - [ ] #11: loop statement --break,continue
+    - [ ] #12: loop statement --for..in and for..of
+    - [ ] #13: Number object and its properties
+    - [ ] #14: Methods of Number object--toString() and toLocaleString()
+    - [ ] #15: Methods of Number object--toFixed(), toExponential() and toPrecision()
+    - [ ] #16: Methods of String object--slice(), substring() and substr()
+    - [ ] #17: Methods of String object--indexOf(), lastIndexOf() and search()
+    - [ ] #18: Methods of String object--concat() split() and its good friend join()
+    - [ ] #19: Methods of String object--toUpperCase() toLowerCase() and replace()
+    - [ ] #25: methods of arrayObject---reverse() and sort()
+    - [ ] #26: methods of arrayObject---map()
+    - [ ] #27: methods of arrayObject---filter()
+    - [ ] #28: methods of arrayObject---every() and some()
+    - [ ] #29: methods of arrayObject---concat() and join()
+    - [ ] #30: methods of arrayObject---reduce() and reduceRight()
+    - [ ] #31: methods of arrayObject---isArray() indexOf() and toString()
+    - [ ] #32: methods of Math---round() ceil() and floor()
+    - [ ] #33: methods of Math---max() min() and abs()
+    - [ ] #34: methods of Math---pow() sqrt() and cbrt()
+    - [ ] #35: methods of Math---log() and its family
+    - [ ] #36: methods of Math---kata author's lover:random()
+    - [ ] #37: Unlock new weapon---RegExp Object
+    - [ ] #38: Regular Expression--"^","$", "." and test()
+    - [ ] #39: Regular Expression--"?", "*", "+" and "{}"
+    - [ ] #40: Regular Expression--"|", "[]" and "()"
+    - [ ] #41: Regular Expression--"\"
+    - [ ] #42: Regular Expression--(?:), (?=) and (?!)
+    - [ ] Other Katas series:
+    - [ ] - Coding 3 Minutes Series
+    - Shortest Code Series
+    - Fastest Code Series
+    - Thinking and Testing Series
+    - Play Game Series
+    - Pattern Series
+    - Contact GitHub 
