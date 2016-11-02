@@ -401,8 +401,8 @@ Assessment:
           * [ ] Additional Reading:
               - [ ] The Power of Q
               - [ ] JSONP
-          * [ ] Assessment
-              - [ ] AngularJS IV - APIs
+          * [X] Assessment
+              - [X] AngularJS IV - APIs
           * [ ] Weeklong Challenge:
               - [ ] DevMt.In - Day Four
           * [o] Class Survey:
@@ -431,10 +431,10 @@ Assessment:
 * [.] Week 8
 
     * [.] Day 1 - Angular V
-        * [ ] Pre-Reading:
-            - [ ] Routing with UI-Router
+        * [X] Pre-Reading:
+            - [X] Routing with UI-Router  
         * [ ] Lesson Video:
-            - [ ] Routing - 1 hour 7 minutes
+            - [ ] Routing - 1 hour 7 minutes : TODO
         * [o] Install these before class!:
             - [X] Install Node - Mac
             - [X] Install Node - Windows
