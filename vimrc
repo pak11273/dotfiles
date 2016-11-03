@@ -43,7 +43,11 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " colorschemes
 Plugin 'flazz/vim-colorschemes'
 
-
+" vim snippets
+Plugin 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 
 
@@ -134,7 +138,7 @@ set rtp+=~/.vim
 
 " Load up all of our plugins
 if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+    source ~/.vimrc.bundles
 endif
 
 
@@ -159,8 +163,8 @@ let g:syntastic_warning_symbol = '!'
 
 " On by default, turn it off for html
 let g:syntastic_mode_map = { 'mode': 'active',
-           \ 'passive_filetypes': ['html'] }
-            " \ 'active_filetypes': [''] }
+            \ 'passive_filetypes': ['html'] }
+" \ 'active_filetypes': [''] }
 
 " Use jshint (uses ~/.jshintrc)
 let g:syntastic_javascript_checkers = ['jshint']

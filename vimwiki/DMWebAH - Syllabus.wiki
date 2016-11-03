@@ -428,26 +428,26 @@ Assessment:
       
       * [o] Class Survey:
           - [X] Today's Survey
-* [.] Week 8
+* [o] Week 8
 
-    * [.] Day 1 - Angular V
+    * [o] Day 1 - Angular V
         * [X] Pre-Reading:
             - [X] Routing with UI-Router  
-        * [ ] Lesson Video:
-            - [ ] Routing - 1 hour 7 minutes : TODO
+        * [X] Lesson Video:
+            - [X] Routing - 1 hour 7 minutes 
         * [o] Install these before class!:
             - [X] Install Node - Mac
             - [X] Install Node - Windows
-        * [ ] Mini Project:
-            - [ ] MiniRoute
-        * [ ] Learning Objectives
+        * [X] Mini Project:
+            - [X] MiniRoute
+        * [ ] Learning Objectives | later
             - [ ] Students will understand the methodology behind routing and templating
             - [ ] Students will be able to set up a basic routing system with multiple views and controllers using UI-Router
             - [ ] Students will be able to use resolve to resolve data and pass in data to their controller before theirn controller initializes
             - [ ] Students will be able to use stateParams to gather data from the URL
             
         * [ ] Project:
-            - [ ] DevMtn Travels
+            - [ ] DevMtn Travels todo
         * [ ] Assessment:
             - [ ] AngularJS V - Routing
         * [ ] Weeklong Challenge:
