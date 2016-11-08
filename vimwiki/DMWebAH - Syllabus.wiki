@@ -1,4 +1,4 @@
-* [ ] Week 1
+* [.] Week 1
 
 	* [ ] Day 1 - Github & Version Control
 
@@ -32,123 +32,117 @@
                     * [ ] Additional Practice:
                         * [ ] Learn Git Branching
                             - [ ] http://pcottle.github.io/learnGitBranching/ 
-Additional Reading:
-The Command Line Crash Course
-Lecture archive
-Visual Git guide
-Getting Started with Git
-Assessment
-Command Line & git
-Day 2 - HTML & CSS Fundamentals
-
-Pre-Reading:
-Codecademy HTML/CSS
-Lesson Video:
-HTML Basics 2 Hours 7 Minutes
-Learning Objectives
-Students will understand the purpose of HTML
-Students will understand the purpose of CSS
-Students will from scratch, be able to create a skeleton for their html and css page
-understand and be able to use the following HTML Elements
-p
-footer
-header
-h1 - h6
-ul
-li
-div
-Understand and be able to use the following CSS properties
-id (#) vs class(.) and specificity
-width px & %
-height px & %
-background-color
-background-image
-color
-font-size
-text-align: center
-line-height
-box-model (margin, padding, border)
-float
-clear
-Project:
-HTML Layouts
-Additional Reading:
-Assessment
-HTML
-Day 3 - HTML & CSS Positioning
-
-Pre-Reading:
-Positioning: MDN
-Lesson Video:
-HTML/CSS Positioning 1 Hour 45 Minutes
-Learning Objectives
-Students will be able to use Chrome Dev Tools to inspect their HTML/CSS
-Students will understand the purpose of CSS
-Students will be able to compare and contrast fixed, relative, absolute, and static positioning in CSS
-Students will be able to compare and contrast display block, inline-block, inline, and none
-Students will be able to compare and contrast overflow hidden, auto, scroll
-Students will understand and be able to use max/min-width and max/min-height
-Projects:
-HTML Layout 2
-Additional Reading
-Assessment
-CSS Positioning
-Week 2
-
-Day 1 - Advanced HTML & CSS
-
-Pre-Reading:
-Positioning in CSS
-Lesson Video:
-Advanced HTML & CSS w/Ben Callis 1 Hour 25 Minutes
-Optional Advanced HTML & CSS lecture w/Jason Turner 1 Hour 52 Minutes
-Learning Objectives
-Students will understand and be able to explain the box model to someone else
-Students will understand media queries and be able to implement them
-Students will understand when and when not to use floating elements
-Project:
-Wikimedia Clone - Clone the homepage for this website
-Additional Reading:
-Advanced HTML & CSS
-Assessment
-Advanced CSS
-Day 2 - Advanced CSS
-
-Before class:
-No video. Work on previous projects or re-watch lessons on Vimeo, or follow an online tutorial about HTML and CSS. Just make sure you do something! Keep up the momentum!!!
-Learning Objectives
-Students will understand and be able to explain the box model to someone else
-Students will understand media queries and be able to implement them
-Students will understand when and when not to use floating elements
-Project:
-Wideopen Tech Clone - Clone the homepage for this website
-Additional Reading:
-Advanced HTML & CSS
-Day 3 - JavaScript Fundamentals I
-
-Pre-Reading:
-Eloquent JavaScript - Functions
-Lesson Video:
-Intro to Javascript Fundamentals w/ Jeremy Robertson 1 hours 53 minutes
-Archive Video - Javascript Fundamentals w/ Jacob Turner (OPTIONAL) 2 Hours 4 Minutes
-Learning Objectives
-Students will understand how the web works:
-front-end vs back-end
-the web app landscape
-Students will understand JavaScript vs jQuery
-Students will understand what the DOM is
-Students will understand conditional statements and how they’re used
-Students will understand functions:
-invocation vs definition
-parameters vs arguments
-global and local scope
-anonymous functions
-return values and how to save the returned value to another variable
-Practice:
-Level 1 : https://codecard.io/a/sequence/BYTuMSKsX
-Level 2 : https://codecard.io/a/sequence/B4D9MGm5X
-Level 3 : https://codecard.io/a/sequence/dEvmVkM5f
-Projects:
+                        * [ ] Additional Reading:
+                            - [ ] The Command Line Crash Course
+                            - [ ] Lecture archive
+                            - [ ] Visual Git guide
+                            - [ ] Getting Started with Git
+                        * [ ] Assessment
+                            - [ ] Command Line & git
+    * [o] Day 2 - HTML & CSS Fundamentals
+        * [o] Pre-Reading:
+            - [X] Codecademy HTML/CSS
+        * [ ] Lesson Video:
+            - [ ] HTML Basics 2 Hours 7 Minutes
+        * [ ] Learning Objectives
+            - [ ] Students will understand the purpose of HTML
+            - [ ] Students will understand the purpose of CSS
+            - [ ] Students will from scratch, be able to create a skeleton for their html and css page
+        * [O] understand and be able to use the following HTML Elements
+            - [X] p
+            - [X] footer
+            - [X] header
+            - [X] h1 - h6
+            - [X] ul
+            - [X] li
+            - [X] div
+        * [X] Understand and be able to use the following CSS properties
+            - [X] id (#) vs class(.) and specificity
+            - [X] width px & %
+            - [X] height px & %
+            - [X] background-color
+            - [X] background-image
+            - [X] color
+            - [X] font-size
+            - [X] text-align: center
+            - [X] line-height
+            - [X] box-model (margin, padding, border)
+            - [X] float
+            - [X] clear
+        * [X] Project:
+            - [X] HTML Layouts
+        * [X] Additional Reading:
+            * [X] Assessment
+                - [X] HTML
+    * [O] Day 3 - HTML & CSS Positioning
+        * [X] Pre-Reading:
+            - [X] Positioning: MDN
+        * [X] Lesson Video:
+            - [X] HTML/CSS Positioning 1 Hour 45 Minutes
+        * [o] Learning Objectives
+            - [X] Students will be able to use Chrome Dev Tools to inspect their HTML/CSS
+            - [X] Students will understand the purpose of CSS
+            - [X] Students will be able to compare and contrast fixed, relative, absolute, and static positioning in CSS
+            - [X] Students will be able to compare and contrast display block, inline-block, inline, and none
+            - [ ] Students will be able to compare and contrast overflow hidden, auto, scroll : later
+            - [X] Students will understand and be able to use max/min-width and max/min-height
+        * [ ] Projects:
+            - [ ] HTML Layout 2
+            - [ ] Additional Reading
+            - [ ] Assessment
+            - [ ] CSS Positioning
+            - [ ] Week 2
+    * [ ] Day 1 - Advanced HTML & CSS
+        * [ ] Pre-Reading:
+            - [ ] Positioning in CSS
+        * [ ] Lesson Video:
+            - [ ] Advanced HTML & CSS w/Ben Callis 1 Hour 25 Minutes
+            - [ ] Optional Advanced HTML & CSS lecture w/Jason Turner 1 Hour 52 Minutes
+        * [ ] Learning Objectives
+            - [ ] Students will understand and be able to explain the box model to someone else
+            - [ ] Students will understand media queries and be able to implement them
+            - [ ] Students will understand when and when not to use floating elements
+        * [ ] Project:
+            - [ ] Wikimedia Clone - Clone the homepage for this website
+        * [ ] Additional Reading:
+            - [ ] Advanced HTML & CSS
+        * [ ] Assessment
+            - [ ] Advanced CSS
+    * [ ] Day 2 - Advanced CSS
+        * [ ] Before class:
+            - [ ] No video. Work on previous projects or re-watch lessons on Vimeo, or follow an online tutorial about HTML and CSS. Just make sure you do something! Keep up the momentum!!!
+        * [ ] Learning Objectives
+            - [ ] Students will understand and be able to explain the box model to someone else
+            - [ ] Students will understand media queries and be able to implement them
+            - [ ] Students will understand when and when not to use floating elements
+        * [ ] Project:
+            - [ ] Wideopen Tech Clone - Clone the homepage for this website
+        * [ ] Additional Reading:
+            - [ ] Advanced HTML & CSS
+    * [ ] Day 3 - JavaScript Fundamentals I
+        * [ ] Pre-Reading:
+            * [ ] Eloquent JavaScript - Functions
+        * [ ] Lesson Video:
+            - [ ] Intro to Javascript Fundamentals w/ Jeremy Robertson 1 hours 53 minutes
+            - [ ] Archive Video - Javascript Fundamentals w/ Jacob Turner (OPTIONAL) 2 Hours 4 Minutes
+        * [ ] Learning Objectives
+            - [ ] Students will understand how the web works:
+            - [ ] front-end vs back-end
+            - [ ] the web app landscape
+            - [ ] Students will understand JavaScript vs jQuery
+            - [ ] Students will understand what the DOM is
+            - [ ] Students will understand conditional statements and how they’re used
+            - [ ] Students will understand functions:
+            - [ ] invocation vs definition
+            - [ ] parameters vs arguments
+            - [ ] global and local scope
+            - [ ] anonymous functions
+            - [ ] return values and how to save the returned value to another variable
+        * [ ] Practice:
+            - [ ] Level 1 : https://codecard.io/a/sequence/BYTuMSKsX
+            - [ ] Level 2 : https://codecard.io/a/sequence/B4D9MGm5X
+            - [ ] Level 3 : https://codecard.io/a/sequence/dEvmVkM5f
+        * [ ] Projects:
 JavaScript Basics
 Only do Fns-and-scopes.js
 Additional Reading:
