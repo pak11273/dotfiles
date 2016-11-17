@@ -234,3 +234,5 @@ noremap Q <NOP>
 " activate spell-checking alternatives
 nmap ;s :set invspell spelllang=en<cr>
 
+" fix for webpack
+:set backupcopy=yes

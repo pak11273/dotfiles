@@ -86,35 +86,35 @@
             - [X] Students will be able to compare and contrast display block, inline-block, inline, and none
             - [ ] Students will be able to compare and contrast overflow hidden, auto, scroll : later
             - [X] Students will understand and be able to use max/min-width and max/min-height
-        * [ ] Projects:
-            - [ ] HTML Layout 2
-            - [ ] Additional Reading
-            - [ ] Assessment
-            - [ ] CSS Positioning
-            - [ ] Week 2
-    * [ ] Day 1 - Advanced HTML & CSS
-        * [ ] Pre-Reading:
-            - [ ] Positioning in CSS
-        * [ ] Lesson Video:
-            - [ ] Advanced HTML & CSS w/Ben Callis 1 Hour 25 Minutes
-            - [ ] Optional Advanced HTML & CSS lecture w/Jason Turner 1 Hour 52 Minutes
-        * [ ] Learning Objectives
-            - [ ] Students will understand and be able to explain the box model to someone else
-            - [ ] Students will understand media queries and be able to implement them
-            - [ ] Students will understand when and when not to use floating elements
-        * [ ] Project:
-            - [ ] Wikimedia Clone - Clone the homepage for this website
+        * [X] Projects:
+            - [X] HTML Layout 2
+        * [X] Additional Reading
+        * [X] Assessment
+            - [X] CSS Positioning
+* [o] Week 2
+    * [O] Day 1 - Advanced HTML & CSS
+        * [X] Pre-Reading:
+            - [X] Positioning in CSS 
+        * [X] Lesson Video:
+            - [X] Advanced HTML & CSS w/Ben Callis 1 Hour 25 Minutes
+            - [X] Optional Advanced HTML & CSS lecture w/Jason Turner 1 Hour 52 Minutes
+        * [X] Learning Objectives
+            - [X] Students will understand and be able to explain the box model to someone else
+            - [X] Students will understand media queries and be able to implement them
+            - [X] Students will understand when and when not to use floating elements
+        * [X] Project:
+            - [X] Wikimedia Clone - Clone the homepage for this website
         * [ ] Additional Reading:
-            - [ ] Advanced HTML & CSS
-        * [ ] Assessment
-            - [ ] Advanced CSS
-    * [ ] Day 2 - Advanced CSS
-        * [ ] Before class:
-            - [ ] No video. Work on previous projects or re-watch lessons on Vimeo, or follow an online tutorial about HTML and CSS. Just make sure you do something! Keep up the momentum!!!
-        * [ ] Learning Objectives
-            - [ ] Students will understand and be able to explain the box model to someone else
-            - [ ] Students will understand media queries and be able to implement them
-            - [ ] Students will understand when and when not to use floating elements
+            - [ ] Advanced HTML & CSS later
+        * [X] Assessment
+            - [X] Advanced CSS
+    * [o] Day 2 - Advanced CSS
+        * [X] Before class:
+            - [X] No video. Work on previous projects or re-watch lessons on Vimeo, or follow an online tutorial about HTML and CSS. Just make sure you do something! Keep up the momentum!!!
+        * [X] Learning Objectives
+            - [X] Students will understand and be able to explain the box model to someone else
+            - [X] Students will understand media queries and be able to implement them
+            - [X] Students will understand when and when not to use floating elements
         * [ ] Project:
             - [ ] Wideopen Tech Clone - Clone the homepage for this website
         * [ ] Additional Reading:
@@ -441,7 +441,7 @@ Assessment:
             - [ ] Students will be able to use stateParams to gather data from the URL
             
         * [ ] Project:
-            - [ ] DevMtn Travels todo
+            - [ ] DevMtn Travels later 
         * [X] Assessment:
             - [X] AngularJS V - Routing
         * [ ] Weeklong Challenge:
@@ -497,11 +497,12 @@ Quiz App (Use this to reference the Github repo)
 Quiz App Project Guide - Day 2 (Use this to start and build the project)
 Class Survey:
 Today's Survey
-Week 9
 
-Day 1 - Angular VI Workday
+* [ ] Week 9
 
-Pre-Reading:
+    * [ ] Day 1 - Angular VI Workday
+    
+        * [ ] Pre-Reading:
 Directives
 Lesson Video:
 No video for today's lesson
@@ -544,9 +545,9 @@ Quiz App (Use this to reference the Github repo)
 Quiz App Project Guide - Day 3 and BD's (Use this to start and build the project)
 Class Survey:
 Today's Survey
-* [ ] Week 10 
+* [.] Week 10 
 
-    * [ ] Day 1 - NodeJS I
+    * [.] Day 1 - NodeJS I
 
         * [ ] Lesson Video:
             * [ ] NodeJS I - 2 hours 42 minutes
@@ -555,14 +556,14 @@ Today's Survey
             * [ ] Siri
                 - [ ] https://github.com/DevMountain/Siri 
                 - [ ] **Can't do, no access to client
-        * [ ] Learning Objectives
-            - [ ] Students understand what Node is and that it can be used as a server
-            - [ ] Student will understand how HTTP works to communicate between client & server
-            - [ ] Student will understand the need for a module like express
-            - [ ] Student can use require to import a Node module
-            - [ ] Student will understand the basic utility of a package.json file
-            - [ ] Student can create a HTTP NodeJS server using express
-            - [ ] Students can explain endpoints and create basic ones testing them with Postman
+        * [X] Learning Objectives
+            - [X] Students understand what Node is and that it can be used as a server
+            - [X] Student will understand how HTTP works to communicate between client & server
+            - [X] Student will understand the need for a module like express
+            - [X] Student can use require to import a Node module
+            - [X] Student will understand the basic utility of a package.json file
+            - [X] Student can create a HTTP NodeJS server using express
+            - [X] Students can explain endpoints and create basic ones testing them with Postman
         * [ ] Project:
             * [ ] Trello App (Use this to reference the Github repo)
                 - [ ] https://github.com/DevMountain/trello-clone
@@ -661,12 +662,13 @@ Project:
 Trello App (Use this to reference the Github repo)
 Trello App Project Guide - Day 6 (Use this to start and build the project)
 Additional Reading:
-Week 12
 
-Day 1 - NodeJS IV & Ecommerce Project
+* [ ] Week 12
 
-Lesson Video:
-NodeJS Auth - Passport - 1 hour 13 minutes
+    * [ ] Day 1 - NodeJS IV & Ecommerce Project
+    
+        * [ ] Lesson Video:
+            * [ ] NodeJS Auth - Passport - 1 hour 13 minutes
 Mini Project:
 Facebook Profile Viewer
 Learning Objectives

@@ -711,6 +711,8 @@ done
                 * [ ] iptables -L
             * [ ] Clear iptables rules
                 * [ ] iptables -F
+* [ ] Memory utility
+    * [ ] sudo apt-get install htop
      
  
  
