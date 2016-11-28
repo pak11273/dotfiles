@@ -1,13 +1,13 @@
-* [.] Week 1
+* [o] Week 1
 
-	* [ ] Day 1 - Github & Version Control
+	* [o] Day 1 - Github & Version Control
 
-            * [ ] Pre-Reading:
-                * [ ] Git - The Simple Guide
-                    - [ ] http://rogerdudler.github.io/git-guide/
-                * [ ] Atlassian Git Tutorial
-                    - [ ] https://www.atlassian.com/git/tutorials/setting-up-a-repository
-                    - [ ] Make sure you Install Git
+            * [o] Pre-Reading:
+                * [X] Git - The Simple Guide
+                    - [X] http://rogerdudler.github.io/git-guide/
+                * [X] Atlassian Git Tutorial
+                    - [X] https://www.atlassian.com/git/tutorials/setting-up-a-repository
+                    - [X] Make sure you Install Git
                 * [ ] Lesson Video:
                     * [ ] Github 1 Hour 11 Minutes
                         - [ ] https://www.youtube.com/playlist?list=PLFq09yYVYpcK2409Owt4nyRleoRO-OdSx
@@ -119,144 +119,147 @@
             - [ ] Wideopen Tech Clone - Clone the homepage for this website
         * [ ] Additional Reading:
             - [ ] Advanced HTML & CSS
-    * [ ] Day 3 - JavaScript Fundamentals I
+    * [O] Day 3 - JavaScript Fundamentals I
         * [ ] Pre-Reading:
             * [ ] Eloquent JavaScript - Functions
+        * [X] Lesson Video:
+            - [X] Intro to Javascript Fundamentals w/ Jeremy Robertson 1 hours 53 minutes
+            - [X] Archive Video - Javascript Fundamentals w/ Jacob Turner (OPTIONAL) 2 Hours 4 Minutes
+        * [X] Learning Objectives
+            - [X] Students will understand how the web works:
+            - [X] front-end vs back-end
+            - [X] the web app landscape
+            - [X] Students will understand JavaScript vs jQuery
+            - [X] Students will understand what the DOM is
+            - [X] Students will understand conditional statements and how they’re used
+            - [X] Students will understand functions:
+            - [X] invocation vs definition
+            - [X] parameters vs arguments
+            - [X] global and local scope
+            - [X] anonymous functions
+            - [X] return values and how to save the returned value to another variable
+        * [X] Practice:
+            - [X] Level 1 : https://codecard.io/a/sequence/BYTuMSKsX
+            - [X] Level 2 : https://codecard.io/a/sequence/B4D9MGm5X
+            - [X] Level 3 : https://codecard.io/a/sequence/dEvmVkM5f
+        * [X] Projects:
+            - [X] JavaScript Basics
+                * [X] Only do Fns-and-scopes.js
+        * [X] Additional Reading:
+            - [X] Everything you need to know about Scopes
+        * [X] Assessments
+            - [X] JS Fundamentals I
+                * [X] Skip the last 2 questions
+        * [X] Black Diamond (Bonus push yourself material)
+            - [X] Advanced JS Problems - These problems push farther into javascript than what we've taught so far, but they're great to come back to to gauge your progress.
+            
+* [.] Week 3
+            
+    * [O] Day 1 - JavaScript Fundamentals II
+        * [o] Pre-Reading:
+            - [X] JS is Sexy - Closures
+        * [X] Learning Objectives
+            - [X] Students will be able to define what a closure is
+            - [X] Students will be able to identify when a closure is being used
+        * [X] Practice
+            - [X] https://codecard.io/a/sequence/dE5_lLSsX
+            - [X] https://codecard.io/a/sequence/N4pvJbW0y
+        - [o] Projects:
+            - [X] JavaScript Closures
+        * [X] Assessments
+            - [X] JS Fundamentals I
+                * [o] All questions
+        * [o] Black Diamond (Bonus push yourself material)
+            - [X] Advanced JS Problems
+    * [.] Day 2 - JS Fundamentals III
+    
+        * [ ] Pre-Reading:
+            - [ ] Eloquent JavaScript - Objects and Arrays
         * [ ] Lesson Video:
-            - [ ] Intro to Javascript Fundamentals w/ Jeremy Robertson 1 hours 53 minutes
-            - [ ] Archive Video - Javascript Fundamentals w/ Jacob Turner (OPTIONAL) 2 Hours 4 Minutes
+            - [ ] Javascript Fundamentals II & III w/ Jeremy Robertson] (https://www.youtube.com/playlist?list=PLFq09yYVYpcIHr6k0SxZfoU7cQttkkw52) - 1 hr 53 minutes
+            - [ ] Javascript Fundamentals II & III w/ Jeremy Robertson (Unedited) - This video covers content for two classes. 2 hours 22 minutes.
         * [ ] Learning Objectives
-            - [ ] Students will understand how the web works:
-            - [ ] front-end vs back-end
-            - [ ] the web app landscape
-            - [ ] Students will understand JavaScript vs jQuery
-            - [ ] Students will understand what the DOM is
-            - [ ] Students will understand conditional statements and how they’re used
-            - [ ] Students will understand functions:
-            - [ ] invocation vs definition
-            - [ ] parameters vs arguments
-            - [ ] global and local scope
-            - [ ] anonymous functions
-            - [ ] return values and how to save the returned value to another variable
-        * [ ] Practice:
-            - [ ] Level 1 : https://codecard.io/a/sequence/BYTuMSKsX
-            - [ ] Level 2 : https://codecard.io/a/sequence/B4D9MGm5X
-            - [ ] Level 3 : https://codecard.io/a/sequence/dEvmVkM5f
+            - [ ] Students will understand Arrays:
+            - [ ] purpose
+            - [ ] how to get values from arrays
+            - [ ] array properties (length, push/pop, shift/unshift, split/join, splice/slice, reverse, indexOf)
+            - [ ] how to create an array
+            - [ ] how to loop through an array
+        * [ ] Project:
+            - [ ] Array Fiddles
+        * [X] Additional Reading:
+    * [ ] Day 3 - JS Fundamentals IV
+        
+        * [ ] Pre-Reading:
+            - [ ] JS is Sexy - Objects
+        * [ ] Lesson Video:
+            - [ ] Javascript Fundamentals II & III - Same video as yesterday. 2 hours 22 minutes.
+        * [ ] Learning Objectives
+            - [ ] Students will understand how Objects differ from Arrays
+            - [ ] Students will understand use cases for objects
+            - [ ] Students will understand how to create and add properties/values to objects
+            - [ ] Students will understand how to loop through objects
+            - [ ] Students will understand how to create and invoke a method
+            - [ ] Students will understand bracket notation vs dot notation
+            - [ ] Students will understand how to remove keys/props from objects (delete)
         * [ ] Projects:
-JavaScript Basics
-Only do Fns-and-scopes.js
-Additional Reading:
-Everything you need to know about Scopes
-Assessments
-JS Fundamentals I
-Skip the last 2 questions
-Black Diamond (Bonus push yourself material)
-Advanced JS Problems - These problems push farther into javascript than what we've taught so far, but they're great to come back to to gauge your progress.
-Week 3
+            - [ ] JavaScript Objects
+        * [ ] Additional Reading:
+            - [ ] High Order Functions
+            
+* [ ] Week 4
 
-Day 1 - JavaScript Fundamentals II
-
-Pre-Reading:
-JS is Sexy - Closures
-Learning Objectives
-Students will be able to define what a closure is
-Students will be able to identify when a closure is being used
-Practice
-https://codecard.io/a/sequence/dE5_lLSsX
-https://codecard.io/a/sequence/N4pvJbW0y
-Projects:
-JavaScript Closures
-Assessments
-JS Fundamentals I
-All questions
-Black Diamond (Bonus push yourself material)
-Advanced JS Problems
-Day 2 - JS Fundamentals III
-
-Pre-Reading:
-Eloquent JavaScript - Objects and Arrays
-Lesson Video:
-Javascript Fundamentals II & III w/ Jeremy Robertson] (https://www.youtube.com/playlist?list=PLFq09yYVYpcIHr6k0SxZfoU7cQttkkw52) - 1 hr 53 minutes
-Javascript Fundamentals II & III w/ Jeremy Robertson (Unedited) - This video covers content for two classes. 2 hours 22 minutes.
-Learning Objectives
-Students will understand Arrays:
-purpose
-how to get values from arrays
-array properties (length, push/pop, shift/unshift, split/join, splice/slice, reverse, indexOf)
-how to create an array
-how to loop through an array
-Project:
-Array Fiddles
-Additional Reading:
-Day 3 - JS Fundamentals IV
-
-Pre-Reading:
-JS is Sexy - Objects
-Lesson Video:
-Javascript Fundamentals II & III - Same video as yesterday. 2 hours 22 minutes.
-Learning Objectives
-Students will understand how Objects differ from Arrays
-Students will understand use cases for objects
-Students will understand how to create and add properties/values to objects
-Students will understand how to loop through objects
-Students will understand how to create and invoke a method
-Students will understand bracket notation vs dot notation
-Students will understand how to remove keys/props from objects (delete)
-Projects:
-JavaScript Objects
-Additional Reading:
-High Order Functions
-Week 4
-
-Day 1 - Advanced JavaScript I
-
-Pre-Reading:
-JS is Sexy - Callbacks
-Lesson Video:
-JS Callbacks & Prototypes 1 Hour 11 Minutes
-Learning Objectives
-Students will understand synchronous vs asynchronous programming
-Students will be able to talk about what a callback is
-Students will understand the use cases of callbacks
-Students will be able to identify and use callbacks
-Projects:
-Callback Practice
-Utilities
-Additional Reading:
-Electronic Life
-Assessment
-JS Fundamentals V
-Day 2 - Advanced JavaScript II
-
-Pre-Reading:
-This with Clarity
-Lesson Video:
-JS - The "this" keyword 1 Hour 49 Minutes
-Learning Objectives
-the purpose of the ‘this’ keyword
-4 rules for determining what ‘this’ is bound to
-Implicit Binding
-Explicit Binding
-call
-apply
-bind
-new binding
-Default Binding
-Students will understand what prototypes are in JavaScript
-Students will be able to add a method on a function’s prototype and create instances of that function that invoke the prototypes method
-Projects:
-The This Keyword
-Constructors
-Additional Reading:
-Assessment
-JS Fundamentals IV
-Day 3 - JavaScript Review
-
-Pre-Reading:
-JS is Sexy - Scopes and Hoisting
-Project:
-JavaScript Review
-Week 5
+    * [ ] Day 1 - Advanced JavaScript I
+    
+        * [ ] Pre-Reading:
+            - [ ] JS is Sexy - Callbacks
+        * [ ] Lesson Video:
+            - [ ] JS Callbacks & Prototypes 1 Hour 11 Minutes
+        * [ ] Learning Objectives
+            - [ ] Students will understand synchronous vs asynchronous programming
+            - [ ] Students will be able to talk about what a callback is
+            - [ ] Students will understand the use cases of callbacks
+            - [ ] Students will be able to identify and use callbacks
+        * [ ] Projects:
+            - [ ] Callback Practice
+            - [ ] Utilities
+        * [ ] Additional Reading:
+            - [ ] Electronic Life
+        * [ ] Assessment
+            - [ ] JS Fundamentals V
+             
+    * [ ] Day 2 - Advanced JavaScript II
+    
+        * [ ] Pre-Reading:
+            - [ ] This with Clarity
+        * [ ] Lesson Video:
+            - [ ] JS - The "this" keyword 1 Hour 49 Minutes
+        * [ ] Learning Objectives
+            - [ ] the purpose of the ‘this’ keyword
+                - [ ] 4 rules for determining what ‘this’ is bound to
+                    - [ ] Implicit Binding
+                    - [ ] Explicit Binding
+                        - [ ] call
+                        - [ ] apply
+                        - [ ] bind
+                    - [ ] new binding
+                    - [ ] Default Binding
+            - [ ] Students will understand what prototypes are in JavaScript
+            - [ ] Students will be able to add a method on a function’s prototype and create instances of that function that invoke the prototypes method
+        * [ ] Projects:
+            - [ ] The This Keyword
+            - [ ] Constructors
+        * [ ] Additional Reading:
+        * [ ] Assessment
+            - [ ] JS Fundamentals IV
+    * [ ] Day 3 - JavaScript Review
+    
+        * [ ] Pre-Reading:
+            - [ ] JS is Sexy - Scopes and Hoisting
+        * [ ] Project:
+            - [ ] JavaScript Review
+            
+* [ ] Week 5
 
 Day 1 - jQuery I
 

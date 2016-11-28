@@ -29,6 +29,8 @@
     * [ ] = [[#robomongo]] =  
  
     * [ ] = [[#node debugger]] =
+    
+    * [ ] = [[#front-end setup]]=
 
 
 = [[#basic app framework]] =
@@ -458,101 +460,22 @@ done
       **** see node-vim-debugger for commands
  
  
- 
- 
- 
- 
- 
- 
+
  = basic app framework =
  
 * [ ] completed
-    * [ ] directory and file structure:
-        - [ ] main directory
-            package.json (this is made with npm init)
-            - [ ] public
-                index.html
-                - [ ] assets 
-                    - [ ] img
-                    - [ ] styles
-                - [ ] app
-                    app.module.js
-                    app.routes.js
-                    - [ ] home component
-                        ie. homeTemplate, homeCtrl, homeService, homeDashboard, homeLogin
-                    - [ ] shared
-                        ie. navbar, directives, footer
-            - [ ] server
-                schema.sql 
-                index.js
-                - [ ] controllers
-                - [ ] db
-            
-    - [ ] cd inside of your project root directory
-    - [ ] npm init
-    - [ ] npm i express body-parser cors mongojs --save (or massive instead of mongojs)
-    - [ ] touch index.js:
-          var express = require('express');
-          var bodyParser = require('body-parser');
-          var cors = require('cors');
-          var mongojs = require('mongojs');
-          
-          var app = express();
-          
-          //1. listen for http requests 
-          app.listen(<port>, function() {
-            console.log('listening on port 9002');
-          });
-          
-          = //2. always parse http body as json, it assigns result to req.body =
-          //ALL http methods will be parsed as json
-          app.use(bodyParser.json())
-          
-          //3. abstract away methods into an object
-         
-          var controller = {
-            "index": function(req,res,next) {
-                res.send('get page');
-             }
-          };
-                
-              app.get('/endpoint', books_controller.index);
-          
-          //4. basic http post method 
-          app.post('/endpoint', function(req,res,next) {
-            res.send(req.body);
-          });
-          
-          //5. basic http delete method 
-          // incoming url domain.com/endpoint/0
-          app.delete('/endpoint', function(req,res,next) {
-            array.splice(req,params.id, 1);
-            res.send(array:w
-            );
-          });
-          
-          
-    - [ ] git init
-    - [ ] vim .gitignore  
-        - [ ] node_modules
-    - [ ] cd root
-    - [ ] sudo bower init --allow-root 
-    - [ ] pm2 start index.js -n <app name>
-    * [ ] Change nginx config:
-          location / {
-                  proxy_pass http://localhost:{YOUR_PORT};
-                  proxy_http_version 1.1;
-                  proxy_set_header Upgrade $http_upgrade;
-                  proxy_set_header Connection 'upgrade';
-                  proxy_set_header Host $host;
-                                                          proxy_cache_bypass $http_upgrade;
-                                                                      }
-          - [ ] Add port access:
-              sudo iptables -D INPUT -j DROP
-              sudo iptables -A INPUT -p tcp --dport <port #> -j ACCEPT 
-              sudo iptables -A INPUT -j DROP
-              /sbin/iptables-save
-              
+    * [ ] BackEnd
+        * [ ] nginx config file
+            - [ ] add location/port
+        * [ ] server folder
+            * [ ] config.js
+                - [ ] change port number
+                - [ ] change session key
+            * [ ] routes.js
+                - [ ] change app name in filepaths
+             
+    * [ ] FrontEnd
+        * [ ] change gulpfile
 
 
 
@@ -715,6 +638,7 @@ done
     * [ ] sudo apt-get install htop
      
  
- 
+= front-end setup =  
+
  
 
