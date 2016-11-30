@@ -1,31 +1,31 @@
 * [o] Week 1
 
-	* [o] Day 1 - Github & Version Control
+	* [O] Day 1 - Github & Version Control
 
-            * [o] Pre-Reading:
+            * [O] Pre-Reading:
                 * [X] Git - The Simple Guide
                     - [X] http://rogerdudler.github.io/git-guide/
                 * [X] Atlassian Git Tutorial
                     - [X] https://www.atlassian.com/git/tutorials/setting-up-a-repository
                     - [X] Make sure you Install Git
-                * [ ] Lesson Video:
-                    * [ ] Github 1 Hour 11 Minutes
-                        - [ ] https://www.youtube.com/playlist?list=PLFq09yYVYpcK2409Owt4nyRleoRO-OdSx
-                * [ ] Learning Objectives
-                    * [ ] Students will understand and be able to use the command line for
-                        - [ ] creating a folder
-                        - [ ] creating a file
-                        - [ ] editing a file
-                        - [ ] changing directories
-                * [ ] Students will understand what Git and Github are and how they fit into the web app landscape
-                        - [ ] Students will be able to clone a repo and know its purpose
-                        - [ ] Students will be able to add, commit, and push files to github
-                        - [ ] Students will understand basic branching
+                * [X] Lesson Video:
+                    * [X] Github 1 Hour 11 Minutes
+                        - [X] https://www.youtube.com/playlist?list=PLFq09yYVYpcK2409Owt4nyRleoRO-OdSx
+                * [X] Learning Objectives
+                    * [X] Students will understand and be able to use the command line for
+                        - [X] creating a folder
+                        - [X] creating a file
+                        - [X] editing a file
+                        - [X] changing directories
+                * [o] Students will understand what Git and Github are and how they fit into the web app landscape
+                        - [X] Students will be able to clone a repo and know its purpose
+                        - [X] Students will be able to add, commit, and push files to github
+                        - [X] Students will understand basic branching
                         - [ ] Students will understand how to use github in a group setting
-                        - [ ] Students be able to understand what a "Fork" is and be able to Fork a repo
+                        - [X] Students be able to understand what a "Fork" is and be able to Fork a repo
                         - [ ] Students will be able to handle merge conflicts
                         - [ ] Students will be able to minimally manage vim to escape merge conflict messages
-                        - [ ] Students will know how to make a Pull Request
+                       - [ ] Students will know how to make a Pull Request
                     * [ ] Project:
                         * [ ] Learn Git
                             - [ ] https://github.com/DevMountain/learn-git
