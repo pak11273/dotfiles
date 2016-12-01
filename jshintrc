@@ -89,7 +89,9 @@
     // Custom Globals
     "globals"       : {},       // additional predefined global variables
 
-    // isaac changes
-    "esversion"     : 6         // keeps ES6 warnings from poppin up
+    // isaac start
+    "esversion"     : 6,        // keeps ES6 warnings from poppin up
+    "predef"       : ["angular"]
+    // isaac stop 
 }
 
