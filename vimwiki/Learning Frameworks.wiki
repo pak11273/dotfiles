@@ -1,0 +1,41 @@
+Technologies to Learn
+
+Javascript
+Angular
+Sequelize
+CSS
+Jquery
+
+What are some high level concepts that are transferrable between these?
+They all use frameworks
+
+
+TODO:
+Build a basic framework for each of these from scratch. 
+Discover areas where you find hard to recall.  Why are they hard?
+
+Build them in the context of subjects you like or are interested in.
+
+Learn a technique that is transferable or has sustainability.
+
+Teach what you learned. In your words.
+
+
+
+RESEARCH:
+how to make something very important while learning something
+
+what are subjects you like?
+Guitar
+Art
+Learning
+Martial Arts
+Farming
+Architecture
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-* [O] == Follow these in order to setup a basic MEAN Stack on Digital Ocean ==
+* [o] == Follow these in order to setup a basic Web Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
     
@@ -19,6 +19,10 @@
     * [X] = [[#PM2]]=
 
     * [ ] = [[#Multiple Apps ]]=
+    
+* [ ] = Databases Ubuntu 16.04 =
+
+    * [ ] = [[#mysql setup]] = 
  
     * [ ] = [[#mongodb setup]] =
     
@@ -33,7 +37,6 @@
     * [ ] = [[#front-end setup]]=
 
 
-= [[#basic app framework]] =
 
 
 
@@ -237,21 +240,32 @@
 
 
 == Node Setup ==
-    * [X] completed 
+    * [O] completed 
         - [X] apt-get update
         - [X] apt-get install nodejs
-        - [X] apt-get install npm
-        - [X] sudo apt-get install build-essential libssl-dev
-        - [X] curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
-        - [X] bash install_nvm.sh 
-        - [X] source ~/.profile
-        * [X] get latest node version
-            - [X] nvm install 6.7.0 ( or latest version ) 
-            - [X] nvm use 6.7.0
-            * useful commands:
-                * nvm ls //see what version installed
-                * node -v  //see what version you are using
-                * nvm alias default 6.0.0 //use this version as default
+        - [o] NVM
+            * [X] do not do these next steps in root, use a user account  
+            - [X] sudo apt-get install build-essential libssl-dev
+            - [X] curl -sL https://raw.githubusercontent.com/creationix/n vm/v0.31.0/install.sh -o install_nvm.sh
+            - [X] bash install_nvm.sh 
+                  
+                - [X] for user accounts you need to add this to the last line of their .bash_profile:
+                [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+               export NVM_DIR=~/.nvm
+               
+                - [X] then source ~/.bash_profile
+            * [o] get latest node version
+                - [X] nvm install 6.7.0 ( or latest version ) 
+                - [X] nvm use 6.7.0
+            * [ ] per project basis
+                - [ ] vim .nvmrc in project root directory
+                        ie. 5.0.0
+                        ie. lts/*   //latest lts version
+                - [ ] nvm use
+                * useful commands:
+                    * nvm ls //see what version installed
+                    * node -v  //see what version you are using
+                    * nvm alias default 6.0.0 //use this version as default
 
     == PM2 ==
     * [X] completed
@@ -380,7 +394,14 @@ done
     - [ ] git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     - [ ] tmux source ~/.tmux.conf
     - [ ] prefix + I //installs plugins
- 
+    
+    
+= mysql setup =
+* [ ] completed
+    - [ ] sudo apt install mysql-server mysql-client
+    - [ ] systemctl status mysql.service
+
+
 = mongodb setup = 
 * [.] completed
     * [O] installation
@@ -460,22 +481,6 @@ done
       **** see node-vim-debugger for commands
  
  
-
- = basic app framework =
- 
-* [ ] completed
-    * [ ] BackEnd
-        * [ ] nginx config file
-            - [ ] add location/port
-        * [ ] server folder
-            * [ ] config.js
-                - [ ] change port number
-                - [ ] change session key
-            * [ ] routes.js
-                - [ ] change app name in filepaths
-             
-    * [ ] FrontEnd
-        * [ ] change gulpfile
 
 
 

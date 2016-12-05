@@ -1,0 +1,52 @@
+= Basic Framework =
+
+* [ ] - Completed
+    - [ ] Make main directory
+        - [ ] cd into dir
+        - [ ] git init 
+        - [ ] vim .gitignore
+        - [ ] vim robots txt
+        - [ ] npm init -y
+    * [ ] Git
+        - [ ] git add .
+        - [ ] git cm -m "init"
+        - [ ] create bitbucket and push to repo
+    * [ ] Backend 
+        - [ ] create backend branch 
+        - [ ] mkdir server && cd server 
+        - [ ] npm i --save express express-session body-parser cors
+        - [ ] vim .config
+              
+              module.exports = 
+              {
+                PORT: 9000
+              }
+                
+        - [ ] vim index.js
+              
+              /* jshint node: true */
+              'use strict';
+              var path = require('path');
+              var config = require('./.config');
+              var express = require('express');
+              var app = express();
+              var bodyParser = require('body-parser');
+              var cors = require('cors');
+              
+              
+              /* Middleware */
+              app.use(bodyParser.json());
+              app.use(cors());
+              app.use(express.static('public');
+              
+              /# Routes */
+              app.get('/', function(req, res) {
+                  res.send('test');
+              });
+              
+              /* Connections */
+              app.listen(config.PORT, function() {
+                  console.log('listening on port ', config.PORT);
+              });
+                  
+        - [ ] add index.js to pm2 and run it 

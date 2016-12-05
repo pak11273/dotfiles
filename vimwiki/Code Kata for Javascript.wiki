@@ -12,8 +12,8 @@
     - [X] #7: if..else and ternary operator
     - [X] #8: Conditional statement--switch
     - [X] #9: loop statement --while and do..while
-    - [ ] #10: loop statement --for
-    - [ ] #11: loop statement --break,continue
+    - [X] #10: loop statement --for
+    - [X] #11: loop statement --break,continue
     - [ ] #12: loop statement --for..in and for..of
     - [ ] #13: Number object and its properties
     - [ ] #14: Methods of Number object--toString() and toLocaleString()

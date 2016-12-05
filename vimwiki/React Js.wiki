@@ -1,0 +1,37 @@
+= React JS =
+
+== Big Picture ==
+    * [ ] What is reactjs?
+        - [ ] A javascript library to build UI frameworks 
+        
+== Framework ==
+    * [ ] What are the components needed to make it work?
+        * [ ] node moduels
+            - [ ] webpack?
+                - [ ] a node package bundler 
+                    - [ ] Keeps a centralized place to load files so you can minimize http requests. 
+                * [ ] webpack - framework
+                    - [ ] core
+                    - [ ] loader
+                    - [ ] preset
+                - [ ] webpack.config.js
+                    # pseudo
+                    # export an object
+                        # entry
+                        # output > dirname > filename
+                        # module > loaders > presets
+            - [ ] babel?
+              # is like if you were going to japan and you wanted the people(browser) to understand you, you would need a translator since they don't understand English. 
+                - [ ] a es2015 transpiler
+                    - [ ] Turns your code into vanilla js that browsers can read so you can use moder js.
+            - [ ] react 
+            - [ ] what is react dom?
+                - [ ] react's rendering engine
+== TM JSXX ==
+    * [ ] any html in parens will be converted to javascript elements (ie return (<div>>) transpiles to document.createElements("div")
+
+
+* [ ] Playground
+    - [ ] Start base react project
+    - [ ] Create a react component that says Hello world
+    - [ ] 
