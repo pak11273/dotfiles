@@ -1,4 +1,4 @@
-##Reference:
+j##Reference:
 [link](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
 ##Adding new . files in the home dir
@@ -21,3 +21,8 @@ chmod +x makesymlinks.sh
 Download vundle and git clone repo
 
 vim and :PluginInstall
+
+## Windows
+
+Any references to .vim need to change to vimfiles
+Any references to .vimrc need to change to _vimrc
