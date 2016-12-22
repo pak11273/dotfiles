@@ -1,0 +1,40 @@
+* Promises
+* Lazy Evaluation - todo
+* this
+
+ 
+* Lazy Evaluation
+  a) def: 
+     - Computing something and holding onto that information for use anytime in the future.
+  b) analogy:
+     - adding 2 numbers and putting the result on a piece of paper and sticking it into your pocket. 
+  c) application:  
+  d) facts:
+  e) examples: 
+     -  
+
+* Promises
+  a) def:
+    - A way to handle asynchronous events
+  b) analogy:
+    - a father promising a fish fry after a fish trip if he catches fish or else they go out to eat.  On success of catching fish, the father cleans and fillets the fish(then statements)
+  c) application:
+    - anytime you are requesting something that will take time to respond
+  d) facts:
+  e) examples:
+    - http requests
+
+
+* this
+  a) def:   
+     - a variable that represents an instance of an object 
+  c) analagy: 
+     - like a pronoun ie. he, she refers to someone
+  d) facts:
+     - what happens when this is not defined in a function?
+       it will refer to the global object(window) 
+     - what happens to this when it is not defined in a function but the function uses 'use strict'?
+       - it will be undefined
+     - what do you use to pass this in context? 
+       call or apply
+  f) examples: 

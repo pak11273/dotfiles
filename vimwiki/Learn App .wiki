@@ -1,0 +1,60 @@
+Learn App Template
+
+= Web development =
+
+== Make a Backend ==
+
+- [ ] Skeleton 
+  - [ ] Give access by creating a location in the proxy server 
+  - [ ] Create Structure
+    - [ ] git, gitignore, robots.txt
+    - [ ] npm init -y
+      - [ ] express, cors, body-parser 
+    - [ ] Server Folder
+      - [ ] src
+        - [ ] config.js, index.js
+        - [ ] controllers/
+        - [ ] db/
+        - [ ] models/
+      - [ ] dist
+     
+=== Use modern javascript ===
+    - [ ] npm install --save-dev babel-cli babel-preset-es2015 nodemon
+    - [ ] make a package.json script
+    - [ ] create a .babelrc file and include presets
+      - [ ] or just include in package.json
+    - [ ] gitignore dist
+    - [ ] create build and dev scripts in package json
+  - [ ] Setup test endpoint
+
+=== Contact Mailer api ===
+  - [ ] npm i --save nodemailer 
+  - [ ] create controller and endpoint
+  - [ ] test in postman
+  
+=== Make a User ===
+  - [ ] Create a database 
+  - [ ] npm i --save mysql sequelize sequelize-cli 
+  - [ ] create an npm script for migrations
+  - [ ] create sequelizerc
+  - [ ] use sequelize generator and create user model
+  - [ ] run migrations
+
+=== Login/Registration === 
+  - [ ] npm passport passport-local --save 
+  - [ ] create a passport file
+    
+    
+== Make the Frontend ==
+
+- [ ] Completed
+  - [ ] Directory Structure
+    - [ ] public
+
+=== Webpack ===
+    - [ ] npm install webpack --save-dev 
+    - [ ] create a config file that includes front and backends
+    - [ ] create entry files for front and backends
+    - [ ] install modules for babel
+    - [ ] configure the webpack config for the modules
+  

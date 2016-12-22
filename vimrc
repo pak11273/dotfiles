@@ -88,10 +88,10 @@ colorscheme desert
 syntax on
 set clipboard=unnamed
 " set clipboard=unnamedplus
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
+" show existing tab with 2 spaces width
+set tabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
 " automatically set indent of new line
@@ -214,6 +214,7 @@ set t_Co=256
 
 
 """"""" MISC """"""""
+
 
 set scrolloff=30 " Keep 3 lines below and above the cursor
 

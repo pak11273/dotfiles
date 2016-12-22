@@ -2,7 +2,7 @@
 
 * ref: https://github.com/myjinxin2015/Katas-list-of-Training-JS-series 
 
-* [.] Completed
+* [o] Completed
     - [X] #1: create your first JS function helloWorld
     - [X] #2: Basic data types--Number
     - [X] #3: Basic data types--String
@@ -14,9 +14,9 @@
     - [X] #9: loop statement --while and do..while
     - [X] #10: loop statement --for
     - [X] #11: loop statement --break,continue
-    - [ ] #12: loop statement --for..in and for..of
-    - [ ] #13: Number object and its properties
-    - [ ] #14: Methods of Number object--toString() and toLocaleString()
+    - [X] #12: loop statement --for..in and for..of
+    - [X] #13: Number object and its properties
+    - [X] #14: Methods of Number object--toString() and toLocaleString()
     - [ ] #15: Methods of Number object--toFixed(), toExponential() and toPrecision()
     - [ ] #16: Methods of String object--slice(), substring() and substr()
     - [ ] #17: Methods of String object--indexOf(), lastIndexOf() and search()

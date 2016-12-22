@@ -15,9 +15,6 @@
 
 
 
-
-
-
 == JavaScript Guide ==
 - [X] Introduction
 - [ ] Grammar and Types

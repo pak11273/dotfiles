@@ -1,4 +1,4 @@
-* [o] == Follow these in order to setup a basic Web Stack on Digital Ocean ==
+* [O] == Follow these in order to setup a basic Web Stack on Digital Ocean ==
 
     * [X] = [[#Dotfiles setup]] =
     
@@ -8,10 +8,6 @@
     
     * [X] = [[#Ubuntu Server Setup ]]=
     
-    * [X] = [[#server security]] =
-
-    * [X] = [[#NGinx Setup ]]=
-    
     * [X] = [[#nginx security]] = 
 
     * [X] = [[#Node Setup ]]=
@@ -19,6 +15,8 @@
     * [X] = [[#PM2]]=
 
     * [ ] = [[#Multiple Apps ]]=
+    
+    * [ ] = [[#tmux setup]] = 
     
 * [ ] = Databases Ubuntu 16.04 =
 
@@ -54,35 +52,16 @@
         * [X] create key in putty
             - [X] upload public key to server
     * [ ] Add superuser
-        - [ ] adduser pak11273
-        - [ ] usermod -aG sudo pak11273
-        - [ ] copy public key
-        - [ ] login as root and su pak11273
-        - [ ] mkdir ~/.ssh
-        - [ ] chmod 700 ~/.ssh
-        - [ ] vim ~/.ssh/authorized_keys
-        - [ ] paste public key
-        - [ ] exit
-    * Disable password authentication (optional)
-        * UPDATE: Do not do this step.  It will prevent Putty from using passphrase for your ssh key.  Reference only:
-        * allows only ssh keys access to server
-        * vim /etc/ssh/sshd_config
-        * PasswordAuthentication no
-        * systemctl reload sshd
-* [ ] Timezone setup
-        - [ ] sudo dpkg-reconfigure tzdata
-* [ ] Bower fix
-        - [ ] ln -s /usr/bin/nodejs /usr/bin/node
     
 * [ ] X11 setup
     * [ ] todo
 
 == NGinx Setup ==
-* [O] completed 
+* [X] completed 
     - [X] apt-get update
     - [X] apt-get install nginx
     - [X] apt-get install curl
-    * [o] add php and js to file extensions: later
+    * [X] add php and js to file extensions: later
         - [X] cd /etc/nginx
         - [X] vim nginx.conf
         - [X] Add this line:
@@ -92,31 +71,6 @@
 * [.] Add nginx security
     * [.] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-14-04
         * [.] add sendmail
-            - [X] sudo apt-get install sendmail 
-            - [ ] vim /etc/hosts
-                * [ ] change line 127.0.0.1 localhost to:
-                    - [ ] 127.0.0.1 localhost.localdomain localhost <hostname> 
-    * [ ] change bantime to half an hour
-        - [ ] sudo vim /etc/fail2ban/jail.local:
-              [Default] 
-              bantime = -1;
-              destemail = youremail
-              sender = fail2ban@localhost
-              action = %(action_mwl)s
-              [nginx-http-auth]
-              enabled = true
-              filter = nginx-http-auth
-        - [ ] restart fail2ban              
-              sudo service fail2ban restart
-* [ ] More fail2ban for nginx
-      * [ ] ref: https://www.digitalocean.com/community/tutorials/how-to-protect-an-nginx-server-with-fail2ban-on-ubuntu-14-04
-      * [ ] Custom Jails
-      * [ ] vim /etc/fail2ban/jail.local
-          - [ ] badbots
-                [nginx-badbots]
-                enabled  = true
-                port     = http,https
-                filter   = nginx-badbots
                 logpath  = /var/log/nginx/access.log
                 maxretry = 2
           - [ ] nohome 
@@ -319,6 +273,9 @@
 * [ ] completed
     * [ ] ref:  https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
     * [ ] follow instructions per guidelines
+          - OR -
+    * [ ] add-apt-repository ppa:jonathonf/vim
+    * [ ] apt install vim
     * [ ] Since vim is now 8.0 you will need to symlink the path from vim74 to vim80
         - [ ] ln -sv /usr/share/vim/vim80 /usr/share/vim/vim74
 
@@ -390,6 +347,7 @@ done
 = tmux setup = 
 
 * [ ] completed
+    - [ ] apt-get install tmux
     - [ ] start a tmux session
     - [ ] git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     - [ ] tmux source ~/.tmux.conf
@@ -400,6 +358,11 @@ done
 * [ ] completed
     - [ ] sudo apt install mysql-server mysql-client
     - [ ] systemctl status mysql.service
+    * [ ] sudo vim /etc/mysql/my.cnf
+      - [ ] add to the bottom of the file:
+            [mysqld]
+            bind-address    = 0.0.0.0
+        - [ ] sudo systemctl restart mysql
 
 
 = mongodb setup = 
@@ -617,16 +580,16 @@ done
  
 = PreSetup = 
 
-* [ ] Initial security
-    * [ ] Install tcptrack
-        - [ ] apt-get install tcptrack
-        - [ ] tmux leader key > resize-p -R 10
-        - [ ] tcptrack -i eth0
+* [o] Initial security
+    * [X] Install tcptrack
+        - [X] apt-get install tcptrack
+        - [X] tmux leader key > resize-p -R 10
+        - [X] tcptrack -i eth0
     * [ ] Iptables
         * [ ] Iptables basic commands
             * [ ] iptables -L | grep policy
                 * [ ] show current default rules 
-            * [ ] drop all connections from a speicific ip
+            * [ ] drop all connections from a specific ip
                 * [ ] iptables -A INPUT -s 1.1.1.1 -j DROP
             * [ ] drop all connenctions from a range of ip
                 * [ ] iptables -A INPUT -s 1.1.1.1/24 -j DROP

@@ -1,0 +1,114 @@
+App Template
+
+= Web development =
+
+== Make a Backend ==
+
+- [O] Skeleton 
+  - [X] Give access by creating a location in the proxy server 
+  - [O] Create Structure
+    - [X] git, gitignore, robots.txt
+    - [X] npm init -y
+      - [X] express, cors, body-parser 
+    - [O] Server Folder
+      - [O] src
+        - [X] config.js, index.js
+        - [X] db/
+          - [X] controllers/
+        - [X] services/
+      - [X] dist
+     
+=== Use modern javascript ===
+    - [X] npm install --save-dev babel-cli babel-preset-es2015 nodemon
+    - [X] make a package.json script
+    - [X] create a .babelrc file and include presets
+      - [X] or just include in package.json
+    - [X] gitignore dist
+    - [X] create build and dev scripts in package json
+  - [X] Setup test endpoint
+
+=== Contact Mailer api ===
+  - [X] npm i --save nodemailer 
+  - [X] create controller and endpoint
+  - [X] test in postman
+  
+=== Make a User ===
+  - [X] Create a database 
+  - [X] npm i --save mysql sequelize sequelize-cli 
+  - [X] sequelize init
+    - [X] change config data
+  - [X] create sequelizerc
+  - [X] create an npm script for migrations
+  - [X] use sequelize generator and create user model
+  - [X] run migrations
+
+=== Login/Registration === 
+  - [ ] npm i passport passport-local --save 
+  - [ ] create a passport file
+  - [ ] import and add policy, middleware to index.js
+  - [ ] 
+   
+   
+   
+    
+== Make the Frontend ==
+
+- [ ] Completed
+  - [ ] Directory Structure
+    - [ ] public
+    
+=== livingstyle guide ===    
+  - [X] npm i --save livingcss 
+  - [X] build the livingscss.js file
+  - [X] build an npm script
+
+=== Webpack ===
+    - [ ] npm install webpack --save-dev 
+    - [ ] create a config file that includes front and backends
+    - [ ] create entry files for front and backends
+    - [ ] install modules for babel
+    - [ ] configure the webpack config for the modules
+  
+ 
+
+
+
+Javascript
+Angular
+Sequelize
+CSS
+Jquery
+
+What are some high level concepts that are transferrable between these?
+They all use frameworks
+
+
+TODO:
+Build a basic framework for each of these from scratch. 
+Discover areas where you find hard to recall.  Why are they hard?
+
+Build them in the context of subjects you like or are interested in.
+
+Learn a technique that is transferable or has sustainability.
+
+Teach what you learned. In your words.
+
+
+
+RESEARCH:
+how to make something very important while learning something
+
+what are subjects you like?
+Guitar
+Art
+Learning
+Martial Arts
+Farming
+Architecture
+
+
+
+
+
+
+
