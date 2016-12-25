@@ -144,6 +144,9 @@ endif
 " NERDTREE
 let g:NERDTreeWinSize=20
 
+
+
+
 " SYNTASTIC 
 " use :Helptags to learn more
 set statusline+=%#warningmsg#
@@ -180,6 +183,7 @@ let g:syntastic_scss_checkers = ['scss_lint']
 " HTML5 syntastic settings
 " let g:syntastic_html_tidy_exec = 'tidy'
 " let g:syntastic_html_checkers = ['validator']
+let g:syntastic_html_checkers = ['htmlhint']
 " let g:syntastic_scss_checkers = ["tidy"]
 
 " CSS syntastic settings
@@ -237,3 +241,7 @@ nmap ;s :set invspell spelllang=en<cr>
 
 " fix for webpack
 :set backupcopy=yes
+
+
+" post vagrant up
+set encoding=utf-8
