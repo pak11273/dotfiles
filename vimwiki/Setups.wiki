@@ -276,6 +276,7 @@
           - OR -
     * [ ] add-apt-repository ppa:jonathonf/vim
     * [ ] apt install vim
+    * [ ] to remove: add-apt-repository --remove ppa:jonathonf/vim
     * [ ] Since vim is now 8.0 you will need to symlink the path from vim74 to vim80
         - [ ] ln -sv /usr/share/vim/vim80 /usr/share/vim/vim74
 
