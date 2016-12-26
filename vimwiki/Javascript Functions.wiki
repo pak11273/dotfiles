@@ -1,0 +1,28 @@
+= [[#toFixed(n)]] =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+= toFixed(n) =
+
+- changes a number to a string
+- n =  number of decimal places to use
+- will use null for decimal places farther out than the number
+  - 4.33.toFixed(5) // "4.33000" 
+- if no param, the number will be rounded to the nearest whole number
+  - 456.4353.toFixed() // "456"  
+- numbers with more than 21 digits will be in exp form
+  - 1234567890123456789012.toFixed() // "1.234567890123456789012e+21"
+
