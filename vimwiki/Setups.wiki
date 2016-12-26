@@ -1,5 +1,7 @@
 * [O] == Follow these in order to setup a basic Web Stack on Digital Ocean ==
 
+* [o] = Production Environment =
+
     * [X] = [[#Dotfiles setup]] =
     
     * [X] = [[#PreSetup]] =
@@ -8,6 +10,8 @@
     
     * [X] = [[#Ubuntu Server Setup ]]=
     
+    * [ ] = [[#nginx Setup]] =
+
     * [X] = [[#nginx security]] = 
 
     * [X] = [[#Node Setup ]]=
@@ -18,6 +22,10 @@
     
     * [ ] = [[#tmux setup]] = 
     
+* [ ] = Development Environment =
+
+    * [ ] = [[#first steps]] =
+
 * [ ] = Databases Ubuntu 16.04 =
 
     * [ ] = [[#mysql setup]] = 
@@ -56,16 +64,30 @@
 * [ ] X11 setup
     * [ ] todo
 
-== NGinx Setup ==
-* [X] completed 
+== nginx Setup ==
+* [o] completed 
     - [X] apt-get update
     - [X] apt-get install nginx
     - [X] apt-get install curl
-    * [X] add php and js to file extensions: later
+    * [O] add php and js to file extensions: later
         - [X] cd /etc/nginx
         - [X] vim nginx.conf
         - [X] Add this line:
-        
+    - [ ] bindfs 
+      * [ ] ref: http://blog.netgusto.com/solving-web-file-permissions-problem-once-and-for-all/ 
+      * [ ] Installing bindfs (just the first time)
+        - [ ] sudo apt-get update  
+        - [ ] sudo apt-get -y install bindfs
+        * [ ] Creating the application mountpoint
+          - [ ] sudo mkdir -p /home/<user>/<webroot> 
+            * you might can skip the two bottom steps...  
+            - [ ] sudo chown -Rf $USER:$USER /home/<user>/<webroot>
+            - [ ] sudo chmod -Rf 755 /home/<user>/<webroot>
+          - [ ] sudo vim /etc/fstab 
+                bindfs#/var/www/prod /home/pak11273/prod fuse force-user=pak11273,force-group=pak11273,create-for-user=www-data, create-for-group=www-data,create-with-perms=god=rx:ud=rwx:gof=r:uf=rw,chgrp-normal,chown-normal,chmod-normal 0 0
+          - [ ] sudo mount /home/<user>/<webroot> 
+          - [ ] test if the permission are correct from the /home/<user>/prod and /var/www/prod
+       
       
 == nginx security ==
 * [.] Add nginx security
@@ -354,7 +376,49 @@ done
     - [ ] tmux source ~/.tmux.conf
     - [ ] prefix + I //installs plugins
     
-    
+= first steps =   
+
+* [ ] completed
+    - [ ] install vagrant and use a base box
+      - [ ] minimal/xenial64
+    - [ ] create a Vagrantfile with the following config:
+          # -*- mode: ruby -*-
+          # vi: set ft=ruby :
+          
+          # All Vagrant configuration is done below. The "2" in Vagrant.configure
+          # configures the configuration version (we support older styles for
+          # backwards compatibility). Please don't change it unless you know what
+          # you're doing.
+          Vagrant.configure("2") do |config|
+          # ref: https://www.sitepoint.com/vagrantfile-explained-setting-provisioning-shell/
+        	
+          # Every Vagrant development environment requires a box. You can search for
+          # boxes at https://atlas.hashicorp.com/search.
+          config.vm.box = "minimal/xenial64"
+          config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+          config.vm.synced_folder "./html", "/var/www/html", create: true, group: "www-data", owner: "www-data",  mount_options: ["dmode=755", "fmode=644"]
+          config.vm.network :private_network, ip: "192.168.68.8"
+        
+          # Config for VM Box 
+          # Find more configuration at https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm
+          config.vm.provider "virtualbox" do |v|
+              v.name = "pak11273.com dev environment"
+              v.customize ["modifyvm", :id, "--memory", "1024"]
+          end
+        
+            config.vm.provision "shell" do |s|
+                s.path = "provision/setup.sh"
+            end
+        
+          end
+
+    - [ ] reset password for root 
+      - [ ] sudo passwd root 
+          
+
+
+
+
 = mysql setup =
 * [ ] completed
     - [ ] sudo apt install mysql-server mysql-client
