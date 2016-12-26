@@ -1,4 +1,4 @@
-j##Reference:
+##Reference:
 [link](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
 ##Adding new . files in the home dir
