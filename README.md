@@ -18,7 +18,7 @@ chmod +x makesymlinks.sh
 
 ## Vundle
 
-Download vundle and git clone repo
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim and :PluginInstall
 
