@@ -1,37 +1,83 @@
 = React JS =
 
-== Big Picture ==
-    * [ ] What is reactjs?
-        - [ ] A javascript library to build UI frameworks 
-        
-== Framework ==
-    * [ ] What are the components needed to make it work?
-        * [ ] node moduels
-            - [ ] webpack?
-                - [ ] a node package bundler 
-                    - [ ] Keeps a centralized place to load files so you can minimize http requests. 
-                * [ ] webpack - framework
-                    - [ ] core
-                    - [ ] loader
-                    - [ ] preset
-                - [ ] webpack.config.js
-                    # pseudo
-                    # export an object
-                        # entry
-                        # output > dirname > filename
-                        # module > loaders > presets
-            - [ ] babel?
-              # is like if you were going to japan and you wanted the people(browser) to understand you, you would need a translator since they don't understand English. 
-                - [ ] a es2015 transpiler
-                    - [ ] Turns your code into vanilla js that browsers can read so you can use moder js.
-            - [ ] react 
-            - [ ] what is react dom?
-                - [ ] react's rendering engine
-== TM JSXX ==
-    * [ ] any html in parens will be converted to javascript elements (ie return (<div>>) transpiles to document.createElements("div")
+== Notes by Bucky Roberts ==
+
+gotchas:
+you need to have react preset to transpile jsx
+you need to load react-dom to use the render method
+
+== Displaying text with React: ==
+* use reactdom render method
+* put into a div using document getElementById method
+
+var x = ReactDOM.render(<div>hi</div>, document.getElementById("test"));
+
+== A simple React component: ==
+* a react class
+* you create a class and then use react-dom to use the component like an html element
+
+var Bacon = React.createClass({
+
+  render: function() {
+    return <div>hello bacon boy</div>;
+  }
+
+});
+
+var x = ReactDOM.render(<Bacon />, document.getElementById("test");
+
+== React components can only have 1 single element ==
+right:
+var Bacon = React.createClass({
+
+  render: function() {
+    return <p>hello bacon boy</p><p>hello bacon girl<p>;
+  }
+
+});
+
+wrong:
+var Bacon = React.createClass({
+
+  render: function() {
+    return <div><p>hello bacon boy</p><p>hello bacon girl<p></div>;
+  }
+
+});
+
+== ReactDOM render acts lik ReactClass in that it can only render 1 element at a time ==
+wrong:
+var x = ReactDOM(<Blah /><Blah /><Blah />, document.getElementById("test");
+
+right:
+var x = ReactDOM(<div>
+              <Blah />
+              <Blah />
+              <Blah />
+              </div>, document.getElementById("test");
+              
+              
+== React Component Properties ==
+* they are like attributes for html elements you put inside components
+* use this and props to refer to the attribute
+
+var x = React.createClass({
+  render: function() {
+    <div>
+    <h1>{this.props.title}</h1>
+    <h2>{this.props.genre}</h2>
+    </div>
+  }
+});
+
+var y = ReactDOM.render(<div>
+  <Movie title="The Beast" genre="Horror" />
+  <Movie title="The Baby" genre="Humor" />
+  <Movie title="The Man" genre="Drama" />
+  </div>, document.getElementById('test');
 
 
-* [ ] Playground
-    - [ ] Start base react project
-    - [ ] Create a react component that says Hello world
-    - [ ] 
+== Event Handling ==
+              
+              
+              

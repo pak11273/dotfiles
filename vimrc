@@ -219,7 +219,6 @@ set t_Co=256
 
 """"""" MISC """"""""
 
-
 set scrolloff=30 " Keep 3 lines below and above the cursor
 
 if has('mouse')
@@ -245,3 +244,6 @@ nmap ;s :set invspell spelllang=en<cr>
 
 " post vagrant up
 set encoding=utf-8
+
+" better tab titles
+set guitablabel=%t
