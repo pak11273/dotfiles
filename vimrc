@@ -148,9 +148,6 @@ let g:NERDTreeWinSize=15
 set encoding=utf-8 " displays the file in utf8
 set fileencoding=utf-8 " writes the file in utf8
 
-" fixes NERDTree broken borders
-
-
 " SYNTASTIC 
 " use :Helptags to learn more
 set statusline+=%#warningmsg#

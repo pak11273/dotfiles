@@ -21,9 +21,14 @@ fi
 # opens up tmux automatically on bash startup ( opens the main session if you made it )
 # [[ $TERM != "screen" ]] && exec tmux
 
+# ALIASES
 # shortcut to start vim
 alias sv="sudo vim"
 alias c="clear"
+
+# uncomment this line if you are on a windows machine, this will not work in linux
+# alias chrome="/c/'Program Files (x86)'/Google/Chrome/Application/chrome.exe"
+
 
 # not sure what this does
 set -o vi
