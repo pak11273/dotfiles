@@ -734,7 +734,6 @@ esac
     * [ ] sudo apt-get install htop
      
  
-= front-end setup =  
 
  
 

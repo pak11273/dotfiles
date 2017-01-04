@@ -1,14 +1,7 @@
-- [X] Directory Structure
-  - [X] add gitignore
-  - [X] add notes
-  - [X] add webpack.config.js
-  - [X] add robots.txt
-  
-- [ ] Frontend Dependencies
-  - [ ] npm i --save-dev node-sass webpack sass-loader css-loader style-loader --no-bin-links
- 
-- [X] Webpack
-  - [X] configure webpack config 
-    - [X] configure sass loaders
-    - [X] configure js loaders
-    - [X] configure plugins
+- [X] React Starter kit
+
+* [X] Normalize css
+  - [X] download, install and include it your css hub 
+
+- [ ] Living Styleguide
+  - [ ] npm install

@@ -141,10 +141,14 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 
-" NERDTREE
-let g:NERDTreeWinSize=20
+" shrinks NERDTree width
+let g:NERDTreeWinSize=15
 
+" fixes NERDTree arrows
+set encoding=utf-8 " displays the file in utf8
+set fileencoding=utf-8 " writes the file in utf8
 
+" fixes NERDTree broken borders
 
 
 " SYNTASTIC 
@@ -213,8 +217,8 @@ let g:airline_theme='base16color'
 " let g:airline_theme='understated'
 " let g:airline_theme='wombat'
 " let g:airline_theme='xtermlight'
-set t_Co=256
 
+set t_Co=256
 
 
 """"""" MISC """"""""
@@ -227,8 +231,8 @@ if has('mouse')
 endif
 
 " faster redrawing
-set ttyfast
-set diffopt+=vertical
+" set ttyfast
+" set diffopt+=vertical
 
 set laststatus=2 " show the satus line all the time
 
@@ -242,8 +246,4 @@ nmap ;s :set invspell spelllang=en<cr>
 :set backupcopy=yes
 
 
-" post vagrant up
-set encoding=utf-8
 
-" better tab titles
-set guitablabel=%t
