@@ -242,5 +242,8 @@ nmap ;s :set invspell spelllang=en<cr>
 " fix for webpack
 :set backupcopy=yes
 
+" fix for NERDTree arrows
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
 
 
