@@ -26,3 +26,8 @@ vim and :PluginInstall
 
 Any references to .vim need to change to vimfiles
 Any references to .vimrc need to change to _vimrc
+
+mv .vimrc _vimrc
+
+Change the gitbash options > text > Locale > en_US
+Change the gitbash options > text > Character set > UTF-8
