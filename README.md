@@ -22,7 +22,10 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim and :PluginInstall
 
-## Windows
+## Syntastic Checkers 
+sudo install jshint -g
+
+## For Windows Platform
 
 Any references to .vim need to change to vimfiles
 Any references to .vimrc need to change to _vimrc
