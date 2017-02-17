@@ -170,9 +170,10 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " \ 'active_filetypes': [''] }
 
 " Use jshint (uses ~/.jshintrc)
-let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_javascript_checkers = ['jsxhint']
+" let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_javascript_eslint_exec = 'eslint_d'
-" let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " PHP syntastic settings
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
@@ -246,4 +247,5 @@ nmap ;s :set invspell spelllang=en<cr>
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
-
+" uncomment this when debugging syntastic 
+" let g:syntastic_debug=3
