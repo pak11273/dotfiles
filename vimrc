@@ -49,8 +49,16 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
+" vim autocompletion
+Plugin 'valloric/youcompleteme'
 
-
+"""""""""""""""""
+" Tern settings
+""""""""""""""""""
+Bundle 'marijnh/tern_for_vim'
+let g:tern_show_argument_hints='on_hold'
+" and 
+let g:tern_map_keys=1
 
 
 
@@ -98,6 +106,15 @@ set expandtab
 set autoindent
 " works mostly
 set smartindent
+
+" folding for js
+" set foldmethod=syntax
+" let javaScript_fold=1
+" end folding for js
+
+
+" highlights the current line (causes bugs with nerdtree)
+" set cursorline
 
 " word wrap without line breaks
 set wrap
