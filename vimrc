@@ -49,11 +49,15 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
+" remap kep to use YCM with snipmate
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+
 " vim autocompletion
 Plugin 'valloric/youcompleteme'
 
 """""""""""""""""
-" Tern settings
+" Tern settings (for YCM plugin)
 """"""""""""""""""
 Bundle 'marijnh/tern_for_vim'
 let g:tern_show_argument_hints='on_hold'
