@@ -49,21 +49,11 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
-" remap kep to use YCM with snipmate
-imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
-
 " vim autocompletion
 Plugin 'valloric/youcompleteme'
 
-"""""""""""""""""
-" Tern settings (for YCM plugin)
-""""""""""""""""""
-Bundle 'marijnh/tern_for_vim'
-let g:tern_show_argument_hints='on_hold'
-" and 
-let g:tern_map_keys=1
-
+" vim easymotion
+Plugin 'easymotion/vim-easymotion'
 
 
 
@@ -85,9 +75,9 @@ filetype plugin indent on    " required
 
 """""" CORE COMMANDS """""""
 imap jj <ESC>
-let mapleader = '\'
+let mapleader = 'f'
 set number
-set relativenumber
+" set relativenumber (no longer need since i use easymotion)
 colorscheme desert 
 " colo japanesque
 " colo 3dglasses
@@ -153,7 +143,7 @@ augroup END
 set omnifunc=phpcomplete#CompletePHP
 
 
-""""""" PLUGINS """"""""
+""""""" PLUGIN SETTINGS """"""""
 set rtp+=~/.vim
 
 " Load up all of our plugins
@@ -216,9 +206,6 @@ let g:syntastic_css_checkers = ['csslint']
 let g:syntastic_xml_checkers=["xmllint"]
 
 
-
-
-
 " ARILINE settings
 let g:airline_theme='base16color'
 " let g:airline_theme='tomorrow'
@@ -238,6 +225,45 @@ let g:airline_theme='base16color'
 " let g:airline_theme='xtermlight'
 
 set t_Co=256
+
+" remap kep to use YCM with snipmate
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+
+
+"""""""""""""""""
+" Tern settings (for YCM plugin)
+""""""""""""""""""
+Bundle 'marijnh/tern_for_vim'
+let g:tern_show_argument_hints='on_hold'
+" and 
+let g:tern_map_keys=1
+
+
+" settings for easymotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+
+
+
+
+
+
 
 
 """"""" MISC """"""""
