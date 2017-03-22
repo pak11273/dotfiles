@@ -258,6 +258,11 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
+" nerdtree settings (supposedly prettifies nerdtree, uncomment these 2 lines to see if this may fix graphic bugs
+
+" let NERDTreeMinimalUI = 1
+" let NERDTreeDirArrows = 1
+
 
 
 
