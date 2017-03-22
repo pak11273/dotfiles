@@ -55,6 +55,9 @@ Plugin 'valloric/youcompleteme'
 " vim easymotion
 Plugin 'easymotion/vim-easymotion'
 
+" plugins for jsx syntax
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 
 " All of your Plugins must be added before the following line
