@@ -25,7 +25,7 @@ fi
 # shortcut to start vim
 alias sv="sudo vim"
 alias c="clear"
-alias nr = "npm run"
+alias run="npm run"
 
 # uncomment this line if you are on a windows machine, this will not work in linux
 # alias chrome="/c/'Program Files (x86)'/Google/Chrome/Application/chrome.exe"
