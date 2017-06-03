@@ -76,6 +76,15 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
+
+" plugin config
+" 
+" vim-jsx 
+let g:jsx_ext_required = 0
+
+
+
+
 """""" CORE COMMANDS """""""
 imap jj <ESC>
 let mapleader = 'f'
