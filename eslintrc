@@ -1,21 +1,23 @@
 {
   "parser": "babel-eslint",
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "settings": {
-      "ecmascript": 6,
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
       "jsx": true
-    },
-    "plugins": [
-      "react"
-    ],
-    "rules": {
-      "strict": 0,
-      "quotes": 0,
-      "no-unused-vars": 0,
-      "camelcase": 0,
-      "no-underscore-dangle": 0
     }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
 }

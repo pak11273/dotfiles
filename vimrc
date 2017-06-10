@@ -56,9 +56,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'easymotion/vim-easymotion'
 
 " plugins for jsx syntax
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-
+Plugin 'mitermayer/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,13 +74,11 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
+""""""  PLUGIN CONFIGURATION """""""
 
-" plugin config
-" 
-" vim-jsx 
-let g:jsx_ext_required = 0
-
-
+" vim-prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.css,*.scss,*.less Prettier
 
 
 """""" CORE COMMANDS """""""
@@ -313,3 +309,6 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 " uncomment this when debugging syntastic 
 " let g:syntastic_debug=3
+
+" syntax highlighting for .ejs files
+au BufNewFile,BufRead *.ejs set filetype=html
