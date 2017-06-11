@@ -79,6 +79,8 @@ filetype plugin indent on    " required
 " vim-prettier
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.css,*.scss,*.less Prettier
+let g:prettier#config#semi = 'false'
+let g:prettier#config#trailing_comma = 'none'
 
 
 """""" CORE COMMANDS """""""
