@@ -150,6 +150,12 @@ augroup configgroup
     autocmd FileType help nnoremap q :bd<cr>
 augroup END
 
+augroup AutoSaveFolds
+  autocmd!
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview 
+augroup END
+
 set omnifunc=phpcomplete#CompletePHP
 
 
@@ -158,7 +164,7 @@ set rtp+=~/.vim
 
 " Load up all of our plugins
 if filereadable(expand("~/.vimrc.bundles"))
-    source ~/.vimrc.bundles
+  source ~/.vimrc.bundles
 endif
 
 
@@ -187,7 +193,7 @@ let g:syntastic_warning_symbol = '!'
 
 " On by default, turn it off for html
 let g:syntastic_mode_map = { 'mode': 'active',
-            \ 'passive_filetypes': ['html'] }
+      \ 'passive_filetypes': ['html'] }
 " \ 'active_filetypes': [''] }
 
 " Use jshint (uses ~/.jshintrc)
@@ -286,8 +292,8 @@ map <Leader>k <Plug>(easymotion-k)
 set scrolloff=30 " Keep 3 lines below and above the cursor
 
 if has('mouse')
-    set mouse=a
-    " set ttymouse=xterm2
+  set mouse=a
+  " set ttymouse=xterm2
 endif
 
 " faster redrawing
