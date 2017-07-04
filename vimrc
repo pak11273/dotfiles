@@ -82,6 +82,10 @@ autocmd BufWritePre *.js,*.css,*.scss,*.less Prettier
 let g:prettier#config#semi = 'false'
 let g:prettier#config#trailing_comma = 'none'
 
+" ctrl-p ignore config
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$'
+
 
 """""" CORE COMMANDS """""""
 imap jj <ESC>
@@ -320,3 +324,10 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 " syntax highlighting for .ejs files
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" persistant undo
+if has('persistent_undo')      "check if your vim version supports it
+set undofile                 "turn on the feature  
+set undolevels=5000          "save lots of history
+set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+endif

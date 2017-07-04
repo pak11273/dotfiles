@@ -109,7 +109,7 @@ setlocal tagcase=
 setlocal tags=
 setlocal textwidth=0
 setlocal thesaurus=
-setlocal noundofile
+setlocal undofile
 setlocal undolevels=-123456
 setlocal nowinfixheight
 setlocal nowinfixwidth
