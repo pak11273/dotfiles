@@ -58,8 +58,6 @@ Plugin 'easymotion/vim-easymotion'
 " plugin for jsx syntax
 Plugin 'mitermayer/vim-prettier'
 
-" styled-components
-Plugin 'fleischie/vim-styled-components'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
