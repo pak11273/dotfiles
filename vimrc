@@ -58,6 +58,9 @@ Plugin 'easymotion/vim-easymotion'
 " plugin for jsx syntax
 Plugin 'mitermayer/vim-prettier'
 
+" sublime multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
