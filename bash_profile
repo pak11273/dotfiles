@@ -1,5 +1,10 @@
 # .bash_profile
 
+# config for react-android development
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc

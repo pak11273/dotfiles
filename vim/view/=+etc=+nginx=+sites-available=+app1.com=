@@ -20,7 +20,7 @@ setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
-setlocal completefunc=
+setlocal completefunc=youcompleteme#CompleteFunc
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -107,11 +107,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+let s:l = 7 - ((6 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+7
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

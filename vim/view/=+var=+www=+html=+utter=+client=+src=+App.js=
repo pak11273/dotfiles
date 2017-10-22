@@ -79,7 +79,7 @@ setlocal modifiable
 setlocal nrformats=bin,octal,hex
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=youcompleteme#OmniComplete
+setlocal omnifunc=tern#Complete
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -116,12 +116,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 27 - ((11 * winheight(0) + 11) / 23)
+let s:l = 12 - ((9 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-27
-normal! 02|
+12
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

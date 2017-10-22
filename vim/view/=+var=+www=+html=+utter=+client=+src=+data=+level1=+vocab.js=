@@ -97,7 +97,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(3)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
