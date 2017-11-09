@@ -29,7 +29,7 @@ setlocal commentstring=//%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
-setlocal completefunc=youcompleteme#CompleteFunc
+setlocal completefunc=youcompleteme#Complete
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -116,12 +116,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 11) / 23)
+let s:l = 27 - ((26 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 040|
+27
+normal! 013|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

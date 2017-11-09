@@ -61,6 +61,9 @@ Plugin 'mitermayer/vim-prettier'
 " sublime multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
 
+" edit tabs
+Plugin 'gcmt/taboo.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -89,6 +92,10 @@ let g:prettier#config#trailing_comma = 'none'
 " ctrl-p ignore config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$'
+
+"taboo.vim
+set guioptions-=e
+set sessionoptions+=tabpages,globals
 
 
 """""" CORE COMMANDS """""""
@@ -128,7 +135,6 @@ nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
-
 " folding for js
 " set foldmethod=syntax
 " let javaScript_fold=1
