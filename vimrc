@@ -64,6 +64,8 @@ Plugin 'terryma/vim-multiple-cursors'
 " edit tabs
 Plugin 'gcmt/taboo.vim'
 
+" ack for vim
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

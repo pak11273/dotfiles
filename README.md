@@ -25,6 +25,10 @@ vim and :PluginInstall
 ## Syntastic Checkers 
 sudo install jshint -g
 
+## You'll need to install Ack for the Ack plugin
+[Ack Instructions](https://beyondgrep.com/install/)
+
+https://beyondgrep.com/install/
 ## For Windows Platform
 
 Any references to .vim need to change to vimfiles
