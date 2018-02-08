@@ -44,6 +44,14 @@ Note: create an .ackrc on your root directory
 
     ````eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']````
 
+4. Prettier config
+   1. go to your vim-prettier directory and either do npm install or yarn install
+   2. ensure you have the following lines in your .vimrc
+
+   ````let g:prettier#autoformat = 0````
+
+   ````autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync````
+
 ## For Windows Platform
 
 Any references to .vim need to change to vimfiles

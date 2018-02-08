@@ -56,7 +56,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'easymotion/vim-easymotion'
 
 " plugin for jsx syntax
-Plugin 'mitermayer/vim-prettier'
+Plugin 'prettier/vim-prettier'
 
 " sublime multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
@@ -242,7 +242,7 @@ let g:syntastic_html_checkers = ['htmlhint']
 " let g:syntastic_scss_checkers = ["tidy"]
 
 " CSS syntastic settings
-let g:syntastic_css_checkers = ['prettycss']
+let g:syntastic_css_checkers = ['csslint','prettycss']
 
 " XML syntastic settings
 let g:syntastic_xml_checkers=["xmllint"]
