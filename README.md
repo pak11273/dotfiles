@@ -39,8 +39,8 @@ Note: create an .ackrc on your root directory
 3. Syntastic config: 
    1. find checkers at https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
    2. enable checkers with this line in your .vimrc
-      ````let g:syntastic_<language>_checkers = ['<checker>','<another checker>']
-      eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']````
+````let g:syntastic_<language>_checkers = ['<checker>','<another checker>']````
+````eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']````
 
 ## For Windows Platform
 
