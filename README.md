@@ -32,10 +32,10 @@ Note: create an .ackrc on your root directory
 ## MISC notes
 1. If you are using version control(eg. github, bitbucket...) then you will need to create an ssh key
 2. To fix ycm vim you need to do the following:
-  sudo apt-get install build-essential cmake
-  sudo apt-get install python-dev python3-dev
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer
+   1. sudo apt-get install build-essential cmake
+   2. sudo apt-get install python-dev python3-dev
+   3. cd ~/.vim/bundle/YouCompleteMe
+   3. ./install.py --clang-completer
 
 ## For Windows Platform
 
