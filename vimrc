@@ -84,10 +84,9 @@ filetype plugin indent on    " required
 
 
 """"""  PLUGIN CONFIGURATION """""""
-
 " vim-prettier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.css,*.scss,*.less Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 let g:prettier#config#semi = 'false'
 let g:prettier#config#trailing_comma = 'none'
 
