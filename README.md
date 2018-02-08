@@ -27,6 +27,7 @@ sudo install jshint -g
 
 ## You'll need to install Ack for the Ack plugin
 [Ack Instructions](https://beyondgrep.com/install/) 
+Note: create an .ackrc on your root directory
 
 ## MISC notes
 1. If you are using version control(eg. github, bitbucket...) then you will need to create an ssh key
