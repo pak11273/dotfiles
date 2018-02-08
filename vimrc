@@ -242,7 +242,7 @@ let g:syntastic_html_checkers = ['htmlhint']
 " let g:syntastic_scss_checkers = ["tidy"]
 
 " CSS syntastic settings
-let g:syntastic_css_checkers = ['csslint']
+let g:syntastic_css_checkers = ['prettycss']
 
 " XML syntastic settings
 let g:syntastic_xml_checkers=["xmllint"]

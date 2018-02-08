@@ -35,7 +35,12 @@ Note: create an .ackrc on your root directory
    1. sudo apt-get install build-essential cmake
    2. sudo apt-get install python-dev python3-dev
    3. cd ~/.vim/bundle/YouCompleteMe
-   3. ./install.py --clang-completer
+   4. ./install.py --clang-completer
+3. Syntastic config: 
+   1. find checkers at https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
+   2. enable checkers with this line in your .vimrc
+      ````let g:syntastic_<language>_checkers = ['<checker>','<another checker>']
+      eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']````
 
 ## For Windows Platform
 
