@@ -84,6 +84,9 @@ filetype plugin indent on    " required
 
 
 """"""  PLUGIN CONFIGURATION """""""
+" multiple-cursors
+let g:multi_cursor_quit_key='<Space>'
+
 " vim-prettier
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
@@ -351,5 +354,4 @@ if has('persistent_undo')      "check if your vim version supports it
 set undofile                 "turn on the feature  
 set undolevels=5000          "save lots of history
 set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
-set undoreload=10000
 endif
