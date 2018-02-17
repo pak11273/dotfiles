@@ -67,6 +67,9 @@ Plugin 'gcmt/taboo.vim'
 " ack for vim
 Plugin 'mileszs/ack.vim'
 
+" nerdtree tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,6 +87,10 @@ filetype plugin indent on    " required
 
 
 """"""  PLUGIN CONFIGURATION """""""
+" nerdtree tabs
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1 
+
 " multiple-cursors
 let g:multi_cursor_quit_key='<Space>'
 
@@ -189,7 +196,7 @@ set omnifunc=phpcomplete#CompletePHP
 
 """"""" PLUGIN SETTINGS """"""""
 set rtp+=~/.vim
-
+ 
 " Load up all of our plugins
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -205,6 +212,7 @@ set fileencoding=utf-8 " writes the file in utf8
 
 " SYNTASTIC 
 " use :Helptags to learn more
+" https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*

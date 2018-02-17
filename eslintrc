@@ -1,5 +1,8 @@
 {
-  "parser": "babel-eslint",
+  /* "parser": "babel-eslint", */
+  "rules": {
+    "strict": 0
+  },
   "extends": [
     "airbnb",
     "prettier",
@@ -9,7 +12,8 @@
     "prettier"
   ],
   "parserOptions": {
-    "ecmaVersion": 2016,
+    /* "ecmaVersion": 2017, */
+    "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
