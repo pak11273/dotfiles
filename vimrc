@@ -87,6 +87,7 @@ filetype plugin indent on    " required
 
 
 """"""  PLUGIN CONFIGURATION """""""
+
 " nerdtree tabs
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1 
@@ -103,6 +104,7 @@ let g:prettier#config#trailing_comma = 'none'
 " ctrl-p ignore config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$'
+map <leader>r :NERDTreeFind<cr>
 
 "taboo.vim
 set guioptions-=e
@@ -189,6 +191,12 @@ augroup AutoSaveFolds
   autocmd!
   autocmd BufWinLeave *.* mkview
   autocmd BufWinEnter *.* silent loadview 
+augroup END
+
+"TODO: this does not work yet, possibly remove
+augroup CtrlpNerdTree 
+  autocmd!
+  autocmd BufWinEnter :NERDTreeFind<CR>
 augroup END
 
 set omnifunc=phpcomplete#CompletePHP
