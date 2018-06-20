@@ -71,18 +71,25 @@ Change the gitbash options > text > Character set > UTF-8
 ## Installing ctags
 
 references: https://github.com/craigemery/vim-autotag
+
 references: https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags
 
 sudo apt-get install ctags
+
 sudo apt-get install pkg-config
+
 sudo apt-get install autoconf automake
 
 git clone https://github.com/universal-ctags/ctags.git
+
 cd ctags
+
 sudo ./autogen.sh
+
 sudo ./configure
+
 sudo make
+
 sudo make install
 
-add this to .vimrc:
-`let g:autotagTagsFile="tags"`
+add this to .vimrc: `let g:autotagTagsFile="tags"`
