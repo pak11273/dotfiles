@@ -70,11 +70,14 @@ Plugin 'mileszs/ack.vim'
 " nerdtree tabs
 Plugin 'jistr/vim-nerdtree-tabs'
 
+" vim autotags
+Plugin 'craigemery/vim-autotag'
+
 "easy tags
-Plugin 'xolox/vim-easytags'
+" Plugin 'xolox/vim-easytags'
 
 "vim misc
-Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-misc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,6 +96,8 @@ filetype plugin indent on    " required
 
 
 """"""  PLUGIN CONFIGURATION """""""
+" autotags
+let g:autotagTagsFile="tags"
 
 " nerdtree tabs
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
@@ -118,6 +123,7 @@ set sessionoptions+=tabpages,globals
 
 
 """""" CORE COMMANDS """""""
+set tags=./tags,tags;$HOME
 imap jj <ESC>
 let mapleader = 'f'
 set number
