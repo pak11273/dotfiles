@@ -58,7 +58,7 @@ setlocal foldtext=foldtext()
 setlocal formatexpr=
 setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
+setlocal grepprg=ack-grep\ -s\ -H\ --nopager\ --nocolor\ --nogroup\ --column
 setlocal iminsert=0
 setlocal imsearch=0
 setlocal include=
@@ -77,7 +77,7 @@ setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
-setlocal number
+setlocal nonumber
 setlocal numberwidth=4
 setlocal omnifunc=tern#Complete
 setlocal path=
@@ -97,7 +97,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(3)
+setlocal statusline=%!airline#statusline(2)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -116,12 +116,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 5) / 11)
+let s:l = 2 - ((1 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 052|
+2
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

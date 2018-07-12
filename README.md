@@ -74,6 +74,8 @@ references: https://github.com/craigemery/vim-autotag
 
 references: https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags
 
+references: https://stackoverflow.com/questions/25819649/how-to-exclude-multiple-directories-with-exuberant-ctags
+
 sudo apt-get install ctags
 
 sudo apt-get install pkg-config
@@ -93,3 +95,11 @@ sudo make
 sudo make install
 
 add this to .vimrc: `let g:autotagTagsFile="tags"`
+
+usage: in the directory you want tags use this command `$ ctags -R --exclude=@.ctagsignore .` with the following in .ctagsignore:
+
+dir1
+
+dir2
+
+dir3
