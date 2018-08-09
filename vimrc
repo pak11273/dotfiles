@@ -213,7 +213,6 @@ augroup END
 
 set omnifunc=phpcomplete#CompletePHP
 
-
 """"""" PLUGIN SETTINGS """"""""
 set rtp+=~/.vim
  
