@@ -24,7 +24,7 @@ vim and :PluginInstall
 
 ## Syntastic Checkers
 
-sudo install jshint -g
+sudo npm install jshint -g
 
 ## You'll need to install Ack for the Ack plugin
 
