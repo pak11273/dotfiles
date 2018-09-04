@@ -63,7 +63,7 @@ A typical config:
 2. To fix ycm vim you need to do the following:
    1. sudo apt-get install build-essential cmake
    2. sudo apt-get install python-dev python3-dev
-   3. cd ~/.vim/bundle/YouCompleteMe
+   3. cd ~/.vim/bundle/youcompleteme
    4. ./install.py --clang-completer
 3. Syntastic config:
 
