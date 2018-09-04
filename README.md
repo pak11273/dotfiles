@@ -33,6 +33,7 @@ Note: create an .ackrc on your root directory
 
 A typical config:
 
+```
 #ack is a tool like grep, designed for programmers with large trees of heterogeneous source code
 
 #to install ack, see http://betterthangrep.com/
@@ -53,6 +54,7 @@ A typical config:
 --ignore-dir=tags
 --ignore-dir=node_modules/
 --ignore-dir=.cache-loader/
+```
 
 ## MISC notes
 
