@@ -31,6 +31,29 @@ sudo npm install jshint -g
 [Ack Instructions](https://beyondgrep.com/install/)
 Note: create an .ackrc on your root directory
 
+A typical config:
+
+#ack is a tool like grep, designed for programmers with large trees of heterogeneous source code
+
+#to install ack, see http://betterthangrep.com/
+
+#this file is located in the root directory 
+# ~/.ackrc 
+
+# Always sort the files
+#--sort−files
+
+# Always color, even if piping to a another program
+--color
+
+--ignore-file=is:tags
+--ignore-dir=log
+--ignore-dir=doc
+--ignore-dir=tmp
+--ignore-dir=tags
+--ignore-dir=node_modules/
+--ignore-dir=.cache-loader/
+
 ## MISC notes
 
 1. If you are using version control(eg. github, bitbucket...) then you will need to create an ssh key
