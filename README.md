@@ -29,7 +29,8 @@ sudo npm install jshint -g
 ## You'll need to install Ack for the Ack plugin
 
 [Ack Instructions](https://beyondgrep.com/install/)
-Note: create an .ackrc on your root directory
+
+Note: create an .ackrc on your root directory for every project
 
 A typical config:
 
