@@ -73,6 +73,9 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " vim autotags
 Plugin 'craigemery/vim-autotag'
 
+" tern for vim
+Plugin 'marijnh/tern_for_vim'
+
 "easy tags
 " Plugin 'xolox/vim-easytags'
 
@@ -305,7 +308,6 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 """""""""""""""""
 " Tern settings (for YCM plugin)
 """"""""""""""""""
-Bundle 'marijnh/tern_for_vim'
 let g:tern_show_argument_hints='on_hold'
 " and 
 let g:tern_map_keys=1
