@@ -79,6 +79,9 @@ Plugin 'marijnh/tern_for_vim'
 " close html tags
 Plugin 'alvan/vim-closetag'
 
+" graphql syntax highlighting
+Plugin 'jparise/vim-graphql'
+
 "easy tags
 " Plugin 'xolox/vim-easytags'
 
@@ -129,10 +132,10 @@ set sessionoptions+=tabpages,globals
 
 " vim closetags
 " These are the file extensions where this plugin is enabled.
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js, *.jsx'
 
 " This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx, *.js'
 
 " These are the file types where this plugin is enabled.
 let g:closetag_filetypes = 'html,xhtml,phtml,js,jsx'
