@@ -39,8 +39,8 @@ A typical config:
 
 #to install ack, see http://betterthangrep.com/
 
-#this file is located in the root directory 
-# ~/.ackrc 
+#this file is located in the root directory
+# ~/.ackrc
 
 # Always sort the files
 #--sort−files
@@ -59,13 +59,18 @@ A typical config:
 
 ## MISC notes
 
-1. If you are using version control(eg. github, bitbucket...) then you will need to create an ssh key
-2. To fix ycm vim you need to do the following:
+1. Vim undo history
+
+   1. Create an undo directory in $HOME/.vim
+
+2. If you are using version control(eg. github, bitbucket...) then you will need to create an ssh key
+
+3. To fix ycm vim you need to do the following:
    1. sudo apt-get install build-essential cmake
    2. sudo apt-get install python-dev python3-dev
    3. cd ~/.vim/bundle/youcompleteme
    4. ./install.py --clang-completer
-3. Syntastic config:
+4. Syntastic config:
 
    1. find checkers at https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
    2. enable checkers with this line in your .vimrc
@@ -74,7 +79,7 @@ A typical config:
 
    `eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']`
 
-4. Prettier config
+5. Prettier config
 
    1. go to your vim-prettier directory and either do npm install or yarn install
    2. ensure you have the following lines in your .vimrc
