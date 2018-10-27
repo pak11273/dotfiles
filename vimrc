@@ -71,16 +71,19 @@ Plugin 'mileszs/ack.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 
 " vim autotags
-Plugin 'craigemery/vim-autotag'
+" Plugin 'craigemery/vim-autotag'
 
 " tern for vim
-Plugin 'marijnh/tern_for_vim'
+" Plugin 'marijnh/tern_for_vim'
 
 " close html tags
 Plugin 'alvan/vim-closetag'
 
 " graphql syntax highlighting
 Plugin 'jparise/vim-graphql'
+
+" ale
+" Plugin 'w0rp/ale'
 
 "easy tags
 " Plugin 'xolox/vim-easytags'
@@ -270,7 +273,7 @@ set fileencoding=utf-8 " writes the file in utf8
 
 " SYNTASTIC 
 " use :Helptags to learn more
-" https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
+" https://github.com/vim-syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
