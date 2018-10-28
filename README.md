@@ -23,9 +23,19 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 vim and :PluginInstall
 
-## Syntastic Checkers
+## Syntastic Config
 
-sudo npm install jshint -g
+Using eslint instead of using jshint (sorry Douglas Crawford)
+~~sudo npm install jshint -g~~
+
+### Syntastic Checkers:
+
+   1. find checkers at https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
+   2. enable checkers with this line in your .vimrc
+
+   `let g:syntastic_<language>_checkers = ['<checker>','<another checker>']`
+
+   `eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']`
 
 ## You'll need to install Ack for the Ack plugin
 
@@ -71,16 +81,8 @@ A typical config:
    2. sudo apt-get install python-dev python3-dev
    3. cd ~/.vim/bundle/youcompleteme
    4. ./install.py --clang-completer
-4. Syntastic config:
 
-   1. find checkers at https://github.com/vim-syntastic/syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
-   2. enable checkers with this line in your .vimrc
-
-   `let g:syntastic_<language>_checkers = ['<checker>','<another checker>']`
-
-   `eg. let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']`
-
-5. Prettier config
+4. Prettier config
 
    1. go to your vim-prettier directory and either do npm install or yarn install
    2. ensure you have the following lines in your .vimrc
