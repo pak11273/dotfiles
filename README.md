@@ -1,10 +1,11 @@
-##Reference:
+## Reference:
 [link](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
-##Adding new . files in the home dir
+## Adding new . files in the home dir
+
 When adding more configuration files(dot files), you need to add them to the enumerable $file in the /dotfiles/makesymlinks.sh file.
 
-##Cloning files on another machine
+## Cloning this repo onto another machine
 
 cd ~
 
@@ -99,7 +100,7 @@ Change the gitbash options > text > Locale > en_US
 
 Change the gitbash options > text > Character set > UTF-8
 
-## Installing ctags
+## Installing ctags (UPDATE: I no longer use ctags, this step can be skipped) 
 
 references: https://github.com/craigemery/vim-autotag
 
