@@ -425,5 +425,5 @@ set undolevels=5000          "save lots of history
 set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 endif
 
-" remove Auto-Commands popup "
-au VimLeave * %bdelete
+" remove Auto-Commands popup 
+:set viminfo+=f0
