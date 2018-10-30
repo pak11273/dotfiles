@@ -105,15 +105,10 @@ Plugin 'gcmt/taboo.vim' " edit tabs
 Plugin 'mileszs/ack.vim' " ack for vim
 Plugin 'easymotion/vim-easymotion' " vim easymotion
 Plugin 'valloric/youcompleteme' " vim autocompletion
-"Plugin 'jparise/vim-graphql' " graphql syntax highlighting
-"Plugin 'marijnh/tern_for_vim' " tern for vim
-"
-"" vim snippets block 
-"Plugin 'honza/vim-snippets'
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'garbas/vim-snipmate'
-"" eof vim snippets block
+Plugin 'jparise/vim-graphql' " graphql syntax highlighting
+Plugin 'SirVer/ultisnips' " the ultimate snippets pkg requires pythos support
+Plugin 'honza/vim-snippets' " snippets for ultisnips
+
 "
 "archived plugins (used little to none)
 "Plugin 'vimwiki/vimwiki' " personal wiki/diary/tasks
@@ -242,10 +237,6 @@ map <Leader>k <Plug>(easymotion-k)
 " remap kep to use YCM with snipmate
 "imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
 "smap <C-J> <Plug>snipMateNextOrTrigger
-
-" TERN (for YCM plugin) (archived)
-" let g:tern_show_argument_hints='on_hold'
-" let g:tern_map_keys=1
 
 """" Language Specific Settings
 " Folding 
