@@ -1,199 +1,30 @@
+"""" Create an undo directory in ~/.vim 
+if has('persistent_undo')
+set undofile                 "turn on the feature  
+set undolevels=5000          "save lots of history
+set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+endif
+
+"""" CORE
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" personal wiki/diary/tasks
-Plugin 'vimwiki/vimwiki'
-
-" status and tabline
-Plugin 'vim-airline/vim-airline'
-
-" airline themes
-Plugin 'vim-airline/vim-airline-themes'
-
-" tmux and vim integration
-Plugin 'christoomey/vim-tmux-navigator'
-
-" directory tree for vim
-Plugin 'scrooloose/nerdtree'
-
-" validation scripts
-Plugin 'scrooloose/syntastic'
-
-" edit surrounding tags
-Plugin 'tpope/vim-surround'
-
-" git wrapper
-Plugin 'tpope/vim-fugitive'
-
-" vim commentary 
-Plugin 'tpope/vim-commentary'
-
-" file finder
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" colorschemes
-Plugin 'flazz/vim-colorschemes'
-
-" vim snippets
-Plugin 'honza/vim-snippets'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-
-" vim autocompletion
-Plugin 'valloric/youcompleteme'
-
-" vim easymotion
-Plugin 'easymotion/vim-easymotion'
-
-" plugin for jsx syntax
-Plugin 'prettier/vim-prettier'
-
-" sublime multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
-
-" edit tabs
-Plugin 'gcmt/taboo.vim'
-
-" ack for vim
-Plugin 'mileszs/ack.vim'
-
-" nerdtree tabs
-Plugin 'jistr/vim-nerdtree-tabs'
-
-" vim autotags
-" Plugin 'craigemery/vim-autotag'
-
-" tern for vim
-" Plugin 'marijnh/tern_for_vim'
-
-" close html tags
-Plugin 'alvan/vim-closetag'
-
-" graphql syntax highlighting
-Plugin 'jparise/vim-graphql'
-
-" ale
-" Plugin 'w0rp/ale'
-
-"easy tags
-" Plugin 'xolox/vim-easytags'
-
-"vim misc
-" Plugin 'xolox/vim-misc'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
-""""""  PLUGIN CONFIGURATION """""""
-" autotags
-let g:autotagTagsFile="tags"
-
-" nerdtree tabs
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup=1 
-
-" multiple-cursors
-let g:multi_cursor_quit_key='<Space>'
-
-" vim-prettier
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-let g:prettier#config#semi = 'false'
-let g:prettier#config#trailing_comma = 'none'
-" single quotes over double quotes
-" Prettier default: false
-let g:prettier#config#single_quote = 'false'
-
-" ctrl-p ignore config
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$'
-map <leader>r :NERDTreeFind<cr>
-
-"taboo.vim
-set guioptions-=e
-set sessionoptions+=tabpages,globals
-
-" vim closetags
-" These are the file extensions where this plugin is enabled.
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js, *.jsx'
-
-" This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx, *.js'
-
-" These are the file types where this plugin is enabled.
-let g:closetag_filetypes = 'html,xhtml,phtml,js,jsx'
-
-" This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filetypes = 'xhtml,js,jsx'
-
-" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-let g:closetag_emptyTags_caseSensitive = 1
-
-" Shortcut for closing tags, default is '>'
-let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-let g:closetag_close_shortcut = '<leader>>'
-
-
-
-
-
-
-
-"""""" CORE COMMANDS """""""
-set tags=./tags,tags;$HOME
 imap jj <ESC>
 let mapleader = 'f'
-set number
-" set relativenumber (no longer need since i use easymotion)
-colorscheme desert 
-" colo japanesque
-" colo 3dglasses
-" colo PapayaWhip 
-" colo donbass 
-" colorscheme holokai 
-"colo ChocolateLiquor
-"colorscheme cyberpunk 
-"colorscheme molokai 
 syntax on
-set clipboard=unnamed
-" set clipboard=unnamedplus
-" show existing tab with 2 spaces width
-set tabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-" On pressing tab, insert 4 spaces
-set expandtab
-" automatically set indent of new line
-set autoindent
-" works mostly
+set number
+colorscheme desert 
+set clipboard=unnamed "allows you to yank text to other programs (for host Only ie. windows)
+filetype plugin indent on  "turns on detection, plugin, and indent  
+set rtp+=~/.vim " set vim runtime path to include .vim directory
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
+	
+"" Tab stops
+set tabstop=2 " pressing tab = 2 spaces
+set shiftwidth=2 " when indenting with '>', use 2 spaces width
+set autoindent " automatically set indent of new line
 set smartindent
 
-" vim navigation with file tabs
+"" vim navigation with file tabs
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
@@ -202,29 +33,37 @@ nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
-" folding for js
-" set foldmethod=syntax
-" let javaScript_fold=1
-" end folding for js
 
-
-" highlights the current line (causes bugs with nerdtree)
-" set cursorline
-
-" word wrap without line breaks
+"" word wrap without line breaks
 set wrap
 set linebreak
 set nolist " list disables linebreak
 set textwidth=0
 set wrapmargin=0 " wrap lines when coming within n characters from side
 
-set pastetoggle=<f2>
-set history=1000
+set pastetoggle=<f2> " when pasting into vim this will format for comments
+set history=1000 " this sets vim command line history limit
+"""" EOF CORE
 
-" set filetype tabs
-"
-" Section AutoGroups {{{
-" file type specific settings
+"""" OPTIONAL
+set scrolloff=30 " Keep 3 lines below and above the cursor
+nmap <leader>s :set invspell spelllang=en<cr> " vim spellcheck shortcut
+set foldmethod=manual
+
+"" enables mouse for terminal
+if has('mouse')
+  set mouse=a
+  " set ttymouse=xterm2
+endif
+
+set laststatus=2 " show the satus line all the time
+set ttyfast " for faster redrawing
+set diffopt+=vertical " for faster redrawing
+au BufNewFile,BufRead *.ejs set filetype=html " syntax highlighting for .ejs files
+"""" EOF OPTIONAL
+
+"""" Section AutoGroups {{{
+" file type specific languages 
 augroup configgroup
     autocmd!
     autocmd Filetype sass setlocal ts=2 sw=2 expandtab
@@ -236,9 +75,7 @@ augroup configgroup
     autocmd FileType jade setlocal ts=2 sts=2 sw=2 noexpandtab
     autocmd FileType markdown,textile setlocal textwidth=0 wrapmargin=0 wrap spell
     autocmd FileType .xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
-
-    " close help files on 'q'
-    autocmd FileType help nnoremap q :bd<cr>
+    autocmd FileType help nnoremap q :bd<cr> " close help files on 'q'
 augroup END
 
 augroup AutoSaveFolds
@@ -247,183 +84,172 @@ augroup AutoSaveFolds
   autocmd BufWinEnter *.* silent loadview 
 augroup END
 
-"TODO: this does not work yet, possibly remove
-augroup CtrlpNerdTree 
-  autocmd!
-  autocmd BufWinEnter :NERDTreeFind<CR>
-augroup END
+"""" PLUGINS 
+" All Plugins must go below this line
+call vundle#begin()
 
-set omnifunc=phpcomplete#CompletePHP
+Plugin 'VundleVim/Vundle.vim' " plugin manager
+Plugin 'vim-airline/vim-airline' " status and tabline
+Plugin 'vim-airline/vim-airline-themes' " airline themes
+Plugin 'christoomey/vim-tmux-navigator' " tmux and vim integration (need this to move between nerdtree too)
+Plugin 'scrooloose/nerdtree' " directory tree for vim
+Plugin 'jistr/vim-nerdtree-tabs' " nerdtree tabs
+Plugin 'alvan/vim-closetag' " close html tags
+Plugin 'tpope/vim-surround' " edit surrounding wtags
+Plugin 'tpope/vim-fugitive' " git wrapper
+Plugin 'tpope/vim-commentary' " comment/uncomment code with gcc 
+Plugin 'scrooloose/syntastic' " validation scripts
+Plugin 'terryma/vim-multiple-cursors' " sublime multiple cursors
+Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder with ctrl-p
+Plugin 'gcmt/taboo.vim' " edit tabs
+Plugin 'mileszs/ack.vim' " ack for vim
+Plugin 'easymotion/vim-easymotion' " vim easymotion
+"Plugin 'valloric/youcompleteme' " vim autocompletion
+"Plugin 'jparise/vim-graphql' " graphql syntax highlighting
+"Plugin 'marijnh/tern_for_vim' " tern for vim
+"
+"" vim snippets block 
+"Plugin 'honza/vim-snippets'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+"" eof vim snippets block
+"
+"archived plugins (used little to none)
+"Plugin 'vimwiki/vimwiki' " personal wiki/diary/tasks
+"Plugin 'flazz/vim-colorschemes' " vim colorschemes
+"Plugin 'prettier/vim-prettier' " plugin for jsx syntax
 
-""""""" PLUGIN SETTINGS """"""""
-set rtp+=~/.vim
- 
+" All of your Plugins must be added before the following line
+call vundle#end()  
+
+"""" PLUGIN CONFIGURATION 
+
 " Load up all of our plugins
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-
-" shrinks NERDTree width
-let g:NERDTreeWinSize=15
-
-" fixes NERDTree arrows
-set encoding=utf-8 " displays the file in utf8
-set fileencoding=utf-8 " writes the file in utf8
-
-" SYNTASTIC 
-" use :Helptags to learn more
-" https://github.com/vim-syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height=2
-
-" Better :sign interface symbols
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-
-" On by default, turn it off for html
-let g:syntastic_mode_map = { 'mode': 'active',
-      \ 'passive_filetypes': ['html'] }
-" \ 'active_filetypes': [''] }
-
-" Use jshint (uses ~/.jshintrc)
-" let g:syntastic_javascript_checkers = ['jsxhint']
-" let g:syntastic_javascript_checkers = ['jshint']
-" let g:syntastic_javascript_eslint_exec = 'eslint_d'
-let g:syntastic_javascript_checkers = ['eslint']
-
-" PHP syntastic settings
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-
-" SASS syntastic settings
-" let g:syntastic_sass_checkers = ['sass_lint']
-let g:syntastic_scss_checkers = ['scss_lint']
-
-" HTML5 syntastic settings
-" let g:syntastic_html_tidy_exec = 'tidy'
-" let g:syntastic_html_checkers = ['validator']
-let g:syntastic_html_checkers = ['htmlhint']
-" let g:syntastic_scss_checkers = ["tidy"]
-
-" CSS syntastic settings
-let g:syntastic_css_checkers = ['csslint','prettycss']
-
-" XML syntastic settings
-let g:syntastic_xml_checkers=["xmllint"]
-
-
-" ARILINE settings
+"" ARILINE 
 let g:airline_theme='base16color'
-" let g:airline_theme='tomorrow'
-" let g:airline_theme='cool'
-" let g:airline_theme='base16_isotope'
-" let g:airline_theme='monokai'
-" let g:airline_theme='badwolf'
-" let g:airline_theme='base16_atelierdune'
-" let g:airline_theme='base16_pop'
-" let g:airline_theme='base16_shapeshifter'
-" let g:airline_theme='badwolf'
-" let g:airline_theme='hybridline'
-" let g:airline_theme='molokai'
-" let g:airline_theme='simple'
-" let g:airline_theme='understated'
-" let g:airline_theme='wombat'
-" let g:airline_theme='xtermlight'
-
 set t_Co=256
 
-" remap kep to use YCM with snipmate
-imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
-
-
-"""""""""""""""""
-" Tern settings (for YCM plugin)
-""""""""""""""""""
-let g:tern_show_argument_hints='on_hold'
-" and 
-let g:tern_map_keys=1
-
-
-" settings for easymotion
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
-" or
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-
-" JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
-" nerdtree settings (supposedly prettifies nerdtree, uncomment these 2 lines to see if this may fix graphic bugs
-
-" let NERDTreeMinimalUI = 1
-" let NERDTreeDirArrows = 1
-
-
-
-
-
-
-
-
-
-""""""" MISC """"""""
-
-set scrolloff=30 " Keep 3 lines below and above the cursor
-
-if has('mouse')
-  set mouse=a
-  " set ttymouse=xterm2
-endif
-
-" faster redrawing
-" set ttyfast
-" set diffopt+=vertical
-
-set laststatus=2 " show the satus line all the time
-
-" disable Ex mode
-noremap Q <NOP>
-
-" activate spell-checking alternatives
-nmap ;s :set invspell spelllang=en<cr>
-
-" fix for webpack
-set backupcopy=yes
+"" NERDTREE 
+" nerdtree tabs
+map <Leader>n <plug>NERDTreeTabsToggle<CR> " toggles nerd tree
+let g:nerdtree_tabs_open_on_console_startup=1 " opens nerdtree when you open vim
 
 " fix for NERDTree arrows
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
+let g:NERDTreeWinSize=15 " shrinks NERDTree width
+
+" fixes NERDTree arrows
+set encoding=utf-8 " displays the file in utf8
+set fileencoding=utf-8 " writes the file in utf8
+map <leader>r :NERDTreeFind<cr>
+
+"" vim closetags
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js, *.jsx' " file extensions where plugin is enabled
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx, *.js' " xhtml file extensions where plugin is enabled 
+let g:closetag_filetypes = 'html,xhtml,phtml,js,jsx' "plugin enabled for these filetypes 
+let g:closetag_xhtml_filetypes = 'xhtml,js,jsx' " plugin enabled for these xhtml filetypes 
+let g:closetag_emptyTags_caseSensitive = 1 " list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+let g:closetag_shortcut = '>' " Shortcut for closing tags, default is '>'
+let g:closetag_close_shortcut = '<leader>>' " Add > at current position without closing the current tag, default is ''
+
+"" MULTIPLE-CURSORS
+let g:multi_cursor_quit_key='<Space>'
+
+"" CTRL-P
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$' " ignore types 
+
+"" TABOO.vim
+set guioptions-=e
+set sessionoptions+=tabpages,globals
+
+"" EASYMOTION 
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+"" VIM PRETIER 
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+"let g:prettier#config#semi = 'false'
+"let g:prettier#config#trailing_comma = 'none'
+"" single quotes over double quotes
+"" Prettier default: false
+"let g:prettier#config#single_quote = 'false'
+
+
+"""" SYNTASTIC 
+" use :Helptags to learn more
+" https://github.com/vim-syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
 " uncomment this when debugging syntastic 
-" let g:syntastic_debug=3
+ "let g:syntastic_debug=3
 
-" syntax highlighting for .ejs files
-au BufNewFile,BufRead *.ejs set filetype=html
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_loc_list_height=2
+"
+"" Better :sign interface symbols
+"let g:syntastic_error_symbol = '✗'
+"let g:syntastic_warning_symbol = '!'
+"
+"" On by default, turn it off for html
+"let g:syntastic_mode_map = { 'mode': 'active',
+"      \ 'passive_filetypes': ['html'] }
+"" \ 'active_filetypes': [''] }
+"
+"" Use jshint (uses ~/.jshintrc)
+"" let g:syntastic_javascript_checkers = ['jsxhint']
+"" let g:syntastic_javascript_checkers = ['jshint']
+"" let g:syntastic_javascript_eslint_exec = 'eslint_d'
+"let g:syntastic_javascript_checkers = ['eslint']
+"
+"" PHP syntastic settings
+"let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+"
+"" SASS syntastic settings
+"" let g:syntastic_sass_checkers = ['sass_lint']
+"let g:syntastic_scss_checkers = ['scss_lint']
+"
+"" HTML5 syntastic settings
+"" let g:syntastic_html_tidy_exec = 'tidy'
+"" let g:syntastic_html_checkers = ['validator']
+"let g:syntastic_html_checkers = ['htmlhint']
+"" let g:syntastic_scss_checkers = ["tidy"]
+"
+"" CSS syntastic settings
+"let g:syntastic_css_checkers = ['csslint','prettycss']
+"
+"" XML syntastic settings
+"let g:syntastic_xml_checkers=["xmllint"]
 
-" BE SURE TO MANUALLY CREATE THE UNDO DIRECTORY 
-" persistant undo
-if has('persistent_undo')      "check if your vim version supports it
-set undofile                 "turn on the feature  
-set undolevels=5000          "save lots of history
-set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
-endif
+"" YCM
+" remap kep to use YCM with snipmate
+"imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+"smap <C-J> <Plug>snipMateNextOrTrigger
 
-" remove Auto-Commands popup 
-:set viminfo+=f0
+" TERN (for YCM plugin) (archived)
+" let g:tern_show_argument_hints='on_hold'
+" let g:tern_map_keys=1
+
+"""" Language Specific Settings
+" Folding 
+let javaScript_fold=1
+
+"""" FIXES
+set backupcopy=yes " fix for webpack
