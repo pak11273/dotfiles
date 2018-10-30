@@ -108,12 +108,12 @@ Plugin 'valloric/youcompleteme' " vim autocompletion
 Plugin 'jparise/vim-graphql' " graphql syntax highlighting
 Plugin 'SirVer/ultisnips' " the ultimate snippets pkg requires pythos support
 Plugin 'honza/vim-snippets' " snippets for ultisnips
+Plugin 'prettier/vim-prettier' " plugin for code formatting
 
 "
 "archived plugins (used little to none)
 "Plugin 'vimwiki/vimwiki' " personal wiki/diary/tasks
 "Plugin 'flazz/vim-colorschemes' " vim colorschemes
-"Plugin 'prettier/vim-prettier' " plugin for jsx syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()  
@@ -173,70 +173,45 @@ let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-"" VIM PRETIER 
-"let g:prettier#autoformat = 0
-"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-"let g:prettier#config#semi = 'false'
-"let g:prettier#config#trailing_comma = 'none'
-"" single quotes over double quotes
-"" Prettier default: false
-"let g:prettier#config#single_quote = 'false'
-
+" VIM PRETIER 
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+let g:prettier#config#semi = 'false'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#single_quote = 'false' " single quotes over double quotes
 
 """" SYNTASTIC 
-" use :Helptags to learn more
-" https://github.com/vim-syntastic/wiki/%28v3.7.0%29---Syntax-Checkers
-" uncomment this when debugging syntastic 
- "let g:syntastic_debug=3
+" Find available checkers with :help syntastic-checkers
+" let g:syntastic_debug=3 "uncomment this when debugging syntastic
 
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_loc_list_height=2
-"
-"" Better :sign interface symbols
-"let g:syntastic_error_symbol = '✗'
-"let g:syntastic_warning_symbol = '!'
-"
-"" On by default, turn it off for html
-"let g:syntastic_mode_map = { 'mode': 'active',
-"      \ 'passive_filetypes': ['html'] }
-"" \ 'active_filetypes': [''] }
-"
-"" Use jshint (uses ~/.jshintrc)
-"" let g:syntastic_javascript_checkers = ['jsxhint']
-"" let g:syntastic_javascript_checkers = ['jshint']
-"" let g:syntastic_javascript_eslint_exec = 'eslint_d'
-"let g:syntastic_javascript_checkers = ['eslint']
-"
-"" PHP syntastic settings
-"let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-"
-"" SASS syntastic settings
-"" let g:syntastic_sass_checkers = ['sass_lint']
-"let g:syntastic_scss_checkers = ['scss_lint']
-"
-"" HTML5 syntastic settings
-"" let g:syntastic_html_tidy_exec = 'tidy'
-"" let g:syntastic_html_checkers = ['validator']
-"let g:syntastic_html_checkers = ['htmlhint']
-"" let g:syntastic_scss_checkers = ["tidy"]
-"
-"" CSS syntastic settings
-"let g:syntastic_css_checkers = ['csslint','prettycss']
-"
-"" XML syntastic settings
-"let g:syntastic_xml_checkers=["xmllint"]
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-"" YCM
-" remap kep to use YCM with snipmate
-"imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
-"smap <C-J> <Plug>snipMateNextOrTrigger
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_loc_list_height=4
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+
+"" syntastic checkers
+" javascript 
+let g:syntastic_javascript_checkers = ['eslint']
+
+" HTML5  
+let g:syntastic_html_checkers = ['htmlhint']
+
+" CSS syntastic settings
+let g:syntastic_css_checkers = ['csslint']
+
+"""" ULTSNIPS
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 """" Language Specific Settings
 " Folding 
