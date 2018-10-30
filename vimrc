@@ -104,7 +104,7 @@ Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder with ctrl-p
 Plugin 'gcmt/taboo.vim' " edit tabs
 Plugin 'mileszs/ack.vim' " ack for vim
 Plugin 'easymotion/vim-easymotion' " vim easymotion
-"Plugin 'valloric/youcompleteme' " vim autocompletion
+Plugin 'valloric/youcompleteme' " vim autocompletion
 "Plugin 'jparise/vim-graphql' " graphql syntax highlighting
 "Plugin 'marijnh/tern_for_vim' " tern for vim
 "
