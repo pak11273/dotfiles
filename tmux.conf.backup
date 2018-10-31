@@ -7,11 +7,11 @@ is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     bind-key -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
     bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
+
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'jimeh/tmux-themepack'
-
 
 # themes
 # set -g @themepack 'block/cyan'
@@ -27,7 +27,6 @@ bind-key -t vi-copy 'C-v' rectangle-toggle # Begin selection in copy mode.
 bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 
 
-# THE FOLLOWING WERE COMMENTED OUT TO FIX TMUX SESSIONS.  REVISIT LATER.
 # NERDTree border fix
 set-window-option -g utf8 on
 
@@ -44,3 +43,37 @@ neww -n foo/bar foo
 splitw -v -p 50 -t 0 bar
 selectw -t 1 
 selectp -t 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+
+
+
+
+
+
+
+
