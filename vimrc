@@ -208,9 +208,11 @@ let g:syntastic_css_checkers = ['csslint']
 
 """" ULTSNIPS
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+autocmd FileType snippets :UltiSnipsAddFiletypes snippets 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 
 """" Language Specific Settings
