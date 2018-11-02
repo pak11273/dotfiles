@@ -7,14 +7,14 @@ endif
 
 """" CORE
 set nocompatible              " be iMproved, required
-"filetype off                  " required
+filetype off                  " required
 imap jj <ESC>
 let mapleader = 'f'
 syntax on
 set number
 colorscheme desert 
 set clipboard=unnamed "allows you to yank text to other programs (for host Only ie. windows)
-filetype indent on  "turns on detection, plugin, and indent  
+filetype plugin indent on  "turns on detection, plugin, and indent  
 set rtp+=~/.vim " set vim runtime path to include .vim directory
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 	
@@ -34,7 +34,7 @@ nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
-" word wrap without line breaks
+"" word wrap without line breaks
 set wrap
 set linebreak
 set nolist " list disables linebreak
@@ -110,15 +110,15 @@ Plugin 'SirVer/ultisnips' " the ultimate snippets pkg requires pythos support
 Plugin 'honza/vim-snippets' " snippets for ultisnips
 Plugin 'prettier/vim-prettier' " plugin for code formatting
 
-
-""archived plugins (used little to none)
+"
+"archived plugins (used little to none)
 "Plugin 'vimwiki/vimwiki' " personal wiki/diary/tasks
 "Plugin 'flazz/vim-colorschemes' " vim colorschemes
 
-"" All of your Plugins must be added before the following line
+" All of your Plugins must be added before the following line
 call vundle#end()  
 
-""""" PLUGIN CONFIGURATION 
+"""" PLUGIN CONFIGURATION 
 
 " Load up all of our plugins
 if filereadable(expand("~/.vimrc.bundles"))
@@ -165,8 +165,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 set guioptions-=e
 set sessionoptions+=tabpages,globals
 
-" EASYMOTION 
-nmap s <Plug>(easymotion-overwin-f2)
+"" EASYMOTION 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
 
@@ -174,7 +173,7 @@ let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-"" VIM PRETIER 
+" VIM PRETIER 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.graphql,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue PrettierAsync
 let g:prettier#config#semi = 'false'
