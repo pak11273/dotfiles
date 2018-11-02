@@ -7,7 +7,7 @@ endif
 
 """" CORE
 set nocompatible              " be iMproved, required
-"filetype off                  " required
+filetype off                  " required
 imap jj <ESC>
 let mapleader = 'f'
 syntax on
@@ -165,7 +165,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 set guioptions-=e
 set sessionoptions+=tabpages,globals
 
-" EASYMOTION 
+"" EASYMOTION 
 nmap s <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
@@ -176,12 +176,12 @@ map <Leader>k <Plug>(easymotion-k)
 
 "" VIM PRETIER 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.graphql,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue PrettierAsync
 let g:prettier#config#semi = 'false'
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#single_quote = 'false' " single quotes over double quotes
 
-"""" SYNTASTIC 
+"" SYNTASTIC 
 " Find available checkers with :help syntastic-checkers
 " let g:syntastic_debug=3 "uncomment this when debugging syntastic
 
