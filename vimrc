@@ -109,6 +109,7 @@ Plugin 'jparise/vim-graphql' " graphql syntax highlighting
 Plugin 'SirVer/ultisnips' " the ultimate snippets pkg requires pythos support
 Plugin 'honza/vim-snippets' " snippets for ultisnips
 Plugin 'prettier/vim-prettier' " plugin for code formatting
+Plugin 'Galooshi/vim-import-js' " auto importing for js 
 
 
 ""archived plugins (used little to none)
@@ -176,7 +177,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 "" VIM PRETIER 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.md,*.vue PrettierAsync
 let g:prettier#config#semi = 'false'
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#single_quote = 'false' " single quotes over double quotes
@@ -206,6 +207,9 @@ let g:syntastic_html_checkers = ['htmlhint']
 
 " CSS syntastic settings
 let g:syntastic_css_checkers = ['csslint']
+
+" vim-import-js
+nnoremap <leader>w :ImportJSWord<CR>
 
 """" ULTSNIPS
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
