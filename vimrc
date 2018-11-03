@@ -210,6 +210,8 @@ let g:syntastic_css_checkers = ['csslint']
 
 " vim-import-js
 nnoremap <leader>w :ImportJSWord<CR>
+nnoremap <leader>e :ImportJSFix<CR>
+nnoremap <leader>g :ImportJSGoto<CR>
 
 """" ULTSNIPS
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
