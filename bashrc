@@ -35,8 +35,26 @@ alias sv="sudo vim"
 alias c="clear"
 alias run="npm run"
 alias tkill="pkill -f tmux"
-alias tstart="tmux new session \; split-window -h -p 70 \; split-window -v -p 30 \; split-window -h -p 50\; select-pane -t 1 \; split-window -h -p 10"
+alias tstart="tmux new session \; \
+split-window -h -p 70 \; \
+send-keys 'cd /var/www/html/utter' C-m \; \
+send-keys 'vim' C-m \; \
+split-window -v -p 30 \; \
+send-keys 'cd /var/www/html/utter' C-m \; \
+send-keys 'clear' C-m \; \
+split-window -h -p 50 \; \
+send-keys 'cd /var/www/html/utter/packages/server' C-m \; \
+send-keys 'run tserver' C-m \; \
+select-pane -t 1 \; \
+split-window -h -p 10 \; \
+send-keys 'cd /var/www/html/utter/packages/client' C-m \; \
+send-keys 'run fserver' C-m \; \
+rename-window -t 0 client \; \
+new-window -t 1 -n server \; \
+send-keys -t 1 'clear' C-m \; \
+send-keys -t 1:1 'sudo systemctl start mongod' C-m \;"
 #ref: https://stackoverflow.com/questions/5609192/how-to-set-up-tmux-so-that-it-starts-up-with-specified-windows-opened
+
 
 # uncomment this line if you are on a windows machine, this will not work in linux
 # alias chrome="/c/'Program Files (x86)'/Google/Chrome/Application/chrome.exe"
