@@ -35,7 +35,8 @@ alias sv="sudo vim"
 alias c="clear"
 alias run="npm run"
 alias tkill="pkill -f tmux"
-alias tstart="tmux new session \; split-window -h -p 70 \; split-window -v -p 30 \; split-window -h -p 50\;" #ref: https://stackoverflow.com/questions/5609192/how-to-set-up-tmux-so-that-it-starts-up-with-specified-windows-opened
+alias tstart="tmux new session \; split-window -h -p 70 \; split-window -v -p 30 \; split-window -h -p 50\; select-pane -t 1 \; split-window -h -p 10"
+#ref: https://stackoverflow.com/questions/5609192/how-to-set-up-tmux-so-that-it-starts-up-with-specified-windows-opened
 
 # uncomment this line if you are on a windows machine, this will not work in linux
 # alias chrome="/c/'Program Files (x86)'/Google/Chrome/Application/chrome.exe"
