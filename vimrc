@@ -160,7 +160,7 @@ let g:multi_cursor_quit_key='<Space>'
 
 "" CTRL-P
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$' " ignore types 
+let g:ctrlp_custom_ignore = '\v[\/](offline-mirror|node_modules|target|dist)|(\.(swp|ico|git|svn|so|exe|dll))$' " ignore types 
 
 "" TABOO.vim
 set guioptions-=e
