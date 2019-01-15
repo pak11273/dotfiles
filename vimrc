@@ -48,7 +48,7 @@ set history=1000 " this sets vim command line history limit
 """" OPTIONAL
 set scrolloff=30 " Keep 3 lines below and above the cursor
 nmap <leader>s :set invspell spelllang=en<cr> " vim spellcheck shortcut
-set foldmethod=manual
+set foldmethod=syntax
 
 "" enables mouse for terminal
 if has('mouse')

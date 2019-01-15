@@ -63,6 +63,8 @@ send-keys -t 1:1 'sudo systemctl start mongod' C-m \;"
 # not sure what this does
 set -o vi
 
+# disables ctrl-s in vim, which freezes it.  Ctrl-q to unfreeze 
+stty -ixon
 
 export NVM_DIR="/root/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
