@@ -1,4 +1,5 @@
 [alias]
+		am = git add -A && git commit -m 
     s = status
     co = checkout
     cm = commit
