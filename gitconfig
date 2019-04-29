@@ -1,5 +1,4 @@
 [alias]
-		am = git add -A && git commit -m 
     s = status
     co = checkout
     cm = commit
@@ -8,6 +7,7 @@
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
+	am = !git add -A && git commit
 [user]
     email = pak11273@gmail.com
     name = pak11273
