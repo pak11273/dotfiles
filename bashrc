@@ -33,7 +33,7 @@ mk ()
 # shortcut to start vim
 alias sv="sudo vim"
 alias c="clear"
-alias run="npm run"
+alias run="npm run --silent"
 alias tkill="pkill -f tmux"
 alias tstart="tmux new session \; \
 split-window -h -p 70 \; \
