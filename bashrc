@@ -44,7 +44,7 @@ send-keys 'cd /var/www/html/utter' C-m \; \
 send-keys 'clear' C-m \; \
 split-window -h -p 50 \; \
 send-keys 'cd /var/www/html/utter/packages/server' C-m \; \
-send-keys 'run tserver' C-m \; \
+send-keys 'run dserver' C-m \; \
 select-pane -t 1 \; \
 split-window -h -p 10 \; \
 send-keys 'cd /var/www/html/utter/packages/client' C-m \; \
