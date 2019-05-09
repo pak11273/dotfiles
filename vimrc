@@ -8,6 +8,8 @@ endif
 """" CORE
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set ignorecase                " required for smartcase to work
+set smartcase
 imap jj <ESC>
 let mapleader = 'f'
 syntax on
