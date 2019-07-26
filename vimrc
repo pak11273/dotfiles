@@ -99,7 +99,6 @@ Plugin 'alvan/vim-closetag' " close html tags
 Plugin 'tpope/vim-surround' " edit surrounding wtags
 Plugin 'tpope/vim-fugitive' " git wrapper
 Plugin 'tpope/vim-commentary' " comment/uncomment code with gcc 
-Plugin 'scrooloose/syntastic' " validation scripts
 Plugin 'terryma/vim-multiple-cursors' " sublime multiple cursors
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy file finder with ctrl-p
 Plugin 'gcmt/taboo.vim' " edit tabs
@@ -109,8 +108,9 @@ Plugin 'valloric/youcompleteme' " vim autocompletion
 Plugin 'jparise/vim-graphql' " graphql syntax highlighting
 Plugin 'SirVer/ultisnips' " the ultimate snippets pkg requires pythos support
 Plugin 'honza/vim-snippets' " snippets for ultisnips
-Plugin 'prettier/vim-prettier' " plugin for code formatting
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plugin 'Galooshi/vim-import-js' " auto importing for js 
+Plugin 'w0rp/ale' " a syntax linter
 
 
 ""archived plugins (used little to none)
@@ -177,39 +177,13 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 "" VIM PRETIER 
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.less,*.scss,*.md,*.vue PrettierAsync
+" let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.less,*.scss,*.css,*.md,*.vue PrettierAsync
 let g:prettier#config#semi = 'false'
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#single_quote = 'false' " single quotes over double quotes
 
-"" SYNTASTIC 
-" Find available checkers with :help syntastic-checkers
-" let g:syntastic_debug=3 "uncomment this when debugging syntastic
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_loc_list_height=4
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-
-"" syntastic checkers
-" javascript 
-let g:syntastic_javascript_checkers = ['eslint']
-
-" HTML5  
-let g:syntastic_html_checkers = ['htmlhint']
-
-" CSS syntastic settings
-let g:syntastic_css_checkers = ['csslint']
-
-" vim-import-js
+""" vim-import-js
 nnoremap <leader>w :ImportJSWord<CR>
 nnoremap <leader>e :ImportJSFix<CR>
 nnoremap <leader>g :ImportJSGoto<CR>
@@ -232,3 +206,14 @@ set foldlevelstart=99
 
 """" FIXES
 set backupcopy=yes " fix for webpack
+
+"""" ALE
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
+"""" ALE
