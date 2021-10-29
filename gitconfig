@@ -9,7 +9,7 @@
     dump = cat-file -p
 		all = !git add -A && git commit
 [user]
-    email = pak11273@gmail.com
+    email = isaac.pak.2024@gmail.com
     name = pak11273
 [color]
     ui = auto
